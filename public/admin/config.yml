@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: csmaller/peacelove
   branch: main # Branch to update (optional; defaults to master)
 
 media_folder: static/img
