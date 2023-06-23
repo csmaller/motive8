@@ -5,5 +5,6 @@
   </div>
 </template>
 <style lang="scss">
+@use 'primeflex/primeflex.css';
 @use '~/style/main.scss';
 </style>

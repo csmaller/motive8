@@ -9,14 +9,19 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.7.0",
     "@nuxt/devtools": "latest",
     "@types/node": "^18",
+    "netlify-cli": "^15.6.0",
     "nuxt": "^3.5.2"
   },
   "dependencies": {
+    "@nuxt/image": "^1.0.0-rc.1",
+    "@nuxt/ui": "^0.4.1",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.3",
     "axios": "^1.4.0",
+    "defu": "^6.1.2",
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-vue": "^9.15.0",
