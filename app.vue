@@ -5,16 +5,10 @@ useHead({
 
 const colorMode = useColorMode();
 colorMode.value = 'light';
-// For Nuxt 3
-// definePageMeta({
-//   colorMode: 'light',
-// });
-
-console.log(colorMode.preference);
 </script>
 <template>
   <div>
-    <img src="/img/m8logo.png" class="logo w-2 ml-0" />
+    <Header />
     <div>
       <h1>Color mode: {{ $colorMode.value }}</h1>
       <select v-model="$colorMode.preference">
@@ -38,8 +32,5 @@ console.log(colorMode.preference);
 .sepia-mode body {
   background-color: #f1e7d0;
   color: #433422;
-}
-
-.logo {
 }
 </style>
