@@ -2,7 +2,7 @@
 //---------- EXAMPLE QUERIES ----------
 
 const { data: equalQuery } = await useAsyncData('equal', () => {
-  return queryContent('/').where({ title: 'news' }).find();
+  return queryContent('/').where({ title: 'about' }).find();
 });
 
 const { data: lowerThanQuery } = await useAsyncData('lower-than', () => {
@@ -42,6 +42,7 @@ const { data: inQuery } = await useAsyncData('in', () => {
       <ul v-if="equalQuery">
         <li v-for="movie in equalQuery" :key="movie.id">
           title: {{ movie.title }}--- description: {{ movie.description }}
+          <ContentRenderer :value="movie" />
         </li>
       </ul>
     </section>

@@ -3,7 +3,7 @@ backend:
   repo: csmaller/motive8
   branch: main # Branch to update (optional; defaults to master)
 
-media_folder: static/img
+media_folder: /img
 public_folder: /img
 
 collections:
