@@ -2,9 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "../vue-3-vite-netlify-template/src"
 		}
 	],
 	"settings": {}
