@@ -7,20 +7,26 @@ const colorMode = useColorMode();
 colorMode.value = 'light';
 </script>
 <template>
-  <div>
-    <Header />
-    <div>
-      <h1>Color mode: {{ $colorMode.value }}</h1>
-      <select v-model="$colorMode.preference">
-        <option value="system">System</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="sepia">Sepia</option>
-      </select>
+  <div id="default-layout">
+    <div id="main-container" class="mt-0">
+      <div id="main-container-scroll" class="flex flex-column h-screen overflow-auto">
+        <div class="header flex flex-wrap gap-3 align-items-center p-2">
+          <img src="/img/m8logo.png" width="200" height="200" class="mt-0" />
+          <Nav />
+        </div>
+        <div id="main-content">
+          <div class="flex w-full md:p-4 p-1">
+            <NuxtPage />
+          </div>
+        </div>
+      </div>
+      <footer class="flex w-full text-center justify-content-center align-items-center">
+        <Address />
+      </footer>
     </div>
-    <NuxtPage />
   </div>
 </template>
+
 <style lang="scss">
 @use 'primeflex/primeflex.css';
 @use '~/style/main.scss';

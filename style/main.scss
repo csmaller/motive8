@@ -1,9 +1,8 @@
 
 @import 'colors';
 
-html{
-    background-color:white;
-}
-h5{
-    color:$primary;
-}
+.max-width {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 -10px;
+  }
