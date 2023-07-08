@@ -6,16 +6,16 @@ const { data: equalQuery } = await useAsyncData('equal', () => {
 
 <template>
   <div>
-    <div v-if="equalQuery">
+    <div v-if="equalQuery" class="w-full p-3 mb-4">
       <Profile
         v-for="person in equalQuery"
         :key="person.id"
         :name="person.name"
         :phone="person.phone"
         :email="person.email"
+        :description="person.description"
       >
-        <div class="w-full sm:p-1" :class="person.position">
-          <h5 v-if="person.description" class="mt-3 mb-2 underline">{{ person.description }}</h5>
+        <div class="w-full sm:p-1 pt-4" :class="person.position">
           <ContentRenderer :value="person" />
         </div>
       </Profile>
@@ -47,8 +47,17 @@ const { data: equalQuery } = await useAsyncData('equal', () => {
   </div>
 </template>
 
-<style scoped lang="scss">
-.anna_img {
-  width: 400px;
+<style lang="scss">
+.left,
+.right {
+  img {
+    max-width: 600px;
+    float: left;
+    padding: 18px;
+  }
+}
+
+.right img {
+  float: right;
 }
 </style>
