@@ -8,7 +8,11 @@ email: anna@motive8endurance.com
 image: /public/img/anna_profile.jpeg
 position: right
 ---
+
+
 ![]()
+
+<img src="/public/img/swimmers.png" title="swimmers" class="w-6 flex float-left sm:w-full p-4" />
 
 <p>
 
