@@ -10,8 +10,6 @@ interface PropsInterface {
 const props = defineProps<PropsInterface>();
 
 const { name, img, email, phone } = toRefs(props);
-
-const src = computed(() => new URL(`${img.value}`, import.meta.url).href);
 </script>
 
 <template>
@@ -25,7 +23,7 @@ const src = computed(() => new URL(`${img.value}`, import.meta.url).href);
     </h5>
     <div class="flex flex-column sm:flex-column md:flex-row gap-3 text-left py-4">
       <div class="flex-inline sm:w-full md:w-6">
-        <img :alt="`${img}`" :src="src" class="img w-full" />
+        <img :alt="`${img}`" :src="img" class="img w-full" />
       </div>
       <div class="md:w-6 sm:w-full">
         <slot></slot>

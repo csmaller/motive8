@@ -1,8 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { data: equalQuery } = await useAsyncData('equal', () => {
+  return queryContent('/about').find();
+});
+</script>
 
 <template>
   <div>
-    <Profile name="Anna Nemeckay" img="/img/anna_profile.jpeg" phone="561-716-6650" email="anna@motive8endurance.com">
+    <div v-if="equalQuery">
+      <Profile v-for="person in equalQuery" :key="person.id" :name="person.title">
+        <div class="w-fullsm:p-1">
+          <h5>{{ person.title }}</h5>
+          <ContentRenderer :value="person" />
+        </div>
+      </Profile>
+    </div>
+    <!-- <Profile name="Anna Nemeckay" img="/img/anna_profile.jpeg" phone="561-716-6650" email="anna@motive8endurance.com">
       <div class="w-fullsm:p-1">
         <h5 class="mt-3 mb-2 underline">USAT certified triathlon coach</h5>
         <p>
@@ -25,7 +37,7 @@
           the reason that I committed to making fitness my life after school.
         </p>
       </div>
-    </Profile>
+    </Profile> -->
   </div>
 </template>
 
