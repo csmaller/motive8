@@ -48,18 +48,3 @@ const { data: equalQuery } = await useAsyncData('equal', () => {
     </Profile> -->
   </div>
 </template>
-
-<style lang="scss">
-.left,
-.right {
-  img {
-    max-width: 600px;
-    float: left;
-    padding: 18px;
-  }
-}
-
-.right img {
-  float: right;
-}
-</style>
