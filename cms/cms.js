@@ -1,5 +1,7 @@
 import CMS from 'netlify-cms-app';
 
+CMS.init();
+
 CMS.registerEditorComponent({
   id: 'ImageResponsive',
   label: 'Image-Responsive',
