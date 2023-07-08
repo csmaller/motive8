@@ -7,9 +7,15 @@ const { data: equalQuery } = await useAsyncData('equal', () => {
 <template>
   <div>
     <div v-if="equalQuery">
-      <Profile v-for="person in equalQuery" :key="person.id" :name="person.title">
-        <div class="w-fullsm:p-1">
-          <h5>{{ person.title }}</h5>
+      <Profile
+        v-for="person in equalQuery"
+        :key="person.id"
+        :name="person.name"
+        :phone="person.phone"
+        :email="person.email"
+      >
+        <div class="w-full sm:p-1" :class="person.position">
+          <h5 v-if="person.description" class="mt-3 mb-2 underline">{{ person.description }}</h5>
           <ContentRenderer :value="person" />
         </div>
       </Profile>
