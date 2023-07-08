@@ -8,7 +8,7 @@ email: anna@motive8endurance.com
 image: /public/img/anna_profile.jpeg
 position: right
 ---
-![anna]( "anna")
+![]()
 
 <p>
 
