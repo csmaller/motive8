@@ -5,9 +5,10 @@ description: USAT certified triathlon coach
 name: Anna Nemeckay
 phone: 561-716-6650
 email: anna@motive8endurance.com
+image: /public/img/anna_profile.jpeg
 position: right
 ---
-![anna](/public/img/anna_profile.jpeg "anna")
+![anna]( "anna")
 
 <p>
 
