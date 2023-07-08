@@ -6,10 +6,11 @@ interface PropsInterface {
   description?: string;
   email?: string;
   phone?: string;
+  img: string;
 }
 const props = defineProps<PropsInterface>();
 
-const { name, email, phone, description } = toRefs(props);
+const { name, email, phone, description, img } = toRefs(props);
 </script>
 
 <template>
@@ -23,7 +24,10 @@ const { name, email, phone, description } = toRefs(props);
       <small v-if="phone">{{ phone }}</small>
     </h5>
     <div class="flex flex-column sm:flex-column md:flex-row gap-3 text-left py-4">
-      <div class="w-full">
+      <div class="flex-inline sm:w-full md:w-6">
+        <img :alt="`${img}`" :src="img" class="img w-full" />
+      </div>
+      <div class="md:w-6 sm:w-full">
         <slot></slot>
       </div>
     </div>

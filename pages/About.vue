@@ -14,6 +14,7 @@ const { data: equalQuery } = await useAsyncData('equal', () => {
         :phone="person.phone"
         :email="person.email"
         :description="person.description"
+        :img="person.image"
       >
         <div class="w-full sm:p-1 pt-4" :class="person.position">
           <ContentRenderer :value="person" />
