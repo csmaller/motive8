@@ -9,11 +9,9 @@ email: anna@motive8endurance.com
 image: /public/img/anna_profile.jpeg
 class: w-6 sm:w-full float-left px-4 py-2
 ---
-
-
 ![]()
 
-<img src="/public/img/swimmers.png" title="swimmers" class="w-6 flex float-left sm:w-full p-4" />
+<img src="/public/img/swimmers.png" title="swimmers" class="w-6 flex float-left sm:w-full p-4 sm:p-1" />
 
 <p>
 
