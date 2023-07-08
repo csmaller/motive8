@@ -7,10 +7,11 @@ interface PropsInterface {
   email?: string;
   phone?: string;
   img: string;
+  imageClass?: string;
 }
 const props = defineProps<PropsInterface>();
 
-const { name, email, phone, description, img } = toRefs(props);
+const { name, email, phone, description, img, imageClass } = toRefs(props);
 </script>
 
 <template>
@@ -25,7 +26,7 @@ const { name, email, phone, description, img } = toRefs(props);
     </h5>
     <div class="flex flex-column sm:flex-column md:flex-row gap-3 text-left py-4">
       <div class="flex-inline sm:w-full md:w-6">
-        <img :alt="`${img}`" :src="img" class="img w-full" />
+        <img :alt="`${img}`" :src="img" class="img w-full" :class="imageClass" />
       </div>
       <div class="md:w-6 sm:w-full">
         <slot></slot>
