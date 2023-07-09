@@ -9,8 +9,6 @@ email: anna@motive8endurance.com
 image: /public/img/anna_profile.jpeg
 class: w-6 sm:w-full float-left px-4 py-2
 ---
-![]()
-
 <p>
 
 As a USAT certified coach, Training peaks Level II coach and multiple IM athlete, I create training plans that work around an athletes life. I believe hard work pays off but over-training is never the answer. I develop training plans that are unique to the athletes needs based on their current fitness level, past race experiences, lifestyle, race goals and injuries. Communication with my athletes is pivotal to their success so when they show up on the start line they know that their training has prepared them for race day.
