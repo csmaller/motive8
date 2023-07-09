@@ -4,7 +4,7 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 media_folder: public/img
-public_folder: public
+public_folder: public/img
 
 collections:
   - name: 'blog'
