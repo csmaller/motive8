@@ -11,13 +11,13 @@ class: w-6 sm:w-full float-left px-4 py-2
 ---
 ![]()
 
-<img src="/public/img/swimmers.png" title="swimmers" class="w-6 flex float-left sm:w-full p-4 sm:p-1" />
-
 <p>
 
 As a USAT certified coach, Training peaks Level II coach and multiple IM athlete, I create training plans that work around an athletes life. I believe hard work pays off but over-training is never the answer. I develop training plans that are unique to the athletes needs based on their current fitness level, past race experiences, lifestyle, race goals and injuries. Communication with my athletes is pivotal to their success so when they show up on the start line they know that their training has prepared them for race day.
 
 I work with athletes all over the US, from every economic and social background. I train athletes who are doing their very first sprint to Ironman World Championships. Each athlete is treated with the same care and detail that is needed for their personal goals!
+
+<img src="/public/img/swimmers.png" title="swimmers" class="w-6 flex float-left sm:w-full p-4 sm:p-1" />
 
 <h5 class="mt-3 mb-2 underline">Family Background</h5>
 
