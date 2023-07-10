@@ -1,13 +1,13 @@
 <template>
   <div class="feedback-form">
-    <form netlify netlify-honeypot name="motive8feedback" method="POST" action="/success">
+    <form netlify netlify-honeypot name="motive-feedback" method="POST" action="/success">
       <p class="hidden">
         <label>
           Don’t fill this out if you’re human:
           <input name="bot-field" />
         </label>
       </p>
-      <input type="hidden" name="form-name" value="motive8feedback" />
+      <input type="hidden" name="form-name" value="motive-feedback" />
       <label for="name">Name</label>
       <input id="name" type="text" name="name" />
       <label for="email">Email</label>
