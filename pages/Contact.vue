@@ -116,49 +116,24 @@ const doToast = () => {
 </script>
 
 <template>
-  <form
-    id="myForm"
-    name="m8EnduranceContact"
-    method="POST"
-    data-netlify="true"
-    class="flex flex-wrap w-full p-3 gap-3"
-    @submit.prevent="handleSubmit"
-  >
-    <div class="flex w-full">
-      <h3>Contact Us</h3>
-    </div>
-    <div class="w-full">
-      <input type="hidden" name="form-name" value="m8EnduranceContact" />
-      <div class="field flex flex-column">
-        <label for="name" class="required">Name</label>
-        <InputText id="name" v-model="v$.name.$model" name="name" class="w-6" />
-        <div v-for="error of v$.name.$errors" :key="error.$uid" class="input-errors">
-          <div class="p-error">{{ error.$message }}</div>
-        </div>
-      </div>
-
-      <div class="field flex flex-column">
-        <label for="email" class="required">Email</label>
-        <InputText id="email" v-model="v$.email.$model" name="email" class="w-6" />
-        <div v-for="error of v$.email.$errors" :key="error.$uid" class="input-errors">
-          <div class="p-error">{{ error.$message }}</div>
-        </div>
-      </div>
-      <div class="field flex flex-column">
-        <label for="message" class="required">message</label>
-        <textarea id="message" v-model="v$.message.$model" name="message" class="w-6"></textarea>
-        <div v-for="error of v$.message.$errors" :key="error.$uid" class="input-errors">
-          <div class="p-error">{{ error.$message }}</div>
-        </div>
-      </div>
-      <Button id="save_btn" type="submit" label="Send" :disabled="v$.$invalid" class="button" />
-    </div>
-  </form>
-  <!-- <form name="motive8EnduranceContact" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="motive8contact" />
-    <input name="contact" />
-    <button name="submit" type="submit">Submit</button>
-  </form> -->
+  <div class="feedback-form">
+    <form netlify netlify-honeypot name="motive8feedback" method="POST" action="/success">
+      <p class="hidden">
+        <label>
+          Don’t fill this out if you’re human:
+          <input name="bot-field" />
+        </label>
+      </p>
+      <input type="hidden" name="form-name" value="motive8feedback" />
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" />
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required />
+      <label for="feedback">Message</label>
+      <textarea id="feedback" wrap="soft" name="feedback" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </template>
 
 <style scoped lang="scss"></style>
