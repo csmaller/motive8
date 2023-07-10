@@ -61,7 +61,7 @@ const handleSubmit = async (e: Event) => {
     )
     .then((response) => {
       console.log(response);
-      if (!error.value) doToast();
+      doToast();
     })
     .catch((e: Error) => {
       console.log(e);
@@ -90,6 +90,7 @@ const encode = (data: FormInterface) => {
  * Display the toast message.
  */
 const doToast = () => {
+  console.log('tast');
   toast.add({
     severity: error.value ? 'error' : 'success',
     summary: error.value ? 'Error' : 'Sent',
