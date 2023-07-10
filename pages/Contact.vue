@@ -105,6 +105,7 @@ const doToast = () => {
     id="myForm"
     name="motive8EnduranceContact"
     method="post"
+    netlify
     data-netlify-honeypot="bot-field"
     class="flex flex-wrap w-full p-3 gap-3"
     @submit.prevent="handleSubmit"
