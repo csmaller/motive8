@@ -23,6 +23,7 @@ colorMode.preference = 'light';
       <footer class="flex w-full text-center justify-content-center align-items-center">
         <Address />
       </footer>
+      <Toast />
     </div>
   </div>
 </template>
