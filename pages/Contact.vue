@@ -104,7 +104,6 @@ const doToast = () => {
     id="myForm"
     name="motive8EnduranceContact"
     method="post"
-    data-netlify="true"
     data-netlify-honeypot="bot-field"
     class="flex flex-wrap w-full p-3 gap-3"
     @submit.prevent="handleSubmit"
@@ -113,6 +112,7 @@ const doToast = () => {
       <h3>Contact Us</h3>
     </div>
     <div class="w-full">
+      <input type="hidden" name="form-name" value="motive8EnduranceContact" />
       <div class="field flex flex-column">
         <label for="name" class="required">Name</label>
         <InputText id="name" v-model="v$.name.$model" name="name" class="w-6" />
