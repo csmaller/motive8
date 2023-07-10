@@ -43,32 +43,47 @@ const error = ref<boolean>(false);
 /**
  * handle submit. dont need a service layer for now
  */
-const handleSubmit = async (e: Event) => {
-  error.value = false;
-  const axiosConfig: AxiosRequestConfig = {
+// const handleSubmit = async (e: Event) => {
+//   error.value = false;
+//   const axiosConfig: AxiosRequestConfig = {
+//     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+//   };
+//   error.value = false;
+//   try {
+//     await axios
+//       .post(
+//         location.href,
+//         encode({
+//           'form-name': e.target.getAttribute('name'),
+//           ...form.value,
+//         }),
+//         axiosConfig,
+//       )
+//       .then((response) => {
+//         doToast();
+//       })
+//       .catch((e: Error) => {
+//         error.value = true;
+//         doToast();
+//       });
+//   } catch (er) {
+//     alert(er);
+//   }
+// };
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch('/', {
+    method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  };
-  error.value = false;
-  try {
-    await axios
-      .post(
-        location.href,
-        encode({
-          'form-name': e.target.getAttribute('name'),
-          ...form.value,
-        }),
-        axiosConfig,
-      )
-      .then((response) => {
-        doToast();
-      })
-      .catch((e: Error) => {
-        error.value = true;
-        doToast();
-      });
-  } catch (er) {
-    alert(er);
-  }
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => doToast())
+    .catch((error) => alert(error));
 };
 
 /**
@@ -104,9 +119,8 @@ const doToast = () => {
   <form
     id="myForm"
     name="m8EnduranceContact"
-    method="post"
-    netlify
-    data-netlify-honeypot="bot-field"
+    method="POST"
+    data-netlify="true"
     class="flex flex-wrap w-full p-3 gap-3"
     @submit.prevent="handleSubmit"
   >
