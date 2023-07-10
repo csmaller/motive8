@@ -102,7 +102,7 @@ const doToast = () => {
 <template>
   <form
     id="myForm"
-    name="motive8contact"
+    name="motive8EnduranceContact"
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
@@ -138,6 +138,11 @@ const doToast = () => {
       <Button id="save_btn" type="submit" label="Send" :disabled="v$.$invalid" class="button" />
     </div>
   </form>
+  <!-- <form name="motive8EnduranceContact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="motive8contact" />
+    <input name="contact" />
+    <button name="submit" type="submit">Submit</button>
+  </form> -->
 </template>
 
 <style scoped lang="scss"></style>
