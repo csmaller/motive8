@@ -115,30 +115,25 @@ const doToast = () => {
 };
 </script>
 <template>
-    <div class="feedback-form">
-      <form
-        netlify
-        netlify-honeypot
-        name="m8mfeedback"
-        method="POST"
-        action="/success"
-      >
-        <p class="hidden">
-          <label>
-            Don’t fill this out if you’re human: <input name="bot-field" />
-          </label>
-        </p>
-        <input type="hidden" name="form-name" value="m8feedback" />
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" />
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required />
-        <label for="feedback">What is your feedback?</label>
-        <textarea id="feedback" wrap="soft" name="feedback" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </template>
+  <div class="feedback-form">
+    <form netlify netlify-honeypot name="m8mfeedback" method="POST" action="/success">
+      <p class="hidden">
+        <label>
+          Don’t fill this out if you’re human:
+          <input name="bot-field" />
+        </label>
+      </p>
+      <input type="hidden" name="form-name" value="m8feedback" />
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" />
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required />
+      <label for="feedback">What is your feedback?</label>
+      <textarea id="feedback" wrap="soft" name="feedback" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</template>
 <!-- <template>
   <form
     id="myForm"
@@ -182,7 +177,7 @@ const doToast = () => {
     <input type="hidden" name="form-name" value="motive8contact" />
     <input name="contact" />
     <button name="submit" type="submit">Submit</button>
-  </form> -->
+  </form> 
 </template>
 
 <style scoped lang="scss"></style> -->
