@@ -1,10 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex flex-wrap gap-3 align-items-center">
-    <RouterLink to="/" v-text="`Home`" />
-    <RouterLink to="/about" v-text="`About`" />
-    <RouterLink to="/contact" v-text="`Contact Us`" />
+  <div class="flex flex-wrap gap-3 align-items-end">
+    <NuxtLink to="/">Home</NuxtLink>
+    <NuxtLink to="/about">About</NuxtLink>
+    <NuxtLink to="/contact">Contact</NuxtLink>
   </div>
 </template>
 

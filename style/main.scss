@@ -1,5 +1,7 @@
 
-@import 'colors';
+@import 'themes';
+@import 'primevue';
+
 
 .max-width {
     width: 100%;
@@ -31,4 +33,32 @@ h3{
 
 h5{
     margin: 16px 0 8px;
+}
+
+a{
+    color: var(--color-primary);
+
+    &:hover{
+        color: var(--color-secondary);
+    }
+
+    &:active{
+        color: orange;
+    }
+}
+
+button, [type='button'], [type='reset'], [type='submit'] {
+    background-color: var(--color-primary);
+}
+
+textarea{
+    border:1px solid var(--border-color);
+    border-radius:3px;
+
+    &:enabled:focus {
+        outline: 0 none;
+        outline-offset: 0;
+        box-shadow: 0 0 0 0.2rem #a6d5fa;
+        border-color: #2196F3;
+    }
 }
