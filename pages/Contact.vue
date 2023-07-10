@@ -48,27 +48,27 @@ const handleSubmit = async (e: Event) => {
   const axiosConfig: AxiosRequestConfig = {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
   };
-  doToast();
   error.value = false;
-  await axios
-    .post(
-      location.href,
-      encode({
-        'form-name': e.target.getAttribute('name'),
-        ...form.value,
-      }),
-      axiosConfig,
-    )
-    .then((response) => {
-      console.log(response);
-      doToast();
-    })
-    .catch((e: Error) => {
-      console.log(e);
-      error.value = true;
-      doToast();
-    });
-  console.log('error??');
+  try {
+    await axios
+      .post(
+        location.href,
+        encode({
+          'form-name': e.target.getAttribute('name'),
+          ...form.value,
+        }),
+        axiosConfig,
+      )
+      .then((response) => {
+        doToast();
+      })
+      .catch((e: Error) => {
+        error.value = true;
+        doToast();
+      });
+  } catch (er) {
+    alert(er);
+  }
 };
 
 /**
@@ -99,39 +99,52 @@ const doToast = () => {
   });
 };
 </script>
+
 <template>
-  <form name="contactMotive8" method="POST" data-netlify="true">
-    <p>
-      <label>
-        Your Name:
-        <input type="text" name="name" />
-      </label>
-    </p>
-    <p>
-      <label>
-        Your Email:
-        <input type="email" name="email" />
-      </label>
-    </p>
-    <p>
-      <label>
-        Your Role:
-        <select name="role[]" multiple>
-          <option value="leader">Leader</option>
-          <option value="follower">Follower</option>
-        </select>
-      </label>
-    </p>
-    <p>
-      <label>
-        Message:
-        <textarea name="message"></textarea>
-      </label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
+  <form
+    id="myForm"
+    name="m8EnduranceContact"
+    method="post"
+    netlify
+    data-netlify-honeypot="bot-field"
+    class="flex flex-wrap w-full p-3 gap-3"
+    @submit.prevent="handleSubmit"
+  >
+    <div class="flex w-full">
+      <h3>Contact Us</h3>
+    </div>
+    <div class="w-full">
+      <input type="hidden" name="form-name" value="m8EnduranceContact" />
+      <div class="field flex flex-column">
+        <label for="name" class="required">Name</label>
+        <InputText id="name" v-model="v$.name.$model" name="name" class="w-6" />
+        <div v-for="error of v$.name.$errors" :key="error.$uid" class="input-errors">
+          <div class="p-error">{{ error.$message }}</div>
+        </div>
+      </div>
+
+      <div class="field flex flex-column">
+        <label for="email" class="required">Email</label>
+        <InputText id="email" v-model="v$.email.$model" name="email" class="w-6" />
+        <div v-for="error of v$.email.$errors" :key="error.$uid" class="input-errors">
+          <div class="p-error">{{ error.$message }}</div>
+        </div>
+      </div>
+      <div class="field flex flex-column">
+        <label for="message" class="required">message</label>
+        <textarea id="message" v-model="v$.message.$model" name="message" class="w-6"></textarea>
+        <div v-for="error of v$.message.$errors" :key="error.$uid" class="input-errors">
+          <div class="p-error">{{ error.$message }}</div>
+        </div>
+      </div>
+      <Button id="save_btn" type="submit" label="Send" :disabled="v$.$invalid" class="button" />
+    </div>
   </form>
+  <!-- <form name="motive8EnduranceContact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="motive8contact" />
+    <input name="contact" />
+    <button name="submit" type="submit">Submit</button>
+  </form> -->
 </template>
 
 <style scoped lang="scss"></style>
