@@ -15,7 +15,7 @@
 
 <style scoped lang="scss">
 .main-img {
-  background-image: url(img/swimmers.png);
+  background-image: url(/img/swimmers.png);
   height: 670px;
   background-size: cover;
   background-repeat: no-repeat;

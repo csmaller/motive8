@@ -48,7 +48,7 @@ const handleSubmit = async (e: Event) => {
   const axiosConfig: AxiosRequestConfig = {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
   };
-
+  doToast();
   error.value = false;
   await axios
     .post(
@@ -60,12 +60,15 @@ const handleSubmit = async (e: Event) => {
       axiosConfig,
     )
     .then((response) => {
+      console.log(response);
       if (!error.value) doToast();
     })
     .catch((e: Error) => {
+      console.log(e);
       error.value = true;
       doToast();
     });
+  console.log('error??');
 };
 
 /**
