@@ -97,19 +97,19 @@ const doToast = () => {
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    class="flex w-6 p-0 text-center justify-content-center newsletter"
+    class="flex w-full p-0 text-center justify-content-center newsletter"
     @submit.prevent="handleSubmit"
   >
-    <div class="w-full flex flex-row justify-content-center align-items-center gap-3">
+    <div class="w-6 flex flex-row justify-content-center align-items-center gap-3">
       <input type="hidden" name="form-name" value="motive8Newsletter" />
       <div><a href="https://www.facebook.com/Motive8endurance/?ref=bookmarks" class="fa fa-facebook"></a></div>
       <div class="field w-7 flex flex-column gap-3 pt-4">
         <InputText
           id="email"
           v-model="v$.email.$model"
-          placeholder="enter your email to join our mailing list for updates on our opening"
+          placeholder="enter your email to join our mailing list"
           name="email"
-          class="w-full"
+          class="w-full newsletter-input"
         />
         <input type="hidden" name="sign-up" value="newsletter-sign-up!" />
         <div v-for="error of v$.email.$errors" :key="error.$uid" class="input-errors">
@@ -119,7 +119,7 @@ const doToast = () => {
         <Button
           id="save_btn"
           type="submit"
-          label="Keep me updated"
+          label="Sign Up"
           :disabled="v$.$invalid"
           class="button newsletter-btn w-full"
         />
@@ -134,9 +134,17 @@ const doToast = () => {
 <style scoped lang="scss">
 .newsletter {
   margin-top: 300px;
+
+  .newsletter-input,
+  .newsletter-btn {
+    height: 28px;
+    padding: 4px;
+    font-size: 12px;
+    margin: 0;
+  }
   .newsletter-btn {
     color: white;
-    background-color: #342921;
+    background-color: #55acee;
 
     &:hover {
       background-color: #ccc3ad;

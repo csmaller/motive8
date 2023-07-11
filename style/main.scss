@@ -37,6 +37,7 @@ h5{
 
 a{
     color: var(--color-primary);
+    cursor:pointer;
 
     &:hover{
         color: var(--color-secondary);
@@ -49,6 +50,7 @@ a{
 
 button, [type='button'], [type='reset'], [type='submit'] {
     background-color: var(--color-primary);
+    cursor:pointer;
 }
 
 textarea{
@@ -62,3 +64,51 @@ textarea{
         border-color: #2196F3;
     }
 }
+
+
+.error {
+    input {
+      border-color: red;
+    }
+  
+    .error-msg {
+      color: red;
+      font-size: 11px;
+      padding: 3px;
+    }
+  }
+  
+  .p-error {
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  
+  /* Style all font awesome icons */
+  .fa {
+    padding: 10px;
+    font-size: 30px !important;
+    width: 50px;
+    height:50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-instagram{
+    background: #55ACEE;
+    color: white;
+  }
+  
