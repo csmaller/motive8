@@ -85,7 +85,7 @@ const doToast = () => {
     severity: error.value ? 'error' : 'success',
     summary: error.value ? 'Error' : 'Sent',
     detail: error.value ? 'There was an error. Please try again' : 'Thank you! Your info has been sent over ',
-    life: 300000,
+    life: 3000,
   });
 };
 </script>
