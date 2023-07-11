@@ -13,7 +13,7 @@ As a USAT certified coach, Training peaks Level II coach and multiple IM athlete
 
 I work with athletes all over the US, from every economic and social background. I train athletes who are doing their very first sprint to Ironman World Championships. Each athlete is treated with the same care and detail that is needed for their personal goals!
 
-<img src="public/img/swimmers.png" title="test" class="p-4 float-right lg:w-6 sm:w-full" />
+<img src="/img/swimmers.png" title="swimmers" class="sm:w-full lg:w-6 float-right p-4" />
 
 ##### **Family Background**
 
