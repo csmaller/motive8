@@ -98,7 +98,7 @@ const doToast = () => {
     method="POST"
     netlify
     netlify-honeypot
-    class="flex flex-wrap w-full p-3 gap-3"
+    class="flex flex-wrap sm:w-full lg:w-6 p-3 gap-3"
     @submit.prevent="handleSubmit"
   >
     <div class="flex w-full">
@@ -108,21 +108,21 @@ const doToast = () => {
       <input type="hidden" name="form-name" value="m8EnduranceContact" />
       <div class="field flex flex-column">
         <label for="name" class="required">Name</label>
-        <InputText id="name" v-model="v$.name.$model" name="name" class="w-6" />
+        <InputText id="name" v-model="v$.name.$model" name="name" />
         <div v-for="error of v$.name.$errors" :key="error.$uid" class="input-errors">
           <div class="p-error">{{ error.$message }}</div>
         </div>
       </div>
       <div class="field flex flex-column">
         <label for="email" class="required">Email</label>
-        <InputText id="email" v-model="v$.email.$model" name="email" class="w-6" />
+        <InputText id="email" v-model="v$.email.$model" name="email" />
         <div v-for="error of v$.email.$errors" :key="error.$uid" class="input-errors">
           <div class="p-error">{{ error.$message }}</div>
         </div>
       </div>
       <div class="field flex flex-column">
         <label for="message" class="required">message</label>
-        <textarea id="message" v-model="v$.message.$model" name="message" class="w-6"></textarea>
+        <textarea id="message" v-model="v$.message.$model" name="message"></textarea>
         <div v-for="error of v$.message.$errors" :key="error.$uid" class="input-errors">
           <div class="p-error">{{ error.$message }}</div>
         </div>
