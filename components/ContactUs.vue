@@ -39,6 +39,10 @@ const v$ = useVuelidate(rules, form);
  */
 const error = ref<boolean>(false);
 
+const resetForm = () => {
+  form.value = { ...defaultForm };
+};
+
 const handleSubmit = (event) => {
   event.preventDefault();
   error.value = false;
@@ -50,7 +54,10 @@ const handleSubmit = (event) => {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => doToast())
+    .then(() => {
+      doToast();
+      resetForm();
+    })
     .catch((error) => {
       error.value = true;
       doToast();

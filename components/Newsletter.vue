@@ -55,11 +55,16 @@ const handleSubmit = async (e: Event) => {
     )
     .then((response) => {
       if (!error.value) doToast();
+      resetForm();
     })
     .catch((e: Error) => {
       error.value = true;
       doToast();
     });
+};
+
+const resetForm = () => {
+  form.value = { ...defaultForm };
 };
 
 /**
