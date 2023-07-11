@@ -133,8 +133,6 @@ const doToast = () => {
 
 <style scoped lang="scss">
 .newsletter {
-  margin-top: 300px;
-
   .newsletter-input,
   .newsletter-btn {
     height: 28px;
