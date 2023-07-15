@@ -3,6 +3,10 @@
 @import 'primevue';
 
 
+.header{
+  border-bottom:2px solid var(--color-primary);
+  padding-bottom:0;
+}
 .max-width {
     width: 100%;
     max-width: 1440px;

@@ -1,22 +1,26 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="w-4 px-4">
-    <h1 class="text-center underline pb-4">Welcome</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+  <div class="flex flex-column p-0">
+    <div class="flex flex-wrap w-full px-4 justify-content-center">
+      <h1 class="text-center underline pb-2">Mission</h1>
+      <Mission />
+    </div>
+    <div class="parent">
+      <div class="flex w-12 p-0 main-img"></div>
+    </div>
   </div>
-  <div class="flex w-8 main-img"></div>
 </template>
 
 <style scoped lang="scss">
+.parent {
+  -webkit-mask-image: linear-gradient(to top, rgb(0, 0, 0) 85%, transparent 100%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 85%, transparent 100%);
+}
+
 .main-img {
-  background-image: url(/img/swimmers.png);
-  height: 670px;
+  background-image: url(/img/sandhollow.jpeg);
+  min-height: 670px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
