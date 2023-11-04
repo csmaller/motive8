@@ -1,9 +1,7 @@
 ---
-title: 'news'
+title: news
 id: 1
-description: 'here is a description'
+date: 2023-11-04T00:22:40.581Z
+description: here is a description
 ---
-
-# Blog page
-
-### You can go back to the [home page](/).
+# Here is some news.  we can put this all down the side or wherever we want
