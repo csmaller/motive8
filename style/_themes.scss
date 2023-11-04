@@ -3,17 +3,21 @@
     --color: #243746;
     --color-primary: #3978c0;
     --color-secondary: #ecca52;
-    --bg: #f3f5f4;
-    --bg-secondary: #fff;
+    --bg: #000000;
+    --bg-secondary: #31341b;
     --border-color: #ced4da;
+    --btn-nav:#ffffff;
 
   }
   
   .dark-mode {
     --color: #ebf4f1;
+    --btn-nav:#ffffff;
+    --btn-hover:#ecca51;
+    --border-radius: 50%;
     --color-primary: #41b38a;
     --color-secondary: #fdf9f3;
-    --bg: #280910;
+    --bg: #000000;
     --bg-secondary: #071521;
     --border-color: #0d2538;
   }

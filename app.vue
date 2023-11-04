@@ -7,7 +7,7 @@ useHead({
 });
 
 const colorMode = useColorMode();
-colorMode.preference = 'light';
+colorMode.preference = 'dark';
 </script>
 <template>
   <div id="default-layout">

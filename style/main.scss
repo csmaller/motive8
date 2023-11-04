@@ -3,116 +3,122 @@
 @import 'primevue';
 
 
-.header{
-  border-bottom:2px solid var(--color-primary);
-  padding-bottom:0;
-}
-.max-width {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 -10px;
+#default-layout{
+  background-color: var(--bg);
+
+  .header{
+    border-bottom:2px solid var(--color);
+    padding-bottom:0;
   }
 
-.float-left {
-    float:left !important;
-}
+  .max-width {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 -10px;
+  }
 
-.float-right {
-    float:right !important;
-}
+  .float-left {
+      float:left !important;
+  }
 
-h1{
-    font-size:32px;
-    font-weight: bold;
-}
-h2{
-    font-size:24px;
-    font-weight:bold;
-}
+  .float-right {
+      float:right !important;
+  }
 
-h3{
-    font-size:18.72px;
-    font-weight:700;
-}
+  h1 {
+      font-size:32px;
+      font-weight: bold;
+  }
 
-h5{
-    margin: 16px 0 8px;
-}
+  h2 {
+      font-size:24px;
+      font-weight:bold;
+  }
 
-a{
-    color: var(--color-primary);
-    cursor:pointer;
+  h3 {
+      font-size:18.72px;
+      font-weight:700;
+  }
 
-    &:hover{
-        color: var(--color-secondary);
+  h5 {
+      margin: 16px 0 8px;
+  }
+
+  a {
+      color: var(--btn-nav);
+      cursor:pointer;
+
+      &:hover{
+          color: var(--btn-hover);
+      }
+
+      &:active{
+          color: orange;
+      }
+  }
+
+  button, [type='button'], [type='reset'], [type='submit'] {
+      background-color: var(--color-primary);
+      cursor:pointer;
+  }
+
+  textarea {
+      border:1px solid var(--border-color);
+      border-radius:3px;
+
+      &:enabled:focus {
+          outline: 0 none;
+          outline-offset: 0;
+          box-shadow: 0 0 0 0.2rem #a6d5fa;
+          border-color: #2196F3;
+      }
+  }
+
+
+  .error {
+      input {
+        border-color: red;
+      }
+    
+      .error-msg {
+        color: red;
+        font-size: 11px;
+        padding: 3px;
+      }
     }
-
-    &:active{
-        color: orange;
+    
+    .p-error {
+      font-size: 12px;
+      margin-top: 2px;
     }
+    
+    /* Style all font awesome icons */
+    .fa {
+      padding: 10px;
+      font-size: 30px !important;
+      width: 50px;
+      height:50px;
+      text-align: center;
+      text-decoration: none;
+    }
+    
+    /* Add a hover effect if you want */
+    .fa:hover {
+      opacity: 0.7;
+    }
+    
+    /* Set a specific color for each brand */
+    
+    /* Facebook */
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    /* Twitter */
+    .fa-instagram{
+      background: #55ACEE;
+      color: white;
+    }
+  
 }
-
-button, [type='button'], [type='reset'], [type='submit'] {
-    background-color: var(--color-primary);
-    cursor:pointer;
-}
-
-textarea{
-    border:1px solid var(--border-color);
-    border-radius:3px;
-
-    &:enabled:focus {
-        outline: 0 none;
-        outline-offset: 0;
-        box-shadow: 0 0 0 0.2rem #a6d5fa;
-        border-color: #2196F3;
-    }
-}
-
-
-.error {
-    input {
-      border-color: red;
-    }
-  
-    .error-msg {
-      color: red;
-      font-size: 11px;
-      padding: 3px;
-    }
-  }
-  
-  .p-error {
-    font-size: 12px;
-    margin-top: 2px;
-  }
-  
-  /* Style all font awesome icons */
-  .fa {
-    padding: 10px;
-    font-size: 30px !important;
-    width: 50px;
-    height:50px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
-    opacity: 0.7;
-  }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  /* Twitter */
-  .fa-instagram{
-    background: #55ACEE;
-    color: white;
-  }
-  

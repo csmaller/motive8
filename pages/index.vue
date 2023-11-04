@@ -5,6 +5,7 @@
     <div class="flex flex-wrap w-full px-4 justify-content-center">
       <h1 class="text-center underline pb-2">Mission</h1>
       <Mission />
+      <News />
     </div>
     <div class="parent">
       <div class="flex w-12 p-0 main-img"></div>
