@@ -6,9 +6,9 @@ const { data: equalQuery } = await useAsyncData('equal', () => {
 
 <template>
   <div>
-    <div v-if="equalQuery" class="mission w-full p-3 mb-4 font-bold text-center">
+    <h2 v-if="equalQuery" class="mission w-full p-3 mb-4 text-center">
       <ContentRenderer :value="equalQuery" />
-    </div>
+    </h2>
   </div>
 </template>
 <style scoped lang="scss">

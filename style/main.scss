@@ -5,10 +5,15 @@
 
 #default-layout{
   background-color: var(--bg);
+  color: var(--text-color);
 
   .header{
-    border-bottom:2px solid var(--color);
+    border-bottom:2px solid var(--text-color);
     padding-bottom:0;
+  }
+  #main-content{
+    margin-bottom:120px;
+
   }
 
   .max-width {
@@ -112,13 +117,18 @@
     /* Facebook */
     .fa-facebook {
       background: #3B5998;
-      color: white;
+      color: var(--text-color);
     }
     
     /* Twitter */
     .fa-instagram{
       background: #55ACEE;
-      color: white;
+      color: var(--text-color);
+    }
+
+    footer{
+      background-color:var(--bg-secondary);
+      color: var(--text-dark);
     }
   
 }

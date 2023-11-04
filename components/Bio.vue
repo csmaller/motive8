@@ -16,7 +16,7 @@ const props = defineProps<PropsInterface>();
 const { person } = toRefs(props);
 </script>
 <template>
-  <div>
+  <div class="mt-5">
     <h1 class="sm:w-full">{{ person.name }}</h1>
     <h4 v-if="person.description">{{ person.description }}</h4>
     <h5 v-if="person.email" class="flex flex-column">

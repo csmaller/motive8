@@ -14,8 +14,9 @@ colorMode.preference = 'dark';
     <div id="main-container" class="mt-0">
       <div id="main-container-scroll" class="flex flex-column overflow-auto">
         <div class="header flex flex-wrap md:gap-5 sm:gap-5 align-items-center justify-content-start p-2 pl-4">
-          <img src="/img/m8logo.png" class="logo m-0" />
-          <Nav class="w-9" />
+          <a href="/"><img src="/img/m8logo.png" class="logo m-0" /></a>
+          <Nav class="w-8" />
+          <SocialMedia class="flex justify-self-end" />
         </div>
         <div id="main-content">
           <div class="flex w-full md:p-4 p-1">
@@ -23,7 +24,7 @@ colorMode.preference = 'dark';
           </div>
         </div>
       </div>
-      <footer class="flex flex-column w-full text-center justify-content-center align-items-start">
+      <footer class="flex flex-column w-full text-center justify-content-center align-items-start mt-6">
         <Newsletter />
         <Address />
       </footer>
