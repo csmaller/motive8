@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex flex-wrap sm:gap-5 md:gap-3 align-items-end md:w-9 sm:w-8">
+  <div class="inline-flex sm:gap-5 gap-3 align-items-end sm:w-4 lg:w-7">
     <NuxtLink to="/">Home</NuxtLink>
     <NuxtLink to="/about">About</NuxtLink>
     <NuxtLink to="/contact">Contact</NuxtLink>

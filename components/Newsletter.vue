@@ -102,17 +102,17 @@ const doToast = () => {
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    class="flex w-full p-0 text-center justify-content-center newsletter"
+    class="flex flex-column p-0 text-center justify-content-center newsletter"
     @submit.prevent="handleSubmit"
   >
-    <div class="w-6 flex flex-row justify-content-center align-items-center gap-3">
+    <div class="flex flex-row justify-content-center align-items-center gap-3">
       <input type="hidden" name="form-name" value="motive8Newsletter" />
-      <div><a href="https://www.facebook.com/Motive8endurance/?ref=bookmarks" class="fa fa-facebook"></a></div>
-      <div class="field w-7 flex flex-column gap-3 pt-4">
+      <div class="flex flex-column gap-3 pt-4">
+        <h5>Enter your email to join our mailing list</h5>
         <InputText
           id="email"
           v-model="v$.email.$model"
-          placeholder="enter your email to join our mailing list"
+          placeholder="email"
           name="email"
           class="w-full newsletter-input"
         />
@@ -128,9 +128,6 @@ const doToast = () => {
           :disabled="v$.$invalid"
           class="button newsletter-btn w-full"
         />
-      </div>
-      <div>
-        <a href="https://www.instagram.com/motive8endurance" class="fa fa-instagram"></a>
       </div>
     </div>
   </form>

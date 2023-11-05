@@ -13,18 +13,19 @@ colorMode.preference = 'dark';
   <div id="default-layout">
     <div id="main-container" class="mt-0">
       <div id="main-container-scroll" class="flex flex-column overflow-auto">
-        <div class="header flex flex-wrap md:gap-5 sm:gap-5 align-items-center justify-content-start p-2 pl-4">
+        <div class="header flex flex-wrap gap-3 align-items-center justify-content-between sm:px-6 p-3 pl-4">
           <a href="/"><img src="/img/m8logo.png" class="logo m-0" /></a>
-          <Nav class="w-8" />
-          <SocialMedia class="flex justify-self-end" />
+          <Nav />
+          <SocialMedia class="hidden md:flex" />
         </div>
-        <div id="main-content">
+        <div id="main-content px-6">
           <div class="flex w-full md:p-4 p-1">
             <NuxtPage />
           </div>
         </div>
       </div>
-      <footer class="flex flex-column w-full text-center justify-content-center align-items-start mt-6">
+      <footer class="flex flex-wrap w-full text-center justify-content-center gap-6 align-items-center mt-6 px-6">
+        <SocialMedia class="pt-4" />
         <Newsletter />
         <Address />
       </footer>

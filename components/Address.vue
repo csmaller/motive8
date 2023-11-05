@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="w-full flex flex-wrap justify-content-center pb-6">
+  <div class="w-full flex flex-wrap justify-content-center py-6">
     <small>
       <div class="line">1962 E Meadow Downs Way</div>
       <div class="line">Salt Lake City, UT 84121</div>
