@@ -132,4 +132,8 @@ const doToast = () => {
   </form>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+textarea {
+  color: black;
+}
+</style>
