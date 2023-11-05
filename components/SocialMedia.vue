@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-2">
+  <div class="gap-2 hidden md:flex">
     <a
       href="https://www.facebook.com/Motive8endurance/?ref=bookmarks"
       class="fa fa-facebook border-round"
