@@ -6,8 +6,9 @@
       <Mission />
       <!-- <News /> -->
     </div>
-    <div class="parent">
-      <div class="flex w-12 p-0 main-img"></div>
+    <div class="justify-content-center align-content-center flex w-full px-6">
+      <!-- <div class="flex w-12 p-0 main-img"></div> -->
+      <ImageCarousel />
     </div>
   </div>
 </template>

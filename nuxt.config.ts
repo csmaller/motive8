@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   plugins: ['~/plugins/preview.client.js'],
-  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/color-mode', 'vue3-carousel-nuxt'],
   build: {
     transpile: ['primevue'],
   },

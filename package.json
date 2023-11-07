@@ -17,8 +17,8 @@
     "nuxt": "^3.5.2"
   },
   "dependencies": {
-    "@nuxt/image": "^1.0.0-rc.1",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
+    "@nuxt/image": "^1.0.0-rc.1",
     "@nuxt/ui": "^0.4.1",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.3",
@@ -33,6 +33,8 @@
     "primevue": "^3.29.2",
     "sass": "^1.63.6",
     "vue": "^3.3.4",
+    "vue3-carousel": "^0.3.1",
+    "vue3-carousel-nuxt": "^1.1.0",
     "vuelidate": "^0.7.7"
   }
 }
