@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { toRefs, computed } from 'vue';
+import { toRefs } from 'vue';
 
 interface PersonInterface {
   name: string;
@@ -26,7 +26,7 @@ const { person } = toRefs(props);
     <Bio :person="person" class="flex flex-column" />
     <div class="flex flex-column sm:flex-column lg:flex-row">
       <div class="w-full px-4 text-center">
-        <ContentRenderer :value="person" />
+        <ContentRendererMarkdown :value="person" />
       </div>
     </div>
   </div>

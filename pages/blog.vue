@@ -42,7 +42,7 @@ const { data: inQuery } = await useAsyncData('in', () => {
       <ul v-if="equalQuery">
         <li v-for="movie in equalQuery" :key="movie.id">
           title: {{ movie.title }}--- description: {{ movie.description }}
-          <ContentRenderer :value="movie" />
+          ContentRenderedMod:value="movie" />
         </li>
       </ul>
     </section>
