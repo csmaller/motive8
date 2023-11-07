@@ -40,7 +40,7 @@ const currentSlide = ref(0);
     animation-timing-function: ease-in-out;
 
     @media (max-width: 600px) {
-      min-height: 320px;
+      min-height: 270px;
     }
   }
 
