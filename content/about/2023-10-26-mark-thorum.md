@@ -6,7 +6,7 @@ name: Mark Thorum
 phone: (801) 706-3377
 email: mark@motive8endurance.com
 image: /img/mark_headshot.png
-class: '""'
+class: w-full px-4 py-2
 ---
 
 Coach Mark has been involved with triathlon since 2005. He grew up swimming in Utah and went on to play water polo for the University of Utah. Mark’s coaching career was influenced by his father, a very successful swim coach.

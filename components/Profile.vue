@@ -20,15 +20,13 @@ const { person } = toRefs(props);
 
 <template>
   <div class="profile flex flex-wrap justify-content-center align-content-start text-center pt-3">
-    <div class="flex flex-wrap w-full justify-content-center">
+    <div class="img-container flex flex-wrap w-full justify-content-center">
       <img v-if="person.image" :alt="`${person.image}`" :src="person.image" class="img border-round" />
     </div>
     <Bio :person="person" class="flex flex-column" />
-    <div class="flex flex-column sm:flex-column md:flex-row">
-      <div class="w-full px-4">
-        <div class="p-3 pt-4">
-          <ContentRenderer :value="person" />
-        </div>
+    <div class="flex flex-column sm:flex-column lg:flex-row">
+      <div class="w-full px-4 text-center">
+        <ContentRenderer :value="person" />
       </div>
     </div>
   </div>
@@ -36,11 +34,20 @@ const { person } = toRefs(props);
 
 <style scoped lang="scss">
 .profile {
-  max-width: 50%;
-  .img {
-    object-fit: contain;
-    width: 200px;
-    height: 200px;
+  max-width: 40%;
+  .img-container {
+    .img {
+      object-fit: contain;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    max-width: 100%;
+  }
+  @media (max-width: 1000px) {
+    font-size: 12px;
   }
 }
 </style>

@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  ssr: true,
   plugins: ['~/plugins/preview.client.js'],
   modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/color-mode', 'vue3-carousel-nuxt'],
   build: {
