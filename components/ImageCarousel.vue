@@ -38,6 +38,10 @@ const currentSlide = ref(0);
     animation: fadeIn 2s;
     border-radius: 6px;
     animation-timing-function: ease-in-out;
+
+    @media (max-width: 600px) {
+      min-height: 320px;
+    }
   }
 
   :deep(.carousel__prev) {
