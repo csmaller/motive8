@@ -19,7 +19,7 @@
 }
 
 .main-img {
-  background-image: url(/img/sandhollow.jpeg);
+  background-image: url(/img/main_page_bg1.png);
   min-height: 670px;
   background-size: cover;
   background-repeat: no-repeat;
