@@ -20,9 +20,33 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
   - name: 'about'
     label: 'About'
     folder: 'content/about'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Featured Image',
+          name: 'image',
+          widget: 'image',
+          required: false,
+        }
+      - {
+          label: 'Image Class',
+          name: 'class',
+          widget: 'string',
+          reqiured: false,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'coaches'
+    label: 'Coaches'
+    folder: 'content/coaches'
     format: 'frontmatter'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
