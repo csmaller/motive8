@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: missionQuery } = await useAsyncData('mission', () => {
-  return queryContent('/blog').where({ title: 'mission-statement' }).findOne();
+  return queryContent('/mission').where({ title: 'mission-statement' }).findOne();
 });
 </script>
 

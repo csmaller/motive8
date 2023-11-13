@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: aboutQuery } = await useAsyncData('about', () => {
-  return queryContent('/about').find();
+  return queryContent('/about').where({ title: 'about-us' }).findOne();
 });
 </script>
 
