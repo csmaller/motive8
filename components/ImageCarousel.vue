@@ -65,15 +65,6 @@ const currentSlide = ref(0);
   }
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .carousel__viewport {
   perspective: 700px;
 }
