@@ -6,9 +6,10 @@ const { data: classesQuery } = await useAsyncData('classes', () => {
 
 <template>
   <div>
-    <h2 v-if="classesQuery" class="classes w-full p-3 mb-4 text-center">
+    <h2>Classes</h2>
+    <div v-if="classesQuery" class="classes w-full p-3 mb-4 text-center">
       <ContentRendererMarkdown :value="classesQuery" />
-    </h2>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
