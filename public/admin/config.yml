@@ -44,6 +44,17 @@ collections:
           reqiured: false,
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'mission'
+    label: 'Mission'
+    folder: 'content/mission'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'coaches'
     label: 'Coaches'
     folder: 'content/coaches'
