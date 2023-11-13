@@ -38,12 +38,6 @@ collections:
           widget: 'image',
           required: false,
         }
-      - {
-          label: 'Image Class',
-          name: 'class',
-          widget: 'string',
-          reqiured: false,
-        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'mission'
     label: 'Mission'
