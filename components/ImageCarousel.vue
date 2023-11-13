@@ -9,9 +9,8 @@ const currentSlide = ref(0);
       v-model="currentSlide"
       :items-to-show="1"
       :wrap-around="true"
-      :transition="800"
+      :transition="500"
       :autoplay="4000"
-      :pause-autoplay-on-hover="true"
       class="carousel sm:w-full"
     >
       <template #slides>
