@@ -3,6 +3,6 @@ title: classes
 date: 2023-11-13T02:53:35.227Z
 class: w-full
 ---
-<div><span>Mark</span>2023-11-14T00:00:06.658Z &nbsp; 2023-11-14T02:00:00.000Z</div>
+<div><span><b>Anna</b></span> &nbsp; 11/13/2023, 5:00:06 PM</div>
 
-<div><span>Anna</span>2023-11-14T00:01:35.887Z &nbsp; 2023-11-14T00:00:35.899Z</div>
+<div><span><b>Mark</b></span> &nbsp; 11/13/2023, 7:20:47 AM</div>
