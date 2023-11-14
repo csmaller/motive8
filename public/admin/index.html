@@ -61,13 +61,8 @@
         fields: [
           {
             name: 'title',
-            label: 'Title',
+            label: 'Coach',
             widget: 'string',
-          },
-          {
-            name: 'date',
-            label: 'Date',
-            widget: 'date',
           },
           {
             name: 'time',
@@ -75,7 +70,7 @@
             widget: 'datetime',
           },
         ],
-        pattern: /^<title>$\s*?<date>(.*?)<\/date>\n\n(.*?)\n^$\s*?<time>(.*?)<\/time>\n\n(.*?)\n^<\/title>$/ms,
+        pattern: /^<title>$\s*?\n\n(.*?)\n^$\s*?<time>(.*?)<\/time>\n\n(.*?)\n^<\/title>$/ms,
         fromBlock: function (match) {
           return {
             title: match[1],
@@ -83,10 +78,14 @@
           };
         },
         toBlock: function (obj) {
-          return `<div><span>${obj.title}</span>${obj.date} &nbsp; ${obj.time}</div>`;
+          return `<div><span><b>${obj.title}</b></span> &nbsp; ${new Date(obj.time).toLocaleString('en-US', {
+            timeZone: 'America/Denver',
+          })}</div>`;
         },
         toPreview: function (obj) {
-          return `<div><span>${obj.title}</span>${obj.date} &nbsp; ${obj.time}</div>`;
+          return `<div><span><b>${obj.title}</b></span> &nbsp; ${new Date(obj.time).toLocaleString('en-US', {
+            timeZone: 'America/Denver',
+          })}</div>`;
         },
       });
     </script>
