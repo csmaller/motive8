@@ -67,6 +67,10 @@
       }
   }
 
+  .router-link-active{
+    color: var(--color-primary);
+  }
+
   button, [type='button'], [type='reset'], [type='submit'] {
       background-color: var(--color-primary);
       cursor:pointer;

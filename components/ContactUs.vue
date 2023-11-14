@@ -138,4 +138,7 @@ const doToast = () => {
 textarea {
   color: black;
 }
+h2 {
+  color: var(--primary-50);
+}
 </style>
