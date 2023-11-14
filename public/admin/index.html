@@ -78,14 +78,20 @@
           };
         },
         toBlock: function (obj) {
-          return `<div><span><b>${obj.title}</b></span> &nbsp; ${new Date(obj.time).toLocaleString('en-US', {
-            timeZone: 'America/Denver',
-          })}</div>`;
+          return `<div class="classes"><span><b>${obj.title}</b></span> &nbsp; ${new Date(obj.time).toLocaleString(
+            'en-US',
+            {
+              timeZone: 'America/Denver',
+            },
+          )}</div>`;
         },
         toPreview: function (obj) {
-          return `<div><span><b>${obj.title}</b></span> &nbsp; ${new Date(obj.time).toLocaleString('en-US', {
-            timeZone: 'America/Denver',
-          })}</div>`;
+          return `<div class="classes"><span><b>${obj.title}</b></span> &nbsp; ${new Date(obj.time).toLocaleString(
+            'en-US',
+            {
+              timeZone: 'America/Denver',
+            },
+          )}</div>`;
         },
       });
     </script>
