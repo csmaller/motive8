@@ -3,6 +3,16 @@ title: classes
 date: 2023-11-13T02:53:35.227Z
 class: w-full
 ---
-<div><span><b>Anna</b></span> &nbsp; 11/13/2023, 5:00:06 PM</div>
+## Anna
 
-<div><span><b>Mark</b></span> &nbsp; 11/13/2023, 7:20:47 AM</div>
+Tuesdays and Thursdays 5:30pm (75 minutes)
+
+
+
+## Mark
+
+Mondays and Wednesdays 6:00am  (75 minutes)
+
+
+
+Saturdays: 7am. (90 minutes)
