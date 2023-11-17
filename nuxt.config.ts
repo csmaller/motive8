@@ -1,6 +1,11 @@
 export default {
   devtools: { enabled: true },
-  ssr: true,
+  ssr: false,
+  content: {
+    experimental: {
+      clientDB: true,
+    },
+  },
   plugins: ['~/plugins/preview.client.js'],
 
   buildModules: ['@nuxtjs/google-analytics'],
