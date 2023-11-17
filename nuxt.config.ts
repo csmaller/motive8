@@ -1,7 +1,10 @@
-export default defineNuxtConfig({
+export default {
   devtools: { enabled: true },
   ssr: true,
   plugins: ['~/plugins/preview.client.js'],
+
+  buildModules: ['@nuxtjs/google-analytics'],
+
   modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/color-mode', 'vue3-carousel-nuxt'],
   build: {
     transpile: ['primevue'],
@@ -16,6 +19,15 @@ export default defineNuxtConfig({
     classSuffix: '-mode',
     storageKey: 'nuxt-color-mode',
   },
+  googleAnalytics: {
+    id: 'G-RBN4YPXE48',
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID,
+    },
+    gtagId: 'G-RBN4YPXE48',
+  },
   css: ['primevue/resources/themes/saga-blue/theme.css', 'primevue/resources/primevue.css', 'primeflex/primeflex.css'],
   vite: {
     css: {
@@ -26,4 +38,4 @@ export default defineNuxtConfig({
       },
     },
   },
-});
+};

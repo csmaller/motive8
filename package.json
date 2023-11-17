@@ -14,13 +14,14 @@
     "@nuxtjs/color-mode": "^3.3.0",
     "@types/node": "^18",
     "netlify-cli": "^15.6.0",
-    "nuxt": "^3.5.2",
+    "nuxt": "^3.8.1",
     "vue-stripe-js": "^1.0.1"
   },
   "dependencies": {
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxt/ui": "^0.4.1",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.3",
     "@vuelidate/core": "^2.0.3",
