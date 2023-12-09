@@ -12,14 +12,10 @@ colorMode.preference = 'dark';
 <template>
   <div id="default-layout">
     <div id="main-container" class="mt-0">
-      <div id="main-container-scroll" class="flex flex-column overflow-auto">
-        <div class="header flex flex-wrap gap-3 align-items-center justify-content-between sm:px-6 p-3 pl-4">
-          <a href="/"><img src="/img/m8logo.png" class="logo m-0" /></a>
-          <Nav />
-          <SocialMedia class="hidden md:flex" />
-        </div>
-        <div id="main-content px-6">
-          <div class="flex w-full md:p-4 p-1">
+      <div id="main-container-scroll" class="flex flex-column">
+        <Header />
+        <div id="main-content">
+          <div class="flex w-full">
             <NuxtPage />
           </div>
         </div>
