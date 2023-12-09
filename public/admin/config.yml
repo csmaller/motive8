@@ -106,7 +106,13 @@ collections:
           label: 'Background Color',
           name: 'background_color',
           widget: 'select',
-          options: ['transparent', 'white', 'blue', 'yellow'],
+          options:
+            [
+              { label: 'Transparent', value: 'transparent' },
+              { label: 'White', value: 'rgba(255,255,255, .8)' },
+              { label: 'Blue', value: 'rgba(57, 121, 192, 0.8)' },
+              { label: 'Yellow', value: 'rgba(236, 202, 81, 0.8)' },
+            ],
         }
       - { label: 'Payment Link', name: 'link', widget: 'string' }
       - {
