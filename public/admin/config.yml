@@ -114,6 +114,7 @@ collections:
           name: 'class',
           widget: 'string',
           reqiured: false,
+          default: 'img',
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'classes'

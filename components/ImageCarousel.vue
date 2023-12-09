@@ -10,7 +10,7 @@ const currentSlide = ref(0);
       :items-to-show="1"
       :wrap-around="true"
       :transition="500"
-      :autoplay="4000"
+      :autoplay="4000000"
       class="carousel sm:w-full"
     >
       <template #slides>
@@ -66,7 +66,7 @@ const currentSlide = ref(0);
 }
 
 .carousel__viewport {
-  perspective: 700px;
+  perspective: 100vw;
 }
 
 .carousel__slide--sliding {
