@@ -1,11 +1,50 @@
 <script lang="ts" setup>
 const images = ['7.jpeg', '12.jpeg', '2.jpeg', '6.jpeg', '10.jpeg', '11.jpeg', '9.jpeg', '8.jpeg'];
 const currentSlide = ref(0);
+const responsiveOptions = ref([
+  {
+    breakpoint: '1400px',
+    numVisible: 1,
+    numScroll: 1,
+  },
+  {
+    breakpoint: '1199px',
+    numVisible: 1,
+    numScroll: 1,
+  },
+  {
+    breakpoint: '767px',
+    numVisible: 1,
+    numScroll: 1,
+  },
+  {
+    breakpoint: '575px',
+    numVisible: 1,
+    numScroll: 1,
+  },
+]);
 </script>
 
 <template>
   <div class="container">
     <Carousel
+      :showNavigators="false"
+      :value="images"
+      :numVisible="1"
+      :numScroll="1"
+      verticalViewPortHeight="300"
+      :circular="true"
+      :autoplayInterval="3000"
+      :responsiveOptions="responsiveOptions"
+    >
+      <template #item="slotProps">
+        <div class="w-screen">
+          <img :src="`/img/slider/${slotProps.data}`" class="w-screen" />
+        </div>
+      </template>
+    </Carousel>
+
+    <!-- <PrimevueCarousel
       v-model="currentSlide"
       :items-to-show="1"
       :wrap-around="true"
@@ -22,13 +61,14 @@ const currentSlide = ref(0);
         <Navigation />
         <Pagination />
       </template>
-    </Carousel>
+    </PrimevueCarousel> -->
   </div>
 </template>
 
 <style lang="scss" scoped>
 .container {
   overflow: hidden;
+  max-width: 100vw;
 
   .carousel__item {
     min-height: 700px;

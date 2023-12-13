@@ -10,7 +10,7 @@ export default {
 
   buildModules: ['@nuxtjs/google-analytics'],
 
-  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/color-mode', 'vue3-carousel-nuxt'],
+  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/color-mode'],
   build: {
     transpile: ['primevue'],
   },
