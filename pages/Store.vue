@@ -3,14 +3,12 @@ const { data: programsQuery } = await useAsyncData('programs', () => queryConten
 </script>
 
 <template>
-  <div v-for="item in programsQuery" :key="item.url">
-    <Program
-      :item="item"
-      :image="item.image"
-      :link="item.link"
-      :name="item.name"
-      :background-color="item.background_color"
-    />
+  <div
+    v-for="item in programsQuery"
+    :key="item.url"
+    class="flex flex-wrap w-full p-4 mb-4 justify-content-evenly lg:gap-5"
+  >
+    <Program :item="item" :background-color="item.background_color" />
   </div>
 </template>
 

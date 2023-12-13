@@ -5,41 +5,50 @@ interface ItemInterface {}
 
 interface PropsInterface {
   backgroundColor?: string;
-  blurb: ParsedContent;
-  name: string;
-  image: string;
-  link: string;
+  item: ParsedContent;
 }
 
 const props = withDefaults(defineProps<PropsInterface>(), {
   backgroundColor: 'rgba(255,255,255,.8)',
 });
-const { backgroundColor, image, name, blurb, link } = toRefs(props);
+const { item } = toRefs(props);
 </script>
 
 <template>
   <div
-    class="program flex flex-wrap justify-content-center align-content-start text-center pt-3"
-    v-bind:style="{ backgroundColor }"
+    class="program border-round-md bg-white flex flex-wrap justify-content-center align-content-start text-center p-0"
   >
-    <a :href="link" target="_blank">Click here</a>
-    <h1>{{ name }}</h1>
-    <div class="img-container flex flex-wrap w-full justify-content-center">
-      <img v-if="image" :alt="`${image}`" :src="image" class="img border-round" />
+    <div class="head p-0 w-full" v-bind:style="{ backgroundColor }">
+      <h1>{{ item.name }}</h1>
+      <ContentRendererMarkdown :value="item" />
+      <div class="img-container flex flex-wrap w-full justify-content-center">
+        <img v-if="item.image" :alt="`${item.image}`" :src="item.image" class="img border-round" />
+      </div>
     </div>
-    <ContentRendererMarkdown :value="blurb" />
+    <div class="justify-content-center h-full w-full align-content-end">
+      <a :href="item.link" target="_blank" class="p-button font-bold">Get Started</a>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .program {
   max-width: 40%;
+  min-height: 500px;
+
+  a {
+    background-color: rgba(57, 121, 192);
+  }
   .img-container {
     .img {
       object-fit: contain;
       width: 200px;
       height: 200px;
     }
+  }
+
+  a {
+    height: 40px;
   }
 }
 </style>
