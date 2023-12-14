@@ -20,7 +20,7 @@ const { item } = toRefs(props);
       <LazyProseH3>{{ item.name }}</LazyProseH3>
       <ContentRendererMarkdown :value="item" />
       <div class="img-container flex flex-wrap w-full justify-content-center">
-        <img v-if="item.image" :alt="`${item.image}`" :src="item.image" class="img border-round" />
+        <img v-if="item.image" :alt="`${item.image}`" :src="item.image" class="w-full" />
       </div>
     </div>
     <div class="justify-content-center w-full align-content-end">
