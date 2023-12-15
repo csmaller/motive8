@@ -16,7 +16,7 @@ const { item } = toRefs(props);
 
 <template>
   <div
-    class="program border-round-md bg-white flex flex-wrap justify-content-center text-center p-0"
+    class="program border-round-md flex flex-wrap justify-content-center text-center p-0"
     v-bind:style="{ backgroundColor }"
   >
     <div class="head p-1 pt-4 w-full">
