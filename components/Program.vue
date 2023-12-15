@@ -15,8 +15,11 @@ const { item } = toRefs(props);
 </script>
 
 <template>
-  <div class="program border-round-md bg-white flex flex-wrap justify-content-center text-center p-0">
-    <div class="head p-1 pt-4 w-full" v-bind:style="{ backgroundColor }">
+  <div
+    class="program border-round-md bg-white flex flex-wrap justify-content-center text-center p-0"
+    v-bind:style="{ backgroundColor }"
+  >
+    <div class="head p-1 pt-4 w-full">
       <LazyProseH3>{{ item.name }}</LazyProseH3>
       <ContentRendererMarkdown :value="item" />
       <div class="img-container flex flex-wrap w-full justify-content-center">
