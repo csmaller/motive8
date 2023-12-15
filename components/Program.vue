@@ -35,6 +35,7 @@ const { item } = toRefs(props);
 <style scoped lang="scss">
 .program {
   max-width: 40%;
+  min-width: 300px;
   height: 500px;
   .head {
     height: 80%;
