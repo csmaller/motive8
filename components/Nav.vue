@@ -3,7 +3,8 @@
     <NuxtLink to="/">Home</NuxtLink>
     <!-- <NuxtLink to="/about">About</NuxtLink> -->
     <NuxtLink to="/coaches">Coaches</NuxtLink>
-    <NuxtLink to="/classes">Power Program</NuxtLink>
+    <NuxtLink to="/store">Programs</NuxtLink>
+    <NuxtLink to="/classes">Schedule</NuxtLink>
     <NuxtLink to="/contact">Contact</NuxtLink>
   </div>
 </template>
