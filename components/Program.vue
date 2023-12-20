@@ -16,17 +16,21 @@ const { item } = toRefs(props);
 
 <template>
   <div
-    class="program border-round-md flex flex-wrap justify-content-center text-center p-0"
+    class="program border-round-md flex align-content-between flex-wrap justify-content-center text-center p-0"
     v-bind:style="{ backgroundColor }"
   >
-    <div class="head p-1 pt-4 w-full">
-      <LazyProseH3>{{ item.name }}</LazyProseH3>
-      <ContentRendererMarkdown :value="item" />
-      <div class="img-container flex flex-wrap w-full justify-content-center">
-        <img v-if="item.image" :alt="`${item.image}`" :src="item.image" class="w-full" />
+    <div class="head p-1 pt-4 w-full inline">
+      <LazyProseH2>{{ item.name }}</LazyProseH2>
+      <div class="blurb px-3 py-4">
+        <ContentRendererMarkdown :value="item" />
       </div>
     </div>
-    <div class="justify-content-center w-full align-content-end">
+
+    <div class="img-container flex flex-wrap w-full justify-content-center">
+      <img v-if="item.image" :alt="`${item.image}`" :src="item.image" class="w-full" />
+    </div>
+
+    <div class="justify-content-center w-full align-content-end mb-3">
       <a :href="item.link" target="_blank" class="p-button font-bold">Get Started</a>
     </div>
   </div>
@@ -36,14 +40,22 @@ const { item } = toRefs(props);
 .program {
   max-width: 40%;
   min-width: 300px;
-  height: 500px;
+  min-height: 600px;
   .head {
-    height: 80%;
+    max-height: 40%;
+    height: 40%;
+
+    .blurb {
+      font-size: 12px;
+    }
   }
   a {
     background-color: rgba(57, 121, 192);
   }
   .img-container {
+    height: 40%;
+    max-height: 40%;
+    align-content: end;
     .img {
       object-fit: contain;
       width: 200px;
