@@ -26,8 +26,8 @@ const { item } = toRefs(props);
       </div>
     </div>
 
-    <div class="img-container flex flex-wrap w-full justify-content-center">
-      <img v-if="item.image" :alt="`${item.image}`" :src="item.image" class="w-full" />
+    <div class="img-container flex flex-wrap w-full justify-content-center align-content-end">
+      <img v-if="item.image" :alt="`${item.image}`" :src="item.image" />
     </div>
 
     <div class="justify-content-center w-full align-content-end mb-3">
@@ -55,11 +55,9 @@ const { item } = toRefs(props);
   .img-container {
     height: 40%;
     max-height: 40%;
-    align-content: end;
-    .img {
-      object-fit: contain;
-      width: 200px;
-      height: 200px;
+    overflow: hidden;
+    img {
+      height: 300px;
     }
   }
 
