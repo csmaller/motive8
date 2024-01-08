@@ -8,7 +8,7 @@ const { data: programsQuery } = await useAsyncData('programs', () => queryConten
     :key="item.url"
     class="flex flex-wrap w-full p-4 mb-4 justify-content-evenly lg:gap-5"
   >
-    <Program :item="item" :background-color="item.background_color" />
+    <StoreItem :item="item" :background-color="item.background_color" />
   </div>
 </template>
 

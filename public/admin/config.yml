@@ -128,6 +128,44 @@ collections:
           default: 'img',
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'merchandise'
+    label: 'Merchandise'
+    folder: 'content/store'
+    format: 'frontmatter'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - { label: 'URL', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - {
+          label: 'Featured Image',
+          name: 'image',
+          widget: 'image',
+          required: false,
+        }
+      - {
+          label: 'Background Color',
+          name: 'background_color',
+          widget: 'select',
+          options:
+            [
+              { label: 'White', value: 'rgba(255,255,255, .8)' },
+              { label: 'Blue', value: 'rgba(57, 121, 192, 0.8)' },
+              { label: 'Yellow', value: 'rgba(236, 202, 81, 0.8)' },
+            ],
+        }
+      - { label: 'Payment Link', name: 'link', widget: 'string' }
+      - {
+          label: 'Image Class',
+          name: 'class',
+          widget: 'string',
+          reqiured: false,
+          default: 'img',
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'classes'
     label: 'Classes'
     folder: 'content/classes'
