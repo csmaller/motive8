@@ -55,9 +55,8 @@ const { item } = toRefs(props);
     background-color: rgba(57, 121, 192);
   }
   .img-container {
-    height: 40%;
-    max-height: 40%;
-    overflow: hidden;
+    height: 50%;
+    max-height: 60%;
     img {
       height: 300px;
     }
