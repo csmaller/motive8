@@ -17,6 +17,12 @@ collections:
       preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Featured Image',
+          name: 'image',
+          widget: 'image',
+          required: false,
+        }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -108,7 +114,6 @@ collections:
           widget: 'select',
           options:
             [
-              { label: 'Transparent', value: 'transparent' },
               { label: 'White', value: 'rgba(255,255,255, .8)' },
               { label: 'Blue', value: 'rgba(57, 121, 192, 0.8)' },
               { label: 'Yellow', value: 'rgba(236, 202, 81, 0.8)' },
