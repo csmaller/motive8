@@ -6,10 +6,12 @@ interface ItemInterface {}
 interface PropsInterface {
   backgroundColor?: string;
   item: ParsedContent;
+  buttonName: string;
 }
 
 const props = withDefaults(defineProps<PropsInterface>(), {
   backgroundColor: 'rgba(255,255,255,.8)',
+  buttonName: 'Get Started',
 });
 const { item } = toRefs(props);
 </script>
@@ -31,7 +33,7 @@ const { item } = toRefs(props);
     </div>
 
     <div class="justify-content-center w-full align-content-end mb-3">
-      <a :href="item.link" target="_blank" class="p-button font-bold">Get Started</a>
+      <a :href="item.link" target="_blank" class="p-button font-bold">{{ buttonName }}</a>
     </div>
   </div>
 </template>
