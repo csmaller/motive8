@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-const images = ['swim.JPG', '7.jpeg', '12.jpeg', '2.jpeg', '6.jpeg', '10.jpeg', '11.jpeg', '9.jpeg', '8.jpeg'];
+import images from 'public/json/images.json';
+
 const currentSlide = ref(0);
 const responsiveOptions = ref([
   {
@@ -29,17 +30,17 @@ const responsiveOptions = ref([
   <div class="container">
     <Carousel
       :showNavigators="false"
-      :value="images"
+      :value="images.images"
       :numVisible="1"
       :numScroll="1"
       verticalViewPortHeight="300"
       :circular="true"
-      :autoplayInterval="3000"
+      :autoplayInterval="5000"
       :responsiveOptions="responsiveOptions"
     >
       <template #item="slotProps">
         <div class="w-screen">
-          <img :src="`/img/slider/${slotProps.data}`" class="w-screen" />
+          <img :src="`${slotProps.data.image}`" class="w-screen" />
         </div>
       </template>
     </Carousel>
