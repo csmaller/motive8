@@ -168,10 +168,19 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'images'
-    label: 'Image Slider'
-    widget: 'list'
-    summary: “{{fields.image}}”
-    field: { label: “Image”, name: “image”, widget: “image” }
+    extension: 'json'
+
+    files:
+      - file: 'img/images.json'
+        label: 'Image Slider'
+        name: 'imageList'
+        fields:
+          - name: songs
+            label: songs
+            widget: list
+            summary: “{{fields.image}}”
+            fields:
+              - { label: “Image”, name: “image”, widget: “image” }
 
   - name: 'classes'
     label: 'Classes'
