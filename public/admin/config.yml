@@ -175,12 +175,12 @@ collections:
         label: 'Image Slider'
         name: 'imageList'
         fields:
-          - name: songs
-            label: songs
+          - name: images
+            label: images
             widget: list
             summary: “{{fields.image}}”
             fields:
-              - { label: “Image”, name: “image”, widget: “image” }
+              - { label: “Image”, name: image, widget: image }
 
   - name: 'classes'
     label: 'Classes'
