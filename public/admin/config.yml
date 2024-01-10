@@ -166,18 +166,13 @@ collections:
           default: 'img',
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
   - name: 'images'
     label: 'Image Slider'
-    extension: 'json'
+    widget: 'list'
+    summary: “{{fields.image}}”
+    field: { label: “Image”, name: “image”, widget: “image” }
 
-    files:
-      - file: 'img/slider/images.json'
-        label: 'Images'
-        name: 'imageSlider'
-        fields:
-          - name: 'slider-image'
-            label: 'Slider Image'
-            widget: 'image'
   - name: 'classes'
     label: 'Classes'
     folder: 'content/classes'
