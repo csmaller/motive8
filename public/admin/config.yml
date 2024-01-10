@@ -171,7 +171,7 @@ collections:
     extension: 'json'
     label: 'Image Slider'
     files:
-      - file: 'img/images.json'
+      - file: 'public/json/images.json'
         label: 'Image Slider'
         name: 'imageList'
         fields:
