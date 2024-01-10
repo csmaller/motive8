@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const images = ['7.jpeg', '12.jpeg', '2.jpeg', '6.jpeg', '10.jpeg', '11.jpeg', '9.jpeg', '8.jpeg'];
+const images = ['swim.JPG', '7.jpeg', '12.jpeg', '2.jpeg', '6.jpeg', '10.jpeg', '11.jpeg', '9.jpeg', '8.jpeg'];
 const currentSlide = ref(0);
 const responsiveOptions = ref([
   {
