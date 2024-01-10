@@ -176,7 +176,7 @@ collections:
         name: 'imageList'
         fields:
           - name: songs
-          - label: songs
+            label: songs
             widget: list
             summary: “{{fields.image}}”
             fields:
