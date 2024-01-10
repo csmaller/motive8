@@ -1,10 +1,16 @@
 {
   "images": [
     {
+      "image": "/img/swim.JPG"
+    },
+    {
       "image": "/img/1000006429.jpg"
     },
     {
       "image": "/img/20231030_102758.jpg"
+    },
+    {
+      "image": "/img/main_page_bg1.png"
     }
   ]
 }
