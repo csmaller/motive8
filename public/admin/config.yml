@@ -169,14 +169,14 @@ collections:
 
   - name: 'images'
     extension: 'json'
-
+    label: 'Image Slider'
     files:
       - file: 'img/images.json'
         label: 'Image Slider'
         name: 'imageList'
         fields:
           - name: songs
-            label: songs
+          - label: songs
             widget: list
             summary: “{{fields.image}}”
             fields:
