@@ -10,17 +10,13 @@ interface PropsInterface {
 }
 
 const props = withDefaults(defineProps<PropsInterface>(), {
-  backgroundColor: 'rgba(255,255,255,.8)',
   buttonName: 'Get Started',
 });
 const { item } = toRefs(props);
 </script>
 
 <template>
-  <div
-    class="program border-round-md flex align-content-between flex-wrap justify-content-center text-center p-0"
-    v-bind:style="{ backgroundColor }"
-  >
+  <div class="program border-round-md w-full align-content-between text-center p-0 m-3 mt-4 px-3">
     <div class="head p-1 pt-4 w-full inline">
       <LazyProseH2>{{ item.name }}</LazyProseH2>
       <div class="blurb px-3 py-4">
@@ -32,7 +28,7 @@ const { item } = toRefs(props);
       <img v-if="item.image" :alt="`${item.image}`" :src="item.image" />
     </div>
 
-    <div class="justify-content-center w-full align-content-end mb-3">
+    <div class="justify-content-center w-full align-content-end mt-2">
       <a :href="item.link" target="_blank" class="p-button font-bold">{{ buttonName }}</a>
     </div>
   </div>
@@ -40,9 +36,19 @@ const { item } = toRefs(props);
 
 <style scoped lang="scss">
 .program {
-  max-width: 40%;
+  background-color: rgba(57, 121, 192, 0.8);
   min-width: 300px;
   min-height: 600px;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  // @media screen and (max-width: 1200px) and (min-width: 601px) {
+  //   max-width: 300px;
+  // }
   .head {
     max-height: 40%;
     height: 40%;

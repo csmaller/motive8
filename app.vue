@@ -15,16 +15,12 @@ colorMode.preference = 'dark';
       <div id="main-container-scroll" class="flex flex-column">
         <Header />
         <div id="main-content">
-          <div class="flex w-full">
+          <div class="flex flex-wrap w-full">
             <NuxtPage />
           </div>
         </div>
       </div>
-      <footer class="flex flex-wrap w-full text-center justify-content-center gap-6 align-items-center mt-6 px-6">
-        <SocialMedia class="pt-4" />
-        <Newsletter />
-        <Address />
-      </footer>
+      <!-- <Footer /> -->
       <Toast />
     </div>
   </div>

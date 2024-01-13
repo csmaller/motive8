@@ -2,6 +2,7 @@
   <div class="header flex flex-wrap gap-3 align-items-center justify-content-between sm:px-6 p-3 pl-4">
     <a href="/"><img src="/img/m8logo.png" class="logo m-0" /></a>
     <Nav />
+    <Hamburger />
     <SocialMedia class="hidden md:flex" />
   </div>
 </template>
