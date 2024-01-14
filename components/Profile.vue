@@ -36,14 +36,6 @@ const { person } = toRefs(props);
 .profile {
   max-width: 40%;
 
-  @media (max-width: 600px) {
-    font-size: 16px;
-
-    a {
-      font-size: 16px;
-    }
-  }
-
   .img-container {
     .img {
       object-fit: contain;
@@ -51,12 +43,18 @@ const { person } = toRefs(props);
       height: 200px;
     }
   }
+
+  @media (max-width: 1000px) {
+    font-size: 12px;
+  }
   @media (max-width: 600px) {
     width: 100%;
     max-width: 100%;
-  }
-  @media (max-width: 1000px) {
-    font-size: 12px;
+    font-size: 16px;
+
+    a {
+      font-size: 16px;
+    }
   }
 }
 </style>
