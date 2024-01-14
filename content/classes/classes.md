@@ -5,14 +5,14 @@ class: w-full
 ---
 ## [Anna](coaches)
 
-Tuesdays and Thursdays 5:30pm (75 minutes)
+Tuesdays and Thursdays 5:30pm
 
 ## [Mark](coaches)
 
-Mondays and Wednesdays 6:00am  (75 minutes)
+Mondays and Wednesdays 6:00am  
 
-Saturdays: 7am. (90 minutes)
+Saturdays: 7am. 
 
 ## [Womens Ride](/store)
 
-Fridays - 6:00am (75 minutes)
+Fridays - 6:00am
