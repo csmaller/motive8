@@ -6,7 +6,7 @@ const { data: classesQuery } = await useAsyncData('classes', () => {
 
 <template>
   <div class="w-full justify-content-center">
-    <div class="header text-center border-none justify-content-center">
+    <div class="text-center border-none justify-content-center">
       <div class="w-full justify-content-center flex">
         <NuxtLink to="/store" class="btn px-3 py-2 mt-4 no-underline">Get Started</NuxtLink>
       </div>

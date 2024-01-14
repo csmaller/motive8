@@ -44,6 +44,7 @@ const { item } = toRefs(props);
     max-width: 100%;
     margin-left: 5px;
     margin-right: 5px;
+    font-size: 16px;
   }
 
   // @media screen and (max-width: 1200px) and (min-width: 601px) {
