@@ -30,7 +30,14 @@ collections:
           reqiured: false,
         }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Event Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - {
+          label: 'Payment Link',
+          name: 'link',
+          widget: 'string',
+          required: false,
+        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'about'

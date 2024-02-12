@@ -27,10 +27,7 @@ const { item } = toRefs(props);
     <div class="img-container flex flex-wrap w-full justify-content-center align-content-end">
       <img v-if="item.image" :alt="`${item.image}`" :src="item.image" />
     </div>
-
-    <div class="justify-content-center w-full align-content-end mt-2">
-      <a :href="item.link" target="_blank" class="p-button font-bold">{{ buttonName }}</a>
-    </div>
+    <PurchaseButton :link="item.link" :name="buttonName" />
   </div>
 </template>
 
@@ -67,10 +64,6 @@ const { item } = toRefs(props);
     img {
       height: 300px;
     }
-  }
-
-  a {
-    height: 40px;
   }
 }
 </style>
