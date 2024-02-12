@@ -27,6 +27,7 @@ collections:
           label: 'Image Class',
           name: 'class',
           widget: 'string',
+          default: 'img',
           reqiured: false,
         }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
