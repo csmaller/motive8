@@ -1,5 +1,5 @@
 ---
-title: events
+title: Dexa Open House
 id: 1
 image: /img/make-the-most-of-this-race-season-2.png
 class: w-full
