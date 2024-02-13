@@ -10,7 +10,7 @@ link: adfasfas fasf asf asfsafs
 ---
 
 
-#### **Camp Itinerary**
+#### Camp Itinerary
 
 * Thursday evening we will start with an introductory session. It will provide an opportunity for us to get to know each other and explore the camp schedule in detail.
 * Friday we will kick off the day with a stoke development and conditioning swim session, followed by a multi-brick bike/run session that will focus on strength and endurance.
