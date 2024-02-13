@@ -8,7 +8,7 @@ description: Come a train in beautiful sunny St George!     Cost in only $249
   (Does not included travel, food or lodging)
 link: adfasfas fasf asf asfsafs
 ---
-<img src="/img/biker.jpeg" title="cyclist" class="w-4 flex" />
+
 
 #### **Camp Itinerary**
 
