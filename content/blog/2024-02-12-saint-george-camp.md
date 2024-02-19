@@ -4,7 +4,7 @@ image: /img/swimmers-2.jpeg
 class: img
 date: 2024-02-12T22:57:05.508Z
 event_date: 2024-03-21T22:00:05.516Z
-description: Come a train in beautiful sunny St George!     Cost in only $249
+description: Come an trdain in beautiful sunny St George!     Cost is only $249
   (Does not included travel, food or lodging)
 link: https://buy.stripe.com/7sI15hcQl4iH6bu5ks
 ---
