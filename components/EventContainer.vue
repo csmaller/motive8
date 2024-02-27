@@ -62,9 +62,8 @@ const toggleExpand = () => {
   }
 
   @media (max-width: 720px) {
-    height: 700px;
-    max-height: 700px !important;
-    overflow-y: auto;
+    height: auto;
+    max-height: inherit;
 
     .toggle-button {
       visibility: hidden;
