@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { prettyDate, prettyTime } from '@/utils';
-import type { TreeExpandedKeys } from 'primevue/tree';
-
 interface Props {
   event: any;
 }
@@ -34,14 +31,15 @@ const toggleExpand = () => {
       </div>
       <div class="payment flex flex-column col-12 sm:col-12 lg:col-3 align-items-center gap-3 my-6">
         <PurchaseButton :link="event.link" name="Sign Up" />
-        <Button class="p-button" @click="toggleExpand">More Info</Button>
+        <Button class="p-button toggle-button" @click="toggleExpand">More Info</Button>
       </div>
       <div class="content flex align-content-center justify-content-center col-12 p-4 border-1">
         <div class="main-content flex flex-column">
+          <h2 class="itinerary w-full text-center hidden sm:block lg:hidden mb-3">ITINERARY</h2>
           <ContentRendererMarkdown :value="event" />
           <div class="payment flex flex-column align-items-center gap-3 my-6">
             <PurchaseButton :link="event.link" name="Sign Up" />
-            <Button class="p-button" @click="toggleExpand">Close</Button>
+            <Button class="p-button toggle-button" @click="toggleExpand">Close</Button>
           </div>
         </div>
       </div>
@@ -59,9 +57,36 @@ const toggleExpand = () => {
   overflow: hidden;
   color: black;
 
+  .toggle-buton {
+    visibility: inherit;
+  }
+
+  @media (max-width: 720px) {
+    height: 700px;
+    max-height: 700px !important;
+    overflow-y: auto;
+
+    .toggle-button {
+      visibility: hidden;
+    }
+
+    .content {
+      border: none;
+
+      .itinerary {
+        display: block !important;
+      }
+    }
+  }
+
   img {
     width: 200px;
     height: 200px;
+
+    @media (max-width: 720px) {
+      width: 100%;
+      height: auto;
+    }
   }
   .main-content {
     :deep(p) {

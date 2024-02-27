@@ -6,7 +6,7 @@
         <small class="flex w-full justify-content-center px-3">Date Of Event:{{ prettyDate(doc.event_date) }}</small>
         <small>Time Start: {{ prettyTime(doc.event_date) }}</small>
 
-        <div class="img-container">
+        <div class="img-container ">
           <img v-if="doc.image" :alt="`${doc.description}`" :src="doc.image" :class="doc.class" class="flex w-full" />
         </div>
         <ContentRendererMarkdown :value="doc" />

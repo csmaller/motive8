@@ -5,9 +5,7 @@ const { data: blogQuery } = await useAsyncData('blog', () => {
   return queryContent('/blog').sort({ date: -1 }).find();
 });
 
-const prettyDate = (date: string) => {
-  return new Date(date).toLocaleDateString('en-us');
-};
+
 </script>
 
 <template>
