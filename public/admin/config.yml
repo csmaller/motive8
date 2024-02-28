@@ -22,41 +22,34 @@ collections:
             fields:
               - { name: title }
               - {
-                  label: 'Single Event',
+                  label: 'Event',
                   name: date,
                   widget: datetime,
                   required: false,
                 }
-
+              - {
+                  label: 'Is Reoccuring Event?',
+                  name: 'reoccuring',
+                  widget: 'boolean',
+                  default: false,
+                }
+              - {
+                  label: 'Is All Day Event?',
+                  name: 'all_day',
+                  widget: 'boolean',
+                  default: false,
+                }
               - { name: description }
+
               - {
-                  label: 'Reoccuring Days Of Week (select for reoccuring events)',
-                  name: 'days_of_week',
-                  required: false,
-                  widget: 'select',
-                  multiple: true,
-                  options:
-                    [
-                      { label: 'Sunday', value: '0' },
-                      { label: 'Monday', value: '1' },
-                      { label: 'Tues', value: '2' },
-                      { label: 'Wed', value: '3' },
-                      { label: 'Thur', value: '4' },
-                      { label: 'Fri', value: '5' },
-                      { label: 'Sat', value: '6' },
-                    ],
-                }
-              - {
-                  label: 'Reoccuring Event Start (only for reoccuring events)',
+                  label: 'Event Start Date/Time',
                   name: event_start_time,
-                  widget: time,
-                  required: false,
+                  widget: datetime,
                 }
               - {
-                  label: 'Reoccuring Event End (only for reoccuring events)',
-                  name: event_start_end,
-                  widget: time,
-                  required: false,
+                  label: 'Event End Date/Time',
+                  name: event_end_time,
+                  widget: datetime,
                 }
 
   - name: 'blog'

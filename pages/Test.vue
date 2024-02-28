@@ -31,20 +31,13 @@
       </ParallaxContainer>
     </section>
 
-    <section class="App__example">
-      <ParallaxContainer class="App__example-double-element my-6" :background-img="`/img/slider/2.jpeg`">
-        <!-- <ParallaxImage :width="400" :height="225" :factor="0.8" class="">
-          <img src="/img/barn-night-cropped.png" :style="{ width: '400px', height: '225px' }" />
-        </ParallaxImage> -->
-        <ParallaxElement :factor="0.5" class="App__example-element w-full justify-content-center align-content-center">
-          <AboutUs />
-        </ParallaxElement>
-      </ParallaxContainer>
-    </section>
+    <EventsCalendar />
   </div>
 </template>
 
-<script></script>
+<script>
+import EventsCalendar from '~/components/EventsCalendar.vue';
+</script>
 
 <style lang="scss">
 // ...
