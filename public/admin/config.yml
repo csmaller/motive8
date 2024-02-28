@@ -27,18 +27,7 @@ collections:
                   widget: datetime,
                   required: false,
                 }
-              - {
-                  label: 'Reoccuring Event Start (only for reoccuring events)',
-                  name: event_start_time,
-                  widget: time,
-                  required: false,
-                }
-              - {
-                  label: 'Reoccuring Event End (only for reoccuring events)',
-                  name: event_start_end,
-                  widget: time,
-                  required: false,
-                }
+
               - { name: description }
               - {
                   label: 'Reoccuring Days Of Week (select for reoccuring events)',
