@@ -32,12 +32,14 @@ collections:
                   name: 'reoccuring',
                   widget: 'boolean',
                   default: false,
+                  required: false,
                 }
               - {
-                  label: 'Is All Day Event?',
+                  label: 'Is All Day Event? (nullifies the time set)',
                   name: 'all_day',
                   widget: 'boolean',
                   default: false,
+                  required: false,
                 }
               - { name: description }
 
