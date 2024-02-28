@@ -7,6 +7,24 @@ media_folder: /public/img
 public_folder: /img
 
 collections:
+  - name: 'events_calendar'
+    label: 'Events Calendar'
+    extension: 'json'
+
+    files:
+      - file: 'content/json/events.json'
+        label: 'Events'
+        name: 'eventList'
+        fields:
+          - name: events
+            label: Events
+            widget: list
+            fields:
+              - { name: title }
+              - { label: 'UUID', name: 'uuid', widget: uuid }
+              - { name: date, widget: datetime }
+              - { name: description }
+
   - name: 'blog'
     label: 'News And Events'
     folder: 'content/blog'

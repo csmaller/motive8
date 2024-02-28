@@ -18,6 +18,11 @@
     "vue-stripe-js": "^1.0.1"
   },
   "dependencies": {
+    "@fullcalendar/core": "^6.1.10",
+    "@fullcalendar/daygrid": "^6.1.10",
+    "@fullcalendar/interaction": "^6.1.10",
+    "@fullcalendar/timegrid": "^6.1.10",
+    "@fullcalendar/vue3": "^6.1.10",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxt/ui": "^0.4.1",
