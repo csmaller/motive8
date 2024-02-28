@@ -10,14 +10,14 @@
     {
       "date": "2024-03-01T02:10:15.636Z",
       "description": "wetetet",
-      "title": "another test",
+      "title": "ALL DAY EVENT",
       "event_start_time": "2024-02-28T02:46:18.266Z",
       "event_end_time": "2024-02-28T02:46:18.275Z",
       "all_day": true
     },
     {
       "date": "2024-03-02T02:10:45.702Z",
-      "title": "third test",
+      "title": "ALL DAY REOCCURING",
       "description": "test",
       "event_start_time": "2024-02-02T02:46:18.282Z",
       "event_end_time": "2024-02-04T02:46:18.289Z",
