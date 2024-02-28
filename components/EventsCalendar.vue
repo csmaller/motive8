@@ -10,21 +10,22 @@ const parseEvents = () => {
     let newEvent = {} as any;
     newEvent.title = event.title;
     newEvent.description = event.description;
+
     if (event.reoccuring) {
       newEvent.startRecur = '2024-03-01';
       newEvent.endRecur = '2024-03-28';
-      newEvent.daysOfWeek = [2];
-      newEvent.color = 'red';
+      newEvent.daysOfWeek = [2, 5];
+      newEvent.color = '#ff0044';
     }
     if (event.all_day) {
-      newEvent.allDay = true;
       newEvent.start = '2024-02-28';
-      newEvent.color = 'yellow';
+      newEvent.end = '2024-03-05';
+      newEvent.color = '#dddddd';
     } else {
-      newEvent.startTime = '11:00';
-      newEvent.endTime = '12:00';
-      newEvent.start = '2024-02-27';
-      newEvent.color = 'black';
+      newEvent.start = '2024-02-27T12:30:00Z';
+      newEvent.end = '2024-02-27T14:30:00Z';
+      newEvent.description = 'here is a 1-2 pm onetime event';
+      newEvent.color = '#dddd00';
     }
     return newEvent;
   });
@@ -32,7 +33,6 @@ const parseEvents = () => {
 
 onBeforeMount(() => {
   parseEvents();
-  console.log(parsedEvents.value);
   calendarOptions.value.events = parsedEvents.value;
 });
 
@@ -41,11 +41,13 @@ onBeforeMount(() => {
 // };
 
 const handleEventClick = (arg: any) => {
-  alert(arg.event.title);
+  console.log(arg.event);
+  alert(arg.event.extendedProps.description);
 };
 
 const calendarOptions = ref({
   plugins: [dayGridPlugin, interactionPlugin],
+  themeSystem: 'bootstrap5',
   initialView: 'dayGridMonth',
   // dateClick: handleDateClick,
   eventClick: handleEventClick,
@@ -60,4 +62,12 @@ const calendarOptions = ref({
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+:deep(.fc-event-time) {
+  color: black;
+}
+
+:deep(.fc-event-title) {
+  color: black;
+}
+</style>
