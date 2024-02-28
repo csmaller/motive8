@@ -21,9 +21,54 @@ collections:
             widget: list
             fields:
               - { name: title }
-              - { label: 'UUID', name: 'uuid', widget: uuid }
-              - { name: date, widget: datetime }
+              - {
+                  label: 'Single Event',
+                  name: date,
+                  widget: datetime,
+                  required: false,
+                }
+              - {
+                  label: 'Reoccuring Event Start (only for reoccuring events)',
+                  name: event_start_time,
+                  widget: time,
+                  required: false,
+                }
+              - {
+                  label: 'Reoccuring Event End (only for reoccuring events)',
+                  name: event_start_end,
+                  widget: time,
+                  required: false,
+                }
               - { name: description }
+              - {
+                  label: 'Reoccuring Days Of Week (select for reoccuring events)',
+                  name: 'days_of_week',
+                  required: false,
+                  widget: 'select',
+                  multiple: true,
+                  options:
+                    [
+                      { label: 'Sunday', value: '0' },
+                      { label: 'Monday', value: '1' },
+                      { label: 'Tues', value: '2' },
+                      { label: 'Wed', value: '3' },
+                      { label: 'Thur', value: '4' },
+                      { label: 'Fri', value: '5' },
+                      { label: 'Sat', value: '6' },
+                    ],
+                }
+              - {
+                  label: 'Reoccuring Event Start (only for reoccuring events)',
+                  name: event_start_time,
+                  widget: time,
+                  required: false,
+                }
+              - {
+                  label: 'Reoccuring Event End (only for reoccuring events)',
+                  name: event_start_end,
+                  widget: time,
+                  required: false,
+                }
 
   - name: 'blog'
     label: 'News And Events'
