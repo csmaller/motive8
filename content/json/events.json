@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "date": "2024-02-28T02:00:51.059Z",
+      "title": "test",
+      "description": "test"
+    },
+    {
+      "date": "2024-03-01T02:10:15.636Z",
+      "description": "wetetet",
+      "title": "another test"
+    },
+    {
+      "date": "2024-03-02T02:10:45.702Z",
+      "title": "third test",
+      "description": "test"
+    }
+  ]
+}
