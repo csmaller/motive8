@@ -52,8 +52,8 @@ collections:
                   default: false,
                   required: false,
                 }
-              - { name: description }
-
+              - { name: description, label: 'Description' }
+              - { label: 'Event Details', name: 'body', widget: 'markdown' }
               - {
                   label: 'Event Start Date/Time',
                   name: event_start_time,

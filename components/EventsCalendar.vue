@@ -25,6 +25,7 @@ const parsedEvents = ref();
 const parseEvents = () => {
   parsedEvents.value = events.events.map((event) => {
     let newEvent = {} as any;
+    console.log(event);
     newEvent.title = event.title;
     newEvent.description = event.description;
     newEvent.allDay = event.all_day;

@@ -25,7 +25,7 @@ const cancel = () => {
     @hide="cancel"
   >
     <template #header>
-      <span class="font-bold">{{ event.name }}</span>
+      <span class="font-bold">{{ event }}</span>
     </template>
     <slot></slot>
     <template #footer>

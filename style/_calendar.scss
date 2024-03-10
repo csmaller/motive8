@@ -1,14 +1,24 @@
 .fc {
+    &.fc-theme-standard {
+        .fc-toolbar {
+            .fc-button{
+                .fc-icon-chevron-right, .fc-icon-chevron-left{
+                    font-family:fcicons !important;
+                }
+            }
+        }
+
+        a{
+            color:var( --fc-event-bg-color) !important;
+        }
+
+    }.fc-button 
     .fc-col-header-cell-cushion{
       
         color:var( --fc-event-bg-color) !important;
         
     }
-    .fc-button{
-        .fc-icon-chevron-left, .fc-icon-chevron-right{
-            font-family: fcicons !important;
-        }
-    }
+   
 
     .fc-daygrid-block-event{
         background: none !important;
