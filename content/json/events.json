@@ -6,8 +6,8 @@
       "event_start_time": "2024-03-12T15:45:53.298Z",
       "event_end_time": "2024-03-12T16:45:53.308Z",
       "days_of_week": [
-        "2",
-        "3"
+        1,
+        4
       ],
       "title": "Two Days a Week Reoccuring",
       "description": "here is a reoccuring event"
