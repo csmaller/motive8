@@ -1,0 +1,170 @@
+.p-dialog {
+    border-radius: 1rem;
+    overflow: hidden;
+    width:50%;
+
+    @media(max-width:600px){
+      width:90%;
+    }
+
+    &.event-modal {
+      .p-dialog-header,
+      .p-dialog-content {
+        background: white;
+      }
+    }
+  
+    .p-dialog-header {
+      padding: 24px 24px 0 24px;
+      background: #ddd;
+      font-size: 18px;
+    }
+  
+    .p-dialog-content {
+      padding: 24px;
+      background: #ddd;
+    }
+  }
+  
+  .dialog__container {
+    width: 48rem;
+    .p-dialog-header {
+      padding-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+    &.transfer__modal {
+      .p-dialog-header {
+        padding-bottom: 0.5rem;
+      }
+    }
+    .p-dialog-content {
+      background: #ddd;
+      padding-top: 2px;
+    }
+    .p-dialog-footer {
+      display: inline-flex;
+      justify-content: right;
+    }
+    .p-dropdown-label,
+    .p-inputnumber-input,
+    .p-inputtext {
+      font-weight: 600;
+    }
+    &.add-note__modal {
+      .p-dialog-header {
+        padding-bottom: 1rem;
+      }
+      .p-dialog-content {
+        padding: 0 1rem 1rem;
+      }
+    }
+    &.add-document__modal {
+      .p-dialog-header {
+        padding-bottom: 0;
+      }
+      .p-dialog-content {
+        padding: 3.3rem 1.5rem 1rem;
+      }
+    }
+  }
+  
+  .new-event-modal,
+  .document-event-modal {
+    display: flex;
+    flex-direction: column;
+  
+    .p-dialog-header {
+      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    }
+  
+    .p-dialog-content {
+      padding: 0rem;
+      flex: 1;
+      background: white;
+      display: flex;
+      flex-direction: column;
+  
+      .document-event-modal-content {
+        min-height: 25vh;
+        max-height: calc(100vh - 240px);
+        overflow: auto;
+        &::-webkit-scrollbar-track {
+          background: #ddd;
+        }
+        &::-webkit-scrollbar {
+          width: 0.5rem;
+        }
+        &::-webkit-scrollbar-thumb {
+          background:#ddd;
+          border-radius: 0.25rem;
+          border: 2px solid #ddd;
+        }
+      }
+  
+      @media (max-width: 800px) {
+        min-width: unset;
+        width: calc(100vw - 2rem);
+      }
+    }
+  
+    .p-dialog-footer {
+      flex: 1;
+      align-items: flex-end;
+    }
+  }
+  
+  .document-event-modal {
+    max-width: 720px;
+    .p-dialog-header {
+      padding: 1.5rem 1.5rem 0rem 1.5rem;
+    }
+  }
+  
+  .contract-modal {
+    .p-dialog-header {
+      padding: 1.5rem;
+    }
+  }
+  
+  .new-event-modal {
+    min-height: 600px;
+    max-width: 640px;
+  
+    .p-dialog-content {
+      &::-webkit-scrollbar-track {
+        background: #ddd;
+      }
+      &::-webkit-scrollbar {
+        width: 0.5rem;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 0.25rem;
+        border: 2px solid #ddd;
+      }
+    }
+  
+    .p-divider.p-divider-horizontal:before {
+      margin-top: 0.75rem;
+      border-top: 1px solid #ddd;
+    }
+  }
+  
+  .invoice_container {
+    background: #ddd !important;
+  
+    .p-dialog-header {
+      padding-bottom: 0;
+      align-items: center;
+    }
+  
+    .p-dialog-content {
+      background-color: white !important;
+      margin: 24px;
+      border-radius: 16px;
+      .logo__header {
+        height: 60px;
+      }
+    }
+  }
+  

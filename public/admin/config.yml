@@ -28,13 +28,13 @@ collections:
                   multiple: true,
                   options:
                     [
-                      { label: 'Sun', value: '0' },
-                      { label: 'Mon', value: '1' },
-                      { label: 'Tues', value: '2' },
-                      { label: 'Wed', value: '3' },
-                      { label: 'Thur', value: '4' },
-                      { label: 'Fri', value: '5' },
-                      { label: 'Sat', value: '6' },
+                      { label: 'Sun', value: 0 },
+                      { label: 'Mon', value: 1 },
+                      { label: 'Tues', value: 2 },
+                      { label: 'Wed', value: 3 },
+                      { label: 'Thur', value: 4 },
+                      { label: 'Fri', value: 5 },
+                      { label: 'Sat', value: 6 },
                     ],
                 }
               - {
