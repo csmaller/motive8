@@ -27,23 +27,16 @@ const parseEvents = () => {
     let newEvent = {} as any;
     newEvent.title = event.title;
     newEvent.description = event.description;
-
+    newEvent.allDay = event.all_day;
     if (event.reoccuring) {
-      console.log(event);
       newEvent.start = event.event_start_time;
-      newEvent.allDay = event.all_day;
       newEvent.daysOfWeek = event.days_of_week;
+      newEvent.end = event.event_end_time;
+    } else {
+      newEvent.start = event.event_start_time;
+      newEvent.end = event.event_end_time;
     }
-    // if (event.all_day) {
-    //   newEvent.start = '2024-02-28';
-    //   newEvent.end = '2024-03-05';
-    //   newEvent.color = '#dddddd';
-    // } else {
-    //   newEvent.start = '2024-02-27T12:30:00Z';
-    //   newEvent.end = '2024-02-27T14:30:00Z';
-    //   newEvent.description = 'here is a 1-2 pm onetime event';
-    //   newEvent.color = '#dddd00';
-    // }
+
     return newEvent;
   });
 };
@@ -55,6 +48,7 @@ onBeforeMount(() => {
 
 const calendarOptions = ref({
   plugins: [dayGridPlugin, interactionPlugin],
+  themeSystem: 'default',
   initialView: 'dayGridMonth',
   eventClick: handleEventClick,
   showNonCurrentDates: false,

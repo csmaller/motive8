@@ -1,17 +1,26 @@
 .fc {
     .fc-col-header-cell-cushion{
       
-            color:var( --fc-event-bg-color) !important;
+        color:var( --fc-event-bg-color) !important;
         
     }
-    .fc-daygrid-body {
-        color:red;
+    .fc-button{
+        .fc-icon-chevron-left, .fc-icon-chevron-right{
+            font-family: fcicons !important;
+        }
+    }
 
+    .fc-daygrid-block-event{
+        background: none !important;
+        border: none !important;
+    }
+
+    .fc-daygrid-body {
         a{
             color:var( --fc-event-bg-color) !important;
 
             &:hover{
-                background: var(--fc-event-bg-color) !important;
+                // background: var(--fc-event-bg-color) !important;
                 color: red !important;
             }
         }

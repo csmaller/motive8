@@ -60,7 +60,7 @@ collections:
                   widget: datetime,
                 }
               - {
-                  label: 'Event End Date/Time (dont need for indefinite reoccuring events)',
+                  label: 'Event End Date/Time (do not need for indefinite reoccuring events)',
                   name: event_end_time,
                   widget: datetime,
                 }
