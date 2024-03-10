@@ -22,7 +22,7 @@ collections:
             fields:
               - { name: title }
               - {
-                  label: 'Days Of the Week',
+                  label: 'Reoccuring Days Of the Week (for reoccuring events only)',
                   name: 'days_of_week',
                   widget: 'select',
                   required: false,
@@ -39,7 +39,7 @@ collections:
                     ],
                 }
               - {
-                  label: 'Is Reoccuring Event?',
+                  label: 'Is Reoccuring Event? (make sure days of week are selected)',
                   name: 'reoccuring',
                   widget: 'boolean',
                   default: false,
@@ -60,7 +60,7 @@ collections:
                   widget: datetime,
                 }
               - {
-                  label: 'Event End Date/Time',
+                  label: 'Event End Date/Time (dont need for indefinite reoccuring events)',
                   name: event_end_time,
                   widget: datetime,
                 }
