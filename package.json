@@ -42,6 +42,7 @@
     "primevue": "^3.29.2",
     "sass": "^1.63.6",
     "vue": "^3.3.4",
+    "vue-cryptojs": "^2.4.5",
     "vuelidate": "^0.7.7"
   }
 }

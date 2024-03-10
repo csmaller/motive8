@@ -25,7 +25,7 @@ const cancel = () => {
     @hide="cancel"
   >
     <template #header>
-      <span class="font-bold">{{ event }}</span>
+      <span class="font-bold text-dark">{{ event.title }}</span>
     </template>
     <slot></slot>
     <template #footer>
@@ -45,5 +45,9 @@ const cancel = () => {
     margin-left: 5px;
     margin-right: 5px;
   }
+}
+
+.newsletter-btn {
+  background-color: var(--fc-event-bg-color);
 }
 </style>

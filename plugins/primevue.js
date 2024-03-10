@@ -6,6 +6,7 @@ import PrimeVue from 'primevue/config';
 import Toast from 'primevue/toast';
 import ToastService from 'primevue/toastservice';
 import Tooltip from 'primevue/tooltip';
+import VueCryptojs from 'vue-cryptojs';
 import { defineNuxtPlugin } from '#app';
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -17,5 +18,6 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component('Carousel', Carousel);
   nuxtApp.vueApp.component('Dialog', Dialog);
   nuxtApp.vueApp.directive('tooltip', Tooltip);
+  nuxtApp.vueApp.use(VueCryptojs);
   //other components that you need
 });

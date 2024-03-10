@@ -32,13 +32,12 @@ const parseEvents = () => {
     newEvent.title = event.title;
     newEvent.description = event.description;
     newEvent.allDay = event.all_day;
+    newEvent.body = event.body;
+    newEvent.payment_link = event.payment_link;
+    newEvent.start = event.event_start_time;
+    newEvent.end = event.event_end_time;
     if (event.reoccuring) {
-      newEvent.start = event.event_start_time;
       newEvent.daysOfWeek = event.days_of_week;
-      newEvent.end = event.event_end_time;
-    } else {
-      newEvent.start = event.event_start_time;
-      newEvent.end = event.event_end_time;
     }
 
     return newEvent;
@@ -69,7 +68,7 @@ const calendarOptions = ref({
           <div v-html="markdown.render(event.extendedProps.body)" />
         </div>
         <div v-if="event.extendedProps.payment_link" class="flex w-full justify-content-center">
-          <Button id="save_btn" @click="buyTickets" label="Buy Tickets" class="button newsletter-btn w-50 px-3 py-2" />
+          <Button id="save_btn" @click="buyTickets" label="Sign Up" class="button newsletter-btn w-50 px-3 py-2" />
         </div>
       </div>
     </EventModal>
