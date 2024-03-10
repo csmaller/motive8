@@ -25,6 +25,7 @@ collections:
                   label: 'Days Of the Week',
                   name: 'days_of_week',
                   widget: 'select',
+                  required: false,
                   multiple: true,
                   options:
                     [

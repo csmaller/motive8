@@ -1,0 +1,22 @@
+.fc {
+    .fc-col-header-cell-cushion{
+      
+            color:var( --fc-event-bg-color) !important;
+        
+    }
+    .fc-daygrid-body {
+        color:red;
+
+        a{
+            color:var( --fc-event-bg-color) !important;
+
+            &:hover{
+                background: var(--fc-event-bg-color) !important;
+                color: red !important;
+            }
+        }
+
+    }
+
+
+}

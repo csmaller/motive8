@@ -27,10 +27,11 @@ const parseEvents = () => {
     let newEvent = {} as any;
     newEvent.title = event.title;
     newEvent.description = event.description;
-    console.log(event);
+
     if (event.reoccuring) {
-      newEvent.startRecur = event.event_start_time;
-      newEvent.endRecur = event.event_end_time;
+      console.log(event);
+      newEvent.start = event.event_start_time;
+      newEvent.allDay = event.all_day;
       newEvent.daysOfWeek = event.days_of_week;
     }
     // if (event.all_day) {
