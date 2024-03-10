@@ -10,7 +10,8 @@
         4
       ],
       "title": "Two Days a Week Reoccuring",
-      "description": "here is a reoccuring event"
+      "description": "here is a reoccuring event",
+      "body": "Check out the reoccuring event details here!  there is all types of cool stuff\n\n* we can do bullet points\n* and more!\n\n  1. numbered lists....\n  2. **in bold or *italic***\n  3. #### different header style too!"
     },
     {
       "reoccuring": false,
@@ -21,7 +22,8 @@
       "description": "This is a single event",
       "days_of_week": [
         1
-      ]
+      ],
+      "body": "here is more event details!"
     }
   ]
 }
