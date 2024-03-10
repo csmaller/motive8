@@ -52,6 +52,7 @@ collections:
                   default: false,
                   required: false,
                 }
+              - { name: payment_link, required: false }
               - { name: description, label: 'Description' }
               - { label: 'Event Details', name: 'body', widget: 'markdown' }
               - {

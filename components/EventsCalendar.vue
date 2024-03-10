@@ -3,6 +3,9 @@ import FullCalendar from '@fullcalendar/vue3';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import events from '@/content/json/events.json';
+import MarkdownIt from 'markdown-it';
+
+const markdown = new MarkdownIt();
 
 const showDialog = ref<boolean>(false);
 const event = ref();
@@ -25,7 +28,7 @@ const parsedEvents = ref();
 const parseEvents = () => {
   parsedEvents.value = events.events.map((event) => {
     let newEvent = {} as any;
-    console.log(event);
+
     newEvent.title = event.title;
     newEvent.description = event.description;
     newEvent.allDay = event.all_day;
@@ -60,7 +63,16 @@ const calendarOptions = ref({
 
 <template>
   <div class="w-full p-1 sm:p-1 px-3 sm:px-3 lg:p-8">
-    <EventModal v-if="event && showDialog" :event="event" @cancel="handleCancel"></EventModal>
+    <EventModal v-if="event && showDialog" :event="event" @cancel="handleCancel">
+      <div>
+        <div v-if="event.extendedProps.body" class="mission w-full p-3 mb-4 font-bold text-center">
+          <div v-html="markdown.render(event.extendedProps.body)" />
+        </div>
+        <div v-if="event.extendedProps.payment_link" class="flex w-full justify-content-center">
+          <Button id="save_btn" @click="buyTickets" label="Buy Tickets" class="button newsletter-btn w-50 px-3 py-2" />
+        </div>
+      </div>
+    </EventModal>
     <FullCalendar :options="calendarOptions" />
   </div>
 </template>
