@@ -2,7 +2,7 @@
   "events": [
     {
       "reoccuring": true,
-      "all_day": false,
+      "all_day": true,
       "event_start_time": "2024-03-12T15:45:53.298Z",
       "event_end_time": "2024-03-12T16:45:53.308Z",
       "days_of_week": [
@@ -11,6 +11,17 @@
       ],
       "title": "Two Days a Week Reoccuring",
       "description": "here is a reoccuring event"
+    },
+    {
+      "reoccuring": false,
+      "all_day": false,
+      "event_start_time": "2024-03-12T16:35:47.185Z",
+      "event_end_time": "2024-03-12T17:35:47.200Z",
+      "title": "One Time Event",
+      "description": "This is a single event",
+      "days_of_week": [
+        1
+      ]
     }
   ]
 }
