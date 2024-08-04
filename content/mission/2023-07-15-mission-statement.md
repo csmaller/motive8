@@ -7,6 +7,4 @@ description: motive8 mission statement
 
 We are a triathlon/multisport club and community that inspires athletes to reach beyond their potential in a safe, supportive and welcoming environment.
 
-We offer live remote classes on the Velocity 6X's a week!
-
-We have upcoing camps this springand summer  in beautiful St. George and Park City
+We offer live remote classes on[ Velocity](https://app.vqvelocity.com/) daily.
