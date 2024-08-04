@@ -1,14 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex flex-column p-0">
-    <div class="flex flex-wrap w-full px-4 justify-content-center">
-      <Mission />
-      <!-- <News /> -->
-    </div>
-    <div class="justify-content-center align-content-center flex w-full">
-      <!-- <div class="flex w-12 p-0 main-img"></div> -->
+  <div class="flex p-0">
+    <div class="justify-content-center align-content-center flex w-5">
       <ImageCarousel />
+    </div>
+    <div class="flex flex-wrap w-5 px-3 justify-content-center">
+      <Mission />
     </div>
   </div>
 </template>
