@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex p-0">
+  <div class="flex p-0 index-container">
     <div class="justify-content-center align-content-center flex w-full sm:w-full lg:w-5">
       <ImageCarousel />
     </div>
@@ -12,6 +12,12 @@
 </template>
 
 <style scoped lang="scss">
+.index-container {
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
 .parent {
   -webkit-mask-image: linear-gradient(to top, rgb(0, 0, 0) 85%, transparent 100%);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 85%, transparent 100%);

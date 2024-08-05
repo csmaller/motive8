@@ -35,7 +35,7 @@ const responsiveOptions = ref([
       :numScroll="1"
       verticalViewPortHeight="300"
       :circular="true"
-      :autoplayInterval="5000"
+      :autoplayInterval="6000"
       :responsiveOptions="responsiveOptions"
     >
       <template #item="slotProps">
