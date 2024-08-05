@@ -2,10 +2,10 @@
 
 <template>
   <div class="flex p-0">
-    <div class="justify-content-center align-content-center flex w-5">
+    <div class="justify-content-center align-content-center flex sm:w-full lg:w-5">
       <ImageCarousel />
     </div>
-    <div class="flex flex-wrap w-5 px-3 justify-content-center">
+    <div class="flex flex-wrap sm:w-full lg:w-5 px-3 justify-content-center">
       <Mission />
     </div>
   </div>
