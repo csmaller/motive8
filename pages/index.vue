@@ -2,8 +2,11 @@
 
 <template>
   <div class="flex p-0 index-container">
-    <div class="justify-content-center align-content-center flex w-full sm:w-full lg:w-5">
+    <div class="justify-content-center align-content-center hidden sm:hidden lg:flex w-full sm:w-full lg:w-5">
       <ImageCarousel />
+    </div>
+    <div class="flex sm:flex lg:hidden w-full">
+      <img src="/img/img_8880.jpeg" class="w-full" />
     </div>
     <div class="flex flex-wrap w-full sm:w-full lg:w-5 px-3 justify-content-center">
       <Mission />
