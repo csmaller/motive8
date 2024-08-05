@@ -14,5 +14,9 @@ const { data: missionQuery } = await useAsyncData('mission', () => {
 <style scoped lang="scss">
 .mission {
   font-size: 20px;
+
+  a {
+    color: blue !important;
+  }
 }
 </style>

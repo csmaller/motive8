@@ -15,6 +15,12 @@
 .index-container {
   @media (max-width: 600px) {
     flex-direction: column;
+
+    text-align: center;
+
+    a {
+      color: blue;
+    }
   }
 }
 
