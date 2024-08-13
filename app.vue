@@ -20,6 +20,10 @@ colorMode.preference = 'dark';
       <div id="main-container-scroll" class="flex flex-column">
         <Header />
         <div id="main-content">
+          <script
+            type="text/javascript"
+            src="http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=cd0188dcbea6510561a39a11f92394377ab1474c"
+          ></script>
           <div class="flex flex-wrap w-full">
             <NuxtPage />
           </div>
