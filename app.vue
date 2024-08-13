@@ -1,11 +1,15 @@
 <script setup>
 useHead({
-  script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+  script: [
+    { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+    {
+      src: 'http://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=cd0188dcbea6510561a39a11f92394377ab1474c',
+    },
+  ],
   link: [
     { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' },
   ],
 });
-
 const colorMode = useColorMode();
 colorMode.preference = 'dark';
 </script>
