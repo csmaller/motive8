@@ -8,6 +8,4 @@ price: 25
 link: https://buy.stripe.com/6oEbJV9E9eXl7fy7sI
 class: img
 ---
-# **For a more traditional and tailored fit, M8E running hats are your ticket!**
-
-# **Amazing fabrics, fit and performance to keep you running.**
+The Running Trucker delivers performance upgrades for those high-intensity workouts. Soft, laser cut side and back panels provide excellent breathability and a more tailored fit, while the 5-paneled construction gives that classic, casual look. This cap is the perfect summer accessory, from dawn’s early light to twilight’s last gleaming.
