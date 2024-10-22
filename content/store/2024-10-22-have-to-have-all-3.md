@@ -8,4 +8,6 @@ price: 59
 link: https://buy.stripe.com/fZe9BN17D7uTeI08wH
 class: img
 ---
-Can't make up your mind. No worries we got you a discount.
+##### Can't make up your mind? Need all three?
+
+##### No worries we got you a discount.
