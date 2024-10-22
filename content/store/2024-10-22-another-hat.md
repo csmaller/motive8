@@ -1,11 +1,13 @@
 ---
-title: another hat
+title: M8E Running Trucker Hat
 date: 2024-10-22T01:13:32.985Z
-name: another hat
-image: /img/1000006429.jpg
+name: M8E Running Trucker Hat
+image: /img/img_9558.jpg
 background_color: rgba(57, 121, 192, 0.8)
-price: 23.33
-link: http://www.payment.link
+price: 25
+link: https://buy.stripe.com/6oEbJV9E9eXl7fy7sI
 class: img
 ---
-another hat
+# **For a more traditional and tailored fit, M8E running hats are your ticket!**
+
+# **Amazing fabrics, fit and performance to keep you running.**
