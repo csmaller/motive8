@@ -5,27 +5,31 @@ interface PropsInterface {
   backgroundColor?: string;
   item: ParsedContent;
   buttonName: string;
+  className?: string;
 }
 
 const props = withDefaults(defineProps<PropsInterface>(), {
   buttonName: 'Get Started',
 });
-const { item } = toRefs(props);
+const { item, backgroundColor, buttonName, className } = toRefs(props);
 </script>
 
 <template>
-  <div class="program border-round-md w-full align-content-between text-center p-0 m-3 mt-4 px-3">
+  <div
+    class="program border-round-md w-full align-items-stretch align-content-stretch text-center m-3 mt-4 px-3"
+    :class="className"
+  >
     <div class="head p-1 pt-4 w-full inline">
       <LazyProseH2>{{ item.name }}</LazyProseH2>
-      <div class="blurb px-3 py-4">
+      <div class="blurb px-3 py-1">
         <ContentRendererMarkdown :value="item" />
       </div>
     </div>
 
-    <div class="img-container flex flex-wrap w-full justify-content-center align-content-end">
+    <div class="img-container flex flex-wrap w-full justify-content-center p-2">
       <img v-if="item.image" :alt="`${item.image}`" :src="item.image" />
     </div>
-    <div class="price" v-if="item.price">Price: ${{ item.price }}</div>
+    <div class="price my-3 pt-2" v-if="item.price">Price: ${{ item.price }}</div>
 
     <PurchaseButton :link="item.link" :name="buttonName" />
   </div>
@@ -37,6 +41,11 @@ const { item } = toRefs(props);
   min-width: 300px;
   min-height: 600px;
 
+  &.merchandise {
+    img {
+      max-width: 100%;
+    }
+  }
   .price {
     font-size: 20px;
   }
@@ -45,6 +54,8 @@ const { item } = toRefs(props);
     margin-left: 5px;
     margin-right: 5px;
     font-size: 16px;
+    padding-bottom: 10px !important;
+    min-height: auto;
   }
 
   // @media screen and (max-width: 1200px) and (min-width: 601px) {
