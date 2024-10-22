@@ -8,4 +8,6 @@ price: 40
 link: https://buy.stripe.com/fZeeW7dUpaH5fM400c
 class: img
 ---
-Need a swim cap and want any of our noggin covers then we got you covered with a discount
+##### Need a swim cap and want any of our noggin covers then we got you covered with a discount.
+
+##### Choose any of the hats or Beanie to pair with yoru swim cap.
