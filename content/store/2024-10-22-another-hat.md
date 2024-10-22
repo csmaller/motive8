@@ -8,4 +8,6 @@ price: 25
 link: https://buy.stripe.com/6oEbJV9E9eXl7fy7sI
 class: img
 ---
-### The Running Trucker delivers performance upgrades for those high-intensity workouts. Soft, laser cut side and back panels provide excellent breathability and a more tailored fit, while the 5-paneled construction gives that classic, casual look.
+##### The Running Trucker delivers performance upgrades for those high-intensity workouts. 
+
+##### Soft, laser cut side and back panels provide excellent breathability and a more tailored fit, while the 5-paneled construction gives that classic, casual look.
