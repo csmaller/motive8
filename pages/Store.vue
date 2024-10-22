@@ -3,8 +3,8 @@ const { data: storeQuery } = await useAsyncData('merchandise', () => queryConten
 </script>
 
 <template>
-  <div class="flex flex-wrap w-full p-4 mb-5 pb-6 justify-content-evenly lg:gap-1">
-    <div v-for="item in storeQuery" :key="item.url" class="flex flex-wrap p-4 mb-1 justify-content-evenly lg:gap-1">
+  <div class="flex flex-wrap w-full p-4 mb-5 pb-6 justify-content-start">
+    <div v-for="item in storeQuery" :key="item.url" class="flex flex-wrap p-2 justify-content-evenly">
       <StoreItem
         button-name="Buy Now"
         :item="item"
