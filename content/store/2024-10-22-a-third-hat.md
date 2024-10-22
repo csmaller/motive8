@@ -8,6 +8,6 @@ price: 25
 link: https://buy.stripe.com/8wM9BN17D2az43m14j
 class: img
 ---
-### Your favorite piece of equipment this winter to keep your noggin warm and comfortable while training, racing or playing.
+##### Your favorite piece of equipment this winter to keep your noggin warm and comfortable while training, racing or playing.
 
-### This knit beanie features a half fleece lining for additional warmth and enhanced comfort.
+##### This knit beanie features a half fleece lining for additional warmth and enhanced comfort.
