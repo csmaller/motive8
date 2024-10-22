@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 
-interface ItemInterface {}
-
 interface PropsInterface {
   backgroundColor?: string;
   item: ParsedContent;
@@ -27,15 +25,7 @@ const { item } = toRefs(props);
     <div class="img-container flex flex-wrap w-full justify-content-center align-content-end">
       <img v-if="item.image" :alt="`${item.image}`" :src="item.image" />
     </div>
-    <InputNumber
-      v-if="item.price"
-      v-model="item.price"
-      inputId="currency-us"
-      mode="currency"
-      currency="USD"
-      locale="en-US"
-      fluid
-    />
+    <div class="price" v-if="item.price">Price: ${{ item.price }}</div>
 
     <PurchaseButton :link="item.link" :name="buttonName" />
   </div>
@@ -47,6 +37,9 @@ const { item } = toRefs(props);
   min-width: 300px;
   min-height: 600px;
 
+  .price {
+    font-size: 20px;
+  }
   @media (max-width: 600px) {
     max-width: 100%;
     margin-left: 5px;
