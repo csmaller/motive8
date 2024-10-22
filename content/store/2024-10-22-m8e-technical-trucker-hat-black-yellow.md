@@ -8,6 +8,6 @@ price: 25
 link: https://buy.stripe.com/5kA5lx5nTg1peI04gx
 class: img
 ---
-##### The M8E Trucker hat is designed for letting your fellow multisport athletes that you belong to the cool kids club. 
+##### The M8E Trucker hat is designed for letting your fellow multisport athletes that you belong to the cool kids club.
 
 ##### The 6 paneled construction creates a streamlined look that is functional for working out and beyond.
