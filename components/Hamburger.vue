@@ -14,10 +14,10 @@ const toggleMenu = () => {
       <nav id="sidebar-menu" :class="show ? `show-menu` : null">
         <ul v-if="show">
           <li><NuxtLink to="/">Home</NuxtLink></li>
+          <li><NuxtLink to="/store">Store</NuxtLink></li>
           <li><NuxtLink to="/coaches">Coaches</NuxtLink></li>
           <li><NuxtLink to="/programs">Programs</NuxtLink></li>
           <li><NuxtLink to="/classes">Schedule</NuxtLink></li>
-          <!-- <NuxtLink to="/store">Store</NuxtLink> -->
           <li><NuxtLink to="/events">Events</NuxtLink></li>
           <li><NuxtLink to="/contact">Contact</NuxtLink></li>
         </ul>

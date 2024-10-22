@@ -27,6 +27,16 @@ const { item } = toRefs(props);
     <div class="img-container flex flex-wrap w-full justify-content-center align-content-end">
       <img v-if="item.image" :alt="`${item.image}`" :src="item.image" />
     </div>
+    <InputNumber
+      v-if="item.price"
+      v-model="item.price"
+      inputId="currency-us"
+      mode="currency"
+      currency="USD"
+      locale="en-US"
+      fluid
+    />
+
     <PurchaseButton :link="item.link" :name="buttonName" />
   </div>
 </template>

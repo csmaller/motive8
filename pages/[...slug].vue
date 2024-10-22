@@ -1,6 +1,7 @@
 <template>
   <main class="prose">
-  welcome to the main index page! here is some news...
-    <ContentDoc />
+    <ContentDoc>
+      <template #not-found>Sorry, that page is not found.</template>
+    </ContentDoc>
   </main>
 </template>
