@@ -6,7 +6,7 @@ price: 25
 background_color: rgba(57, 121, 192, 0.8)
 class: img
 title: M8E Running Trucker Hat
-id: prod_R4eVofeQLCVpsO
+id: price_1QCVCPCJp6pxKUJfWuGVmEJR
 link: https://buy.stripe.com/6oEbJV9E9eXl7fy7sI
 ---
 ##### The Running Trucker delivers performance upgrades for those high-intensity workouts. 
