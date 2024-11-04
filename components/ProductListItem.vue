@@ -29,7 +29,8 @@ const { product, backgroundColor, className } = toRefs(props);
       <img v-if="product.image" :alt="`${product.image}`" :src="product.image" />
     </div>
     <div class="price my-1 text-center w-full" v-if="product.price">${{ product.price }}</div>
-    <div class="w-full flex justify-content-center">
+    <div class="w-full flex justify-content-evenly align-items-center">
+      <PurchaseButton :link="product.link" name="Buy Now" />
       <Button class="p-button toggle-button cart-button" @click="store.addToCart(product)">
         <i class="pi pi-cart-plus"></i>
         &nbsp;add to cart
@@ -52,7 +53,6 @@ const { product, backgroundColor, className } = toRefs(props);
   }
 
   .cart-button {
-    height: 40px;
   }
 
   .price {
