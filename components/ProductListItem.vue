@@ -20,7 +20,6 @@ const { product, backgroundColor, className } = toRefs(props);
   >
     <div class="head p-1 pt-4 w-full inline">
       <LazyProseH2>{{ product.name }}</LazyProseH2>
-      <LazyProseH4>{{ product.description }}</LazyProseH4>
       <div class="blurb px-3 py-1">
         <ContentRendererMarkdown :value="product" />
       </div>

@@ -9,15 +9,14 @@ const total = computed(() => store.cartItems.reduce((acc, item) => (acc += item.
 </script>
 
 <template>
-  <div class="w-full p-3 px-4">
+  <div class="w-full flex justify-content-center p-3 px-4 mt-5">
     <div class="col-md-12">
       <div class="card">
         <div class="card-body">
           <table class="table">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Image</th>
+                <th></th>
                 <th>Name</th>
                 <th>Quantity</th>
                 <th>Price</th>
@@ -27,9 +26,8 @@ const total = computed(() => store.cartItems.reduce((acc, item) => (acc += item.
             </thead>
             <tbody>
               <tr v-for="item in store.getCartItems" :key="item.id">
-                <td>{{ item.id }}</td>
                 <td>
-                  <img :src="item.image" class="fluid rounded" width="60" height="60" :alt="item.name" />
+                  <img :src="item.image" class="fluid rounded" width="60" :alt="item.name" />
                 </td>
                 <td>
                   {{ item.name }}
@@ -47,15 +45,15 @@ const total = computed(() => store.cartItems.reduce((acc, item) => (acc += item.
                   <i @click="store.removeFromCart(item)" class="pi pi-cart-arrow-down text-red"></i>
                 </td>
               </tr>
-              <tr>
-                <th colSpan="3" class="text-center">Total</th>
-                <td colSpan="3" class="text-center">
-                  <span class="badge bg-danger rounded-pill">${{ total }}</span>
+              <tr style="border-top-2">
+                <th colSpan="3" class="text-center border-top-2">Total</th>
+                <td colSpan="3" class="text-center border-top-2">
+                  <span class="">${{ total }}</span>
                 </td>
               </tr>
             </tbody>
           </table>
-          <div v-if="total > 0" class="d-flex justify-content-center">
+          <div v-if="total > 0" class="w-full flex justify-content-center mt-5">
             <Stripe />
           </div>
         </div>
@@ -64,4 +62,20 @@ const total = computed(() => store.cartItems.reduce((acc, item) => (acc += item.
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+table {
+  margin-left: 32px;
+  tr {
+    padding: 10px;
+    th,
+    td {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    td {
+      padding-bottom: 16px;
+      padding-top: 16px;
+    }
+  }
+}
+</style>

@@ -4,6 +4,7 @@ import { useCartStore } from '../store/useCartStore.js';
 const store = useCartStore();
 onMounted(async () => {
   await store.fetchProducts();
+  await store.fetchCartFromLocalStorage();
 });
 
 const storeItems = computed(() => store.countCartItems);

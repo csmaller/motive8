@@ -1,11 +1,19 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { useCartStore } from '../store/useCartStore.js';
 
 const show = ref<boolean>(false);
 
 const toggleMenu = () => {
   show.value = !show.value;
 };
+
+const store = useCartStore();
+onMounted(async () => {
+  await store.fetchProducts();
+});
+
+const storeItems = computed(() => store.countCartItems);
 </script>
 
 <template>
@@ -20,6 +28,14 @@ const toggleMenu = () => {
           <li><NuxtLink to="/classes">Schedule</NuxtLink></li>
           <li><NuxtLink to="/events">Events</NuxtLink></li>
           <li><NuxtLink to="/contact">Contact</NuxtLink></li>
+          <NuxtLink to="/cart" v-if="storeItems > 0">
+            <div class="flex align-items-center">
+              <i class="pi pi-shopping-cart"></i>
+              <span>
+                <small>({{ storeItems }})</small>
+              </span>
+            </div>
+          </NuxtLink>
         </ul>
       </nav>
     </label>

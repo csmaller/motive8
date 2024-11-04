@@ -36,6 +36,8 @@ export default {
       id: process.env.GOOGLE_ANALYTICS_ID,
     },
     gtagId: 'G-RBN4YPXE48',
+    publishableKey:
+      'pk_live_51O4pfGCJp6pxKUJfeMk29h6p0UCjw6VhfCQ5hBTBcAaMHKa9gAaDAQ9nN46mp4SEsfarhL7aRzQrTgnkL40KiQxw00HPlikOAc',
   },
 
   css: [
