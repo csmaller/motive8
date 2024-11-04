@@ -1,19 +1,21 @@
 export default {
   devtools: { enabled: true },
   ssr: false,
+
   content: {
     experimental: {
       clientDB: true,
     },
   },
+
   plugins: ['~/plugins/preview.client.js'],
-
   buildModules: ['@nuxtjs/google-analytics'],
+  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/color-mode', '@pinia/nuxt'],
 
-  modules: ['@nuxt/content', '@nuxt/ui', '@nuxtjs/color-mode'],
   build: {
     transpile: ['primevue'],
   },
+
   colorMode: {
     preference: 'light', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found
@@ -24,16 +26,25 @@ export default {
     classSuffix: '-mode',
     storageKey: 'nuxt-color-mode',
   },
+
   googleAnalytics: {
     id: 'G-RBN4YPXE48',
   },
+
   publicRuntimeConfig: {
     googleAnalytics: {
       id: process.env.GOOGLE_ANALYTICS_ID,
     },
     gtagId: 'G-RBN4YPXE48',
   },
-  css: ['primevue/resources/themes/saga-blue/theme.css', 'primevue/resources/primevue.css', 'primeflex/primeflex.css'],
+
+  css: [
+    'primevue/resources/themes/saga-blue/theme.css',
+    'primeicons/primeicons.css',
+    'primevue/resources/primevue.css',
+    'primeflex/primeflex.css',
+  ],
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -43,4 +54,6 @@ export default {
       },
     },
   },
+
+  compatibilityDate: '2024-11-03',
 };

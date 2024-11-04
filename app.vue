@@ -1,7 +1,8 @@
-<script setup>
+<script setup lang="ts">
 useHead({
   script: [
     { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+    { src: 'https://js.stripe.com/v3' },
     {
       type: 'text/javascript',
       src: 'https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=cd0188dcbea6510561a39a11f92394377ab1474c',
@@ -13,6 +14,8 @@ useHead({
 });
 const colorMode = useColorMode();
 colorMode.preference = 'dark';
+
+const toast = usePVToastService();
 </script>
 <template>
   <div id="default-layout">

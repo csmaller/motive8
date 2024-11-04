@@ -216,7 +216,7 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'URL', name: 'title', widget: 'string' }
+      - { label: 'Stripe ID', name: 'id', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Name', name: 'name', widget: 'string' }
       - {
@@ -225,17 +225,7 @@ collections:
           widget: 'image',
           required: false,
         }
-      - {
-          label: 'Background Color',
-          name: 'background_color',
-          widget: 'select',
-          options:
-            [
-              { label: 'White', value: 'rgba(255,255,255, .8)' },
-              { label: 'Blue', value: 'rgba(57, 121, 192, 0.8)' },
-              { label: 'Yellow', value: 'rgba(236, 202, 81, 0.8)' },
-            ],
-        }
+
       - { label: 'Price', name: 'price', widget: 'number', value_type: 'float' }
       - { label: 'Payment Link', name: 'link', widget: 'string' }
       - {
