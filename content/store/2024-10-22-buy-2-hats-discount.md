@@ -6,7 +6,7 @@ price: 44
 background_color: rgba(57, 121, 192, 0.8)
 class: img
 title: Buy 2 Hats Discount
-id: prod_R4eXi1gUS9x4cB
+id: price_1QCVEnCJp6pxKUJftaVLr87t
 link: https://buy.stripe.com/4gw6pB9E9bL97fyfZc
 ---
 Have to have more than one then let's save some dough!
