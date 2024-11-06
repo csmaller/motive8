@@ -1,14 +1,12 @@
 ---
 title: unlimited
 date: 2023-12-09T00:29:43.693Z
-name: "Motive8 Velocity Power Program "
+name: BETTER STARTS INSIDE
 image: /img/anna-coaching-class.png
 background_color: rgba(57, 121, 192, 0.8)
 link: https://buy.stripe.com/aEUdS3eYt6qP7fy4gy
 class: "img "
 ---
-# BETTER STARTS INSIDE
-
 *Do you want to develop cycling skills as well as fitness and power while training inside?*
 
 *\
