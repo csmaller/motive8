@@ -29,6 +29,8 @@ Do you want to train with your friends and fellow athletes while competing in fu
 *\
 Did you know you train harder and execute better when your coach and friends are with you?*
 
-#### **This gives you unlimited access to all classes**
+*<br/>*
 
-#### **24/7 365 days of the year**
+
+
+***This gives you unlimited access to all classes. 24/7 365 days a year.***
