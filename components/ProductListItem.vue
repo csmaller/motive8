@@ -14,27 +14,26 @@ const { product, backgroundColor, className } = toRefs(props);
 </script>
 
 <template>
-  <div
-    class="program border-round-md h-full flex flex-wrap align-items-stretch text-center m-3 mt-1 p-2"
-    :class="className"
-  >
+  <div class="program border-round-md flex flex-wrap align-items-stretch text-center m-3 mt-1 p-2" :class="className">
     <div class="head p-1 pt-4 w-full inline">
       <LazyProseH2>{{ product.name }}</LazyProseH2>
-      <div class="blurb px-3 py-1">
+      <div class="w-full blurb px-3 py-1">
         <ContentRendererMarkdown :value="product" />
       </div>
     </div>
+    <div class="row w-full">
+      <div class="col-6 flex flex-wrap p-2">
+        <img v-if="product.image" :alt="`${product.image}`" :src="product.image" />
+      </div>
 
-    <div class="img-container flex flex-wrap w-full justify-content-center p-2">
-      <img v-if="product.image" :alt="`${product.image}`" :src="product.image" />
-    </div>
-    <div class="price my-1 text-center w-full" v-if="product.price">${{ product.price }}</div>
-    <div class="w-full flex justify-content-evenly align-items-center">
-      <PurchaseButton :link="product.link" name="Buy Now" />
-      <Button class="p-button toggle-button cart-button" @click="store.addToCart(product)">
-        <i class="pi pi-cart-plus"></i>
-        &nbsp;add to cart
-      </Button>
+      <div class="col-6 flex justify-content-evenly align-items-center">
+        <div class="price my-1 text-center w-full" v-if="product.price">${{ product.price }}</div>
+        <PurchaseButton :link="product.link" name="Buy Now" />
+        <Button class="p-button toggle-button cart-button" @click="store.addToCart(product)">
+          <i class="pi pi-cart-plus"></i>
+          &nbsp;add to cart
+        </Button>
+      </div>
     </div>
   </div>
 </template>
@@ -73,11 +72,7 @@ const { product, backgroundColor, className } = toRefs(props);
   a {
     background-color: rgba(57, 121, 192);
   }
-  .img-container {
-    img {
-      max-height: 250px;
-    }
-  }
+
   @media (max-width: 600px) {
     width: 100%;
     margin-left: 2px;

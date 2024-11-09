@@ -1,6 +1,7 @@
 export default {
   devtools: { enabled: true },
   ssr: false,
+  compatibilityDate: '2024-11-04',
 
   content: {
     experimental: {

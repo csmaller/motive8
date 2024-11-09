@@ -1,21 +1,26 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="flex p-0 sm:p-0 lg:p-4 index-container">
-    <div class="justify-content-center align-content-center hidden sm:hidden lg:flex w-full sm:w-full lg:w-6">
-      <ImageCarousel />
-    </div>
-    <div class="flex sm:flex lg:hidden w-full">
-      <img src="/img/img_8880.jpeg" class="w-full" />
-    </div>
-    <div class="flex flex-wrap w-full sm:w-full lg:w-6 px-3 justify-content-center">
-      <Mission />
-    </div>
+  <div class="grid p-0 sm:p-0 lg:p-0 index-container">
+    <ParallaxContainer background-img="img/blue_bg.jpg">
+      <ParallaxElement :factor="0.3">
+        <div>
+          <Home class="col-12" />
+          <Divider link="coaches" />
+          <Coaches class="col-12" />
+        </div>
+      </ParallaxElement>
+    </ParallaxContainer>
+    <Divider link="programs" />
+    <Programs class="col-12" />
+    <Divider link="contact" />
+    <Contact class="col-12" />
   </div>
 </template>
 
 <style scoped lang="scss">
 .index-container {
+  width: 100vw;
   @media (max-width: 600px) {
     flex-direction: column;
 

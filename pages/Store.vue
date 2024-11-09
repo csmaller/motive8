@@ -19,9 +19,9 @@ onMounted(async () => {
 <template>
   <div
     v-if="cartStore.products"
-    class="flex flex-wrap w-full p-4 lg:p-4 sm:px-1 mb-5 pb-6 justify-content-start lg:justify-content-evenly sm:justify-content-start"
+    class="row p-4 lg:p-4 sm:px-1 mb-5 pb-6 justify-content-start lg:justify-content-evenly sm:justify-content-start w-full"
   >
-    <div v-for="item in products" :key="item.url" class="flex flex-wrap p-2 mb-5 justify-content-evenly">
+    <div v-for="item in products" :key="item.url" class="col-12 flex flex-wrap p-2 mb-5 justify-content-evenly">
       <ProductListItem :product="item" :background-color="item.background_color" :class-Name="'merchandise'" />
       <!-- <StoreItem
         button-name="Buy Now"

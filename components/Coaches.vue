@@ -5,9 +5,9 @@ const { data: coachesQuery } = await useAsyncData('coaches', () => {
 </script>
 
 <template>
-  <div>
-    <div v-if="coachesQuery" class="flex flex-wrap w-full p-4 mb-4 justify-content-evenly lg:gap-5">
+  <LayoutContainer class-name=" md:col-12 w-full px-5 sm:px-1 md:px-5">
+    <div v-if="coachesQuery" class="flex w-full p-0 mb-4 justify-content-between lg:gap-5">
       <Profile v-for="person in coachesQuery" :person="person" :key="person.id" />
     </div>
-  </div>
+  </LayoutContainer>
 </template>

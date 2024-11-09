@@ -6,6 +6,8 @@
 @import "primeicons/primeicons.css";
 
 
+html { scroll-behavior: smooth; }
+
 #default-layout{
   background-color: var(--bg);
   color: var(--text-color);
@@ -66,12 +68,12 @@
       }
 
       &:active{
-          color: orange;
+          color: red;
       }
   }
 
   .router-link-active{
-    color: var(--color-primary);
+    color: var(--btn-nav);
   }
 
   button, [type='button'], [type='reset'], [type='submit'] {
@@ -112,9 +114,9 @@
     /* Style all font awesome icons */
     .fa {
       padding: 10px;
-      font-size: 30px !important;
-      width: 50px;
-      height:50px;
+      font-size: 12px !important;
+      width: 30px;
+      height:30px;
       text-align: center;
       text-decoration: none;
     }

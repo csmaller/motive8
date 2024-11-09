@@ -19,7 +19,7 @@ const { person } = toRefs(props);
 </script>
 
 <template>
-  <div class="profile flex flex-wrap justify-content-center align-content-start text-center pt-3">
+  <div class="border-1 profile flex flex-wrap justify-content-center align-content-start text-center py-3">
     <div class="img-container flex flex-wrap w-full justify-content-center">
       <img v-if="person.image" :alt="`${person.image}`" :src="person.image" class="img border-round" />
     </div>
@@ -34,8 +34,7 @@ const { person } = toRefs(props);
 
 <style scoped lang="scss">
 .profile {
-  max-width: 40%;
-
+  width: 100%;
   .img-container {
     .img {
       object-fit: contain;

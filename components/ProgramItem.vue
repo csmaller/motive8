@@ -4,7 +4,7 @@ import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 interface PropsInterface {
   backgroundColor?: string;
   item: ParsedContent;
-  buttonName: string;
+  buttonName?: string;
   className?: string;
 }
 
@@ -15,32 +15,24 @@ const { item, backgroundColor, buttonName, className } = toRefs(props);
 </script>
 
 <template>
-  <div
-    class="program border-round-md h-full flex flex-wrap align-items-stretch text-center m-3 mt-1 p-2"
-    :class="className"
-  >
-    <div class="head p-1 pt-4 w-full inline">
-      <LazyProseH2>{{ item.name }}</LazyProseH2>
-      <div class="blurb px-3 py-1">
-        <ContentRendererMarkdown :value="item" />
-      </div>
-    </div>
-
-    <div class="img-container flex flex-wrap w-full justify-content-center p-2">
+  <div class="program flex flex-wrap align-items-stretch text-center mt-1 p-2 mx-0" :class="className">
+    <div class="img-container flex flex-wrap justify-content-center col-6 sm:col-12 lg:col-6 ml-0">
       <img v-if="item.image" :alt="`${item.image}`" :src="item.image" />
     </div>
-    <div class="price my-1 text-center w-full" v-if="item.price">Price: ${{ item.price }}</div>
 
-    <PurchaseButton :link="item.link" :name="buttonName" />
+    <div class="blurb align-content-center px-3 py-1 col-6 sm:col-12 lg:col-6 mr-0">
+      <LazyProseH1 class="py-3 font-underline">{{ item.name }}</LazyProseH1>
+
+      <ContentRendererMarkdown :value="item" />
+      <PurchaseButton :link="item.link" :name="buttonName" />
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .program {
-  background-color: rgba(57, 121, 192, 0.8);
-  min-width: 300px;
   min-height: 600px;
-  width: 400px;
+  width: 100vw !important;
 
   &.merchandise {
     img {
@@ -65,11 +57,7 @@ const { item, backgroundColor, buttonName, className } = toRefs(props);
   a {
     background-color: rgba(57, 121, 192);
   }
-  .img-container {
-    img {
-      max-height: 250px;
-    }
-  }
+
   @media (max-width: 600px) {
     width: 100%;
     margin-left: 2px;

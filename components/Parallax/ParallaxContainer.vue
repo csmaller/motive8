@@ -7,9 +7,12 @@ interface ParallaxInterface {
 
 interface Props {
   backgroundImg?: string;
+  gradient?: string;
 }
-const props = defineProps<Props>();
-const { backgroundImg } = toRefs(props);
+const props = withDefaults(defineProps<Props>(), {
+  gradient: 'linear-gradient(transparent, white 90%)',
+});
+const { backgroundImg, gradient } = toRefs(props);
 
 const data = ref<ParallaxInterface>({ height: 0, scrollFactor: 0, width: 0 });
 const eventHandler = () => requestAnimationFrame(calcParallax);
@@ -47,15 +50,16 @@ provide('parallaxContainer', data);
 </script>
 
 <template>
-  <div ref="root" class="ParallaxContainer" v-bind:style="{ backgroundImage: 'url(' + backgroundImg + ')' }">
+  <div ref="root" class="ParallaxContainer" v-bind:style="{ backgroundImage: `${gradient}, url(${backgroundImg})` }">
     <slot />
   </div>
 </template>
 
 <style scoped lang="scss">
 .ParallaxContainer {
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100%;
   min-height: 100vh;
+  margin-bottom: 700px;
 }
 </style>

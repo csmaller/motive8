@@ -13,7 +13,7 @@ useHead({
   ],
 });
 const colorMode = useColorMode();
-colorMode.preference = 'dark';
+colorMode.preference = 'light';
 
 const toast = usePVToastService();
 </script>
@@ -23,7 +23,7 @@ const toast = usePVToastService();
       <div id="main-container-scroll" class="flex flex-column">
         <Header />
         <div id="main-content">
-          <div class="flex flex-wrap w-full">
+          <div class="flex w-full">
             <NuxtPage />
           </div>
         </div>
@@ -41,5 +41,10 @@ const toast = usePVToastService();
 .logo {
   width: 140px;
   height: 120px;
+}
+
+#main-container {
+  margin-top: 45px;
+  width: 100vw;
 }
 </style>

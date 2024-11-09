@@ -23,6 +23,7 @@
     "@fullcalendar/interaction": "^6.1.10",
     "@fullcalendar/timegrid": "^6.1.10",
     "@fullcalendar/vue3": "^6.1.10",
+    "@lucien144/vue3-parallaxy": "^0.1.2",
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
     "@nuxt/image": "^1.0.0-rc.1",
     "@nuxt/ui": "^0.4.1",

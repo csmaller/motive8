@@ -8,8 +8,8 @@ const props = defineProps<Props>();
 const { link } = toRefs(props);
 </script>
 <template>
-  <div class="flex flex-wrap justify-content-center">
-    <a :href="link" target="_blank" class="p-button font-bold">{{ name }}</a>
+  <div class="flex flex-wrap justify-content-center mt-3">
+    <a :href="link" target="_blank" class="p-button px-4 font-bold">{{ name }}</a>
   </div>
 </template>
 <style lang="scss" scoped>

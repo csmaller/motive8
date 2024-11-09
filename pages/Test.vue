@@ -1,22 +1,33 @@
-<template>
-  <div class="w-full">
-    <EventsCalendar />
-  </div>
-</template>
-
 <script>
 import EventsCalendar from '~/components/EventsCalendar.vue';
+import ParallaxContainer from '~/components/Parallax/ParallaxContainer.vue';
+import ParallaxElement from '~/components/Parallax/ParallaxElement.vue';
 </script>
+<template>
+  <div class="w-full">
+    <ParallaxContainer background-img="img/blue_bg.jpg">
+      <!-- <ParallaxImage :factor="0.5">
+        <ParallaxElement :factor="0.5">
+          <Home />
+          <Divider />
+        </ParallaxElement>
+      </ParallaxImage> -->
+      <ParallaxElement :factor="0.8">
+        <Home />
+      </ParallaxElement>
+    </ParallaxContainer>
+  </div>
+</template>
 
 <style lang="scss">
 // ...
 
 .App__example {
-  padding-bottom: 50px;
+  padding-bottom: 500px;
 }
 
 .App__example-single-element {
-  height: 20em;
+  height: 40em;
   background-color: lightblue;
 }
 
