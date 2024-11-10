@@ -2,7 +2,7 @@
 title: unlimited
 date: 2023-12-09T00:29:43.693Z
 name: BETTER STARTS INSIDE
-image: /img/bffv.jpg
+image: /img/male-face-to-face-bsi.png
 background_color: rgba(57, 121, 192, 0.8)
 link: https://buy.stripe.com/aEUdS3eYt6qP7fy4gy
 class: "img "
