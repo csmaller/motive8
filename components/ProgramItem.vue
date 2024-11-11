@@ -24,14 +24,14 @@ const { item, backgroundColor, buttonName, className } = toRefs(props);
       <LazyProseH1 class="py-3 font-underline">{{ item.name }}</LazyProseH1>
 
       <ContentRendererMarkdown :value="item" />
-      <PurchaseButton :link="item.link" :name="buttonName" />
+      <PurchaseButton :link="item.link" :name="buttonName" class="mt-3 w-full" />
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .program {
-  min-height: 600px;
+  min-height: 700px;
   width: 100vw !important;
 
   &.merchandise {

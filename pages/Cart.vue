@@ -9,7 +9,7 @@ const total = computed(() => store.cartItems.reduce((acc, item) => (acc += item.
 </script>
 
 <template>
-  <div class="w-full flex justify-content-center p-3 px-4 mt-5">
+  <div class="cart w-full flex justify-content-center p-3 px-4">
     <div class="col-md-12">
       <div class="card">
         <div class="card-body">
@@ -21,7 +21,7 @@ const total = computed(() => store.cartItems.reduce((acc, item) => (acc += item.
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Subtotal</th>
-                <th></th>
+                <th>Remove</th>
               </tr>
             </thead>
             <tbody>
@@ -33,16 +33,21 @@ const total = computed(() => store.cartItems.reduce((acc, item) => (acc += item.
                   {{ item.name }}
                 </td>
                 <td>
-                  <i @click="store.incrementQ(item)" class="pi pi-cart-arrow-up"></i>
-                  <span class="mx-2">
+                  <Button @click="store.incrementQ(item)" class="mx-1">
+                    <i class="pi pi-plus"></i>
+                  </Button>
+
+                  <span class="mx-1">
                     {{ item.quantity }}
                   </span>
-                  <i @click="store.decrementQ(item)" class="pi pi-cart-arrow-down"></i>
+                  <Button class="mx-2" @click="store.decrementQ(item)">
+                    <i class="pi pi-minus"></i>
+                  </Button>
                 </td>
                 <td>${{ item.price }}</td>
                 <td>${{ item.price * item.quantity }}</td>
                 <td>
-                  <i @click="store.removeFromCart(item)" class="pi pi-cart-arrow-down text-red"></i>
+                  <Button @click="store.removeFromCart(item)" class="text-red">X</Button>
                 </td>
               </tr>
               <tr style="border-top-2">
@@ -63,6 +68,15 @@ const total = computed(() => store.cartItems.reduce((acc, item) => (acc += item.
 </template>
 
 <style scoped lang="scss">
+.cart {
+  margin-top: 160px;
+
+  .p-button {
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+  }
+}
 table {
   margin-left: 32px;
   tr {

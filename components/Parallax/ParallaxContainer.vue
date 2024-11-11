@@ -8,11 +8,13 @@ interface ParallaxInterface {
 interface Props {
   backgroundImg?: string;
   gradient?: string;
+  padding?: string;
 }
 const props = withDefaults(defineProps<Props>(), {
   gradient: 'linear-gradient(transparent, white 90%)',
+  padding: '0 0 300px 0',
 });
-const { backgroundImg, gradient } = toRefs(props);
+const { backgroundImg, gradient, padding } = toRefs(props);
 
 const data = ref<ParallaxInterface>({ height: 0, scrollFactor: 0, width: 0 });
 const eventHandler = () => requestAnimationFrame(calcParallax);
@@ -60,6 +62,7 @@ provide('parallaxContainer', data);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  margin-bottom: 700px;
+  margin-bottom: 400px;
+  padding: v-bind(padding);
 }
 </style>

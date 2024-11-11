@@ -6,9 +6,9 @@ const { data: missionQuery } = await useAsyncData('mission', () => {
 
 <template>
   <div>
-    <h4 v-if="missionQuery" class="mission w-full p-3 sm:mt-1">
+    <div v-if="missionQuery" class="mission w-full p-3 sm:mt-1">
       <ContentRendererMarkdown :value="missionQuery" />
-    </h4>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
@@ -16,7 +16,7 @@ const { data: missionQuery } = await useAsyncData('mission', () => {
   font-size: 20px;
 
   a {
-    color: blue !important;
+    color: rgb(255, 217, 0) !important;
   }
 }
 </style>

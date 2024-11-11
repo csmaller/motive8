@@ -35,6 +35,7 @@ const { person } = toRefs(props);
 <style scoped lang="scss">
 .profile {
   width: 100%;
+  height: 100vh;
   .img-container {
     .img {
       object-fit: contain;

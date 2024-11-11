@@ -123,13 +123,13 @@ const doToast = () => {
         </div>
       </div>
       <div class="field flex flex-column">
-        <label for="message" class="required">message</label>
+        <label for="message" class="required">Message</label>
         <textarea id="message" v-model="$v.message.$model" name="message"></textarea>
         <div v-for="error of $v.message.$errors" :key="error.$uid" class="input-errors">
           <div class="p-error">{{ error.$message }}</div>
         </div>
       </div>
-      <Button id="save_btn" type="submit" label="Send" :disabled="$v.$invalid" class="button" />
+      <Button id="save_btn" type="submit" label="Send" :disabled="$v.$invalid" class="button w-full mt-3" />
     </div>
   </form>
 </template>
@@ -138,7 +138,9 @@ const doToast = () => {
 textarea {
   color: black;
 }
-h2 {
-  color: var(--primary-50);
+
+label {
+  color: black;
+  font-weight: bold;
 }
 </style>

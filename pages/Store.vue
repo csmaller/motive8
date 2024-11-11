@@ -17,20 +17,28 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div
-    v-if="cartStore.products"
-    class="row p-4 lg:p-4 sm:px-1 mb-5 pb-6 justify-content-start lg:justify-content-evenly sm:justify-content-start w-full"
-  >
-    <div v-for="item in products" :key="item.url" class="col-12 flex flex-wrap p-2 mb-5 justify-content-evenly">
-      <ProductListItem :product="item" :background-color="item.background_color" :class-Name="'merchandise'" />
-      <!-- <StoreItem
-        button-name="Buy Now"
-        :item="item"
-        :background-color="item.background_color"
-        :class-Name="'merchandise'"
-      /> -->
-    </div>
-  </div>
+  <ParallaxContainer background-img="img/blue_bg.jpg" gradient="linear-gradient(white,transparent 90%)">
+    <ParallaxElement :factor="0.1">
+      <div
+        v-if="cartStore.products"
+        class="store p-4 lg:p-4 sm:px-1 mb-5 pb-6 justify-content-start lg:justify-content-evenly sm:justify-content-start w-full"
+      >
+        <div class="flex flex-wrap p-2 mb-5 justify-content-evenly">
+          <ProductListItem
+            v-for="item in products"
+            :key="item.url"
+            :product="item"
+            :background-color="item.background_color"
+            :class-Name="'merchandise'"
+          />
+        </div>
+      </div>
+    </ParallaxElement>
+  </ParallaxContainer>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.store {
+  margin-top: 120px;
+}
+</style>

@@ -23,11 +23,11 @@ const storeItems = computed(() => store.countCartItems);
         <ul v-if="show">
           <li><NuxtLink to="/">Home</NuxtLink></li>
           <li><NuxtLink to="/store">Store</NuxtLink></li>
-          <li><NuxtLink to="/coaches">Coaches</NuxtLink></li>
-          <li><NuxtLink to="/programs">Programs</NuxtLink></li>
-          <li><NuxtLink to="/classes">Schedule</NuxtLink></li>
+          <li><NuxtLink to="/#coaches">Coaches</NuxtLink></li>
+          <li><NuxtLink to="/#programs">Programs</NuxtLink></li>
+          <li><NuxtLink to="/#classes">Schedule</NuxtLink></li>
           <li><NuxtLink to="/events">Events</NuxtLink></li>
-          <li><NuxtLink to="/contact">Contact</NuxtLink></li>
+          <li><NuxtLink to="/#contact">Contact</NuxtLink></li>
           <NuxtLink to="/cart" v-if="storeItems > 0">
             <div class="flex align-items-center">
               <i class="pi pi-shopping-cart"></i>

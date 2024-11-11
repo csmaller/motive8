@@ -3,11 +3,14 @@ const { data: programsQuery } = await useAsyncData('programs', () => queryConten
 </script>
 
 <template>
-  <ParallaxContainer background-img="img/blue_bg.jpg" gradient="linear-gradient(white,transparent 55%,yellow 95%)">
+  <ParallaxContainer
+    background-img="img/blue_bg.jpg"
+    gradient="linear-gradient(white,transparent 90%)"
+    padding="0 0 100px"
+  >
     <ParallaxElement :factor="0.3">
-      <
-      <LayoutContainer>
-        <div v-for="item in programsQuery" :key="item.url">
+      <LayoutContainer class-name="md:col-12 w-full mt-0 pt-0 ">
+        <div v-for="item in programsQuery" :key="item.url" class="h-full">
           <ProgramItem :item="item" :background-color="item.background_color" />
         </div>
       </LayoutContainer>

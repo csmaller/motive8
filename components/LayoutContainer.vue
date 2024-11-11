@@ -11,7 +11,7 @@ const { isSlider, img, className } = toRefs(props);
 const myClass = computed(() => (!isSlider.value ? className.value : null));
 </script>
 <template>
-  <div id="wrapper" class="overflow-hidden px-0 text-center">
+  <div id="wrapper" class="px-0 text-center">
     <div class="content mt-3 flex flex-wrap justify-content-center align-items-center">
       <div class="flex blurb col-12 md:col-6 px-0" :class="myClass">
         <slot />

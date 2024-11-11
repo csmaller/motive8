@@ -7,7 +7,7 @@ const { data: blogQuery } = await useAsyncData('blog', () => {
 </script>
 
 <template>
-  <div class="w-full h-full flex flex-column">
+  <div class="mt-7 w-full h-full flex flex-column">
     <h3 class="flex text-center justify-content-center w-full my-5">Events</h3>
 
     <ul v-if="blogQuery?.length" class="text-center w-full">
@@ -15,7 +15,7 @@ const { data: blogQuery } = await useAsyncData('blog', () => {
         <EventContainer :event="link" />
       </li>
     </ul>
-    <h3 v-else>There are no upcoming events.</h3>
+    <h3 v-else class="mt-4 flex w-full justify-content-center">Sorry, There are no upcoming events.</h3>
   </div>
 </template>
 
