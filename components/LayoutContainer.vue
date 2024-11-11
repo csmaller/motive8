@@ -20,8 +20,8 @@ const myClass = computed(() => (!isSlider.value ? className.value : null));
         <div class="flex sm:flex lg:hidden">
           <img :src="img" class="w-full" />
         </div>
-        <ParallaxElement :factor="0.2">
-          <ImageCarousel />
+        <ParallaxElement :factor="0.2" class="hidden sm:hidden md:block">
+          <ImageCarousel class="hidden sm:hidden md:block" />
         </ParallaxElement>
       </div>
     </div>
@@ -29,8 +29,7 @@ const myClass = computed(() => (!isSlider.value ? className.value : null));
 </template>
 <style lang="scss">
 #wrapper {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   .content {
     // background-image: url(/img/bg-green.png);
     // background-size: v-bind(backgroundSize);

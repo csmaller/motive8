@@ -69,7 +69,7 @@ const { item, backgroundColor, buttonName, className } = toRefs(props);
       padding: 0;
 
       img {
-        max-height: 200px;
+        max-width: 98%;
       }
     }
   }

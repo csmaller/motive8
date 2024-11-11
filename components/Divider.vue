@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<Props>(), {
 const { link, bottom } = toRefs(props);
 </script>
 <template>
-  <div class="divider flex w-full align-content-end relative">
+  <div class="divider w-full align-content-end relative">
     <div :id="link" class="flex h-5 absolute link"></div>
   </div>
 </template>

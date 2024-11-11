@@ -31,7 +31,7 @@ const { product, backgroundColor, className } = toRefs(props);
         <PurchaseButton :link="product.link" name="Buy Now" height="46px" font-size="16px" />
         <Button class="p-button toggle-button cart-button" @click="store.addToCart(product)">
           <i class="pi pi-cart-plus"></i>
-          &nbsp; Add
+          <span class="hidden sm:hidden lg:flex">&nbsp; Add</span> 
         </Button>
       </div>
     </div>
@@ -55,6 +55,7 @@ const { product, backgroundColor, className } = toRefs(props);
 
   .cart-button {
     border-radius: 20px;
+    height:46px;
   }
 
   .price {
