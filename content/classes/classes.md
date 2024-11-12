@@ -1,18 +1,20 @@
 ---
-title: classes
+title: online velocity cycling classes
 date: 2023-11-13T02:53:35.227Z
 class: w-full
 ---
-## [Anna](coaches)
+## Anna
 
-Tuesdays and Thursdays 5:30pm
+Tuesdays and Thursdays 90min ride 5:30pm
 
-## [Mark](coaches)
+## Mark
 
-Mondays and Wednesdays 6:00am  
+Mondays 90min ride 5:30am  
 
-Saturdays: 7am. 
+## Andrew 
 
-## [Womens Ride](/store)
+Wednesdays 90min ride 5:30am
 
-Fridays - 6:00am
+## Coaches Rotate 
+
+Saturdays 2hour ride 7am
