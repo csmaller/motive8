@@ -1,9 +1,9 @@
 
-@import 'themes';
-@import 'primevue';
-@import 'modal';
-@import 'calendar';
-@import "primeicons/primeicons.css";
+@use 'themes';
+@use 'primevue';
+@use 'modal';
+@use 'calendar';
+@use "primeicons/primeicons.css";
 
 
 html { scroll-behavior: smooth; }

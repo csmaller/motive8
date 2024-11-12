@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: classesQuery } = await useAsyncData('classes', () => {
-  return queryContent('/classes').where({ title: 'classes' }).findOne();
+  return queryContent('/classes').findOne();
 });
 </script>
 
@@ -8,6 +8,7 @@ const { data: classesQuery } = await useAsyncData('classes', () => {
   <div class="w-full justify-content-center">
     <div class="text-center border-none justify-content-center">
       <div class="w-full justify-content-center flex">
+        {{ classesQuery }}
         <NuxtLink to="https://buy.stripe.com/aEUdS3eYt6qP7fy4gy" class="btn px-3 py-2 mt-4 no-underline w-full mx-4">
           Get Started with Velocity
         </NuxtLink>

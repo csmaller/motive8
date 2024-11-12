@@ -52,6 +52,7 @@ export default {
     css: {
       preprocessorOptions: {
         scss: {
+          api: 'modern-compiler',
           additionalData: '@use "@/style/_colors.scss" as *;',
         },
       },
