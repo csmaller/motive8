@@ -20,7 +20,7 @@ const { person } = toRefs(props);
 
 <template>
   <div
-    class="border-1 profile col-6 sm:col-12 lg:col-6 flex flex-wrap justify-content-center align-content-start text-center py-3"
+    class="border-1 profile col-12 sm:col-12 lg:col-6 flex flex-wrap justify-content-center align-content-start text-center py-3"
   >
     <div class="img-container flex flex-wrap w-full justify-content-center">
       <img v-if="person.image" :alt="`${person.image}`" :src="person.image" class="img border-round" />

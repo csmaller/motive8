@@ -16,7 +16,7 @@ const { item, backgroundColor, buttonName, className } = toRefs(props);
 
 <template>
   <div class="program flex flex-wrap align-items-stretch text-center mt-1 p-2 mx-0" :class="className">
-    <div class="img-container flex flex-wrap justify-content-center col-6 sm:col-12 lg:col-6 ml-0">
+    <div class="img-container flex flex-wrap justify-content-center col-12 sm:col-12 lg:col-6 ml-0">
       <img v-if="item.image" :alt="`${item.image}`" :src="item.image" />
     </div>
 
