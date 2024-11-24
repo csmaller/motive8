@@ -11,7 +11,7 @@ const { link, height } = toRefs(props);
 </script>
 <template>
   <div class="flex flex-wrap justify-content-center">
-    <a :href="link" target="_blank" class="p-button px-4 font-bold w-full justify-content-center">{{ name }}</a>
+    <a :href="link" target="_blank" class="p-button px-4 py-0 font-bold w-full justify-content-center">{{ name }}</a>
   </div>
 </template>
 <style lang="scss" scoped>

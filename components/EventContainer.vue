@@ -17,14 +17,13 @@ const isInDateRange = (start: string, end: string) => {
   const today = new Date();
   const bannerStart = new Date(start);
   const bannerEnd = new Date(end);
-
   return bannerStart <= today && bannerEnd >= today ? true : false;
 };
 </script>
 
 <template>
   <div
-    v-if="isInDateRange(event.event_date_start, event.event_date_end)"
+    v-if="isInDateRange(event.start, event.end)"
     class="event flex align-content-center p-3 justify-content-between gap-2 my-5 w-full"
     :class="expand ? 'expand' : null"
   >
@@ -39,8 +38,8 @@ const isInDateRange = (start: string, end: string) => {
         <small>Time Start: {{ prettyTime(event.event_date_start) }}</small>
         <p>{{ event.description }}</p>
       </div>
-      <div v-if="event.link" class="payment flex flex-column col-12 sm:col-12 lg:col-3 align-items-center gap-3 my-6">
-        <PurchaseButton :link="event.link" name="Sign Up" />
+      <div class="payment flex flex-column col-12 sm:col-12 lg:col-3 align-items-center gap-3 my-6">
+        <PurchaseButton v-if="event && event.link" :link="event.link" name="Sign Up" />
         <Button class="p-button toggle-button" @click="toggleExpand">More Info</Button>
       </div>
       <div class="content flex align-content-center justify-content-center col-12 p-4 border-1">
@@ -48,7 +47,7 @@ const isInDateRange = (start: string, end: string) => {
           <h2 class="itinerary w-full text-center hidden sm:block lg:hidden mb-3">ITINERARY</h2>
           <ContentRendererMarkdown :value="event" />
           <div class="payment flex flex-column align-items-center gap-3 my-6">
-            <PurchaseButton :link="event.link" name="Sign Up" />
+            <PurchaseButton v-if="event && event.link" :link="event.link" name="Sign Up" />
             <Button class="p-button toggle-button" @click="toggleExpand">Close</Button>
           </div>
         </div>
@@ -62,7 +61,7 @@ const isInDateRange = (start: string, end: string) => {
   border-bottom: 2px solid var(--yellow);
   border-top: 2px solid var(--yellow);
   background-color: var(--blue);
-  max-height: 230px;
+  max-height: 300px;
   transition: all 0.8s ease;
   overflow: hidden;
   color: black;
@@ -89,8 +88,8 @@ const isInDateRange = (start: string, end: string) => {
   }
 
   img {
-    width: 200px;
-    height: 200px;
+    max-width: 340px;
+    max-height: 340px;
 
     @media (max-width: 720px) {
       width: 100%;
@@ -104,7 +103,7 @@ const isInDateRange = (start: string, end: string) => {
     }
     :deep(img) {
       float: right;
-      max-height: 300px;
+      max-height: 400px;
       max-width: 300px;
       margin-left: 20px;
     }
@@ -123,8 +122,8 @@ const isInDateRange = (start: string, end: string) => {
 }
 
 .event.expand {
-  height: 700px;
-  max-height: 700px !important;
+  height: 600px;
+  max-height: 600px !important;
   overflow-y: auto;
 }
 </style>

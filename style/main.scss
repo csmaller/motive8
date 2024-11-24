@@ -79,6 +79,14 @@ html { scroll-behavior: smooth; }
   button, [type='button'], [type='reset'], [type='submit'] {
       background-color: var(--color-primary);
       cursor:pointer;
+      border:2px solid green;
+      border-radius:6px;
+      padding: 10px 6px 10px 6px;
+
+      &:hover{
+        background-color: var(--btn-hover);
+      }
+
   }
 
   textarea {
