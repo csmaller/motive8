@@ -75,6 +75,8 @@ collections:
     editor:
       preview: true
     fields:
+      - { label: 'Ad Start Date', name: 'start', widget: 'datetime' }
+      - { label: 'Ad End Date', name: 'end', widget: 'datetime' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - {
           label: 'Featured Image',
@@ -90,7 +92,12 @@ collections:
           reqiured: false,
         }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Event Date', name: 'event_date', widget: 'datetime' }
+      - {
+          label: 'Event Start Date',
+          name: 'event_date_start',
+          widget: 'datetime',
+        }
+      - { label: 'Event End Date', name: 'event_date_end', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - {
           label: 'Payment Link',

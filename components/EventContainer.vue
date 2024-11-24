@@ -25,11 +25,12 @@ const toggleExpand = () => {
       </div>
       <div class="content flex flex-column align-content-center col-12 sm:col-12 lg:col-6 py-4">
         <h2 class="mb-2">{{ event.title }}</h2>
-        <small>Date Of Event:{{ prettyDate(event.event_date) }}</small>
-        <small>Time Start: {{ prettyTime(event.event_date) }}</small>
+        <small>Start Of Event:{{ prettyDate(event.event_date_start) }}</small>
+        <small>End Of Event:{{ prettyDate(event.event_date_end) }}</small>
+        <small>Time Start: {{ prettyTime(event.event_date_start) }}</small>
         <p>{{ event.description }}</p>
       </div>
-      <div class="payment flex flex-column col-12 sm:col-12 lg:col-3 align-items-center gap-3 my-6">
+      <div v-if="event.link" class="payment flex flex-column col-12 sm:col-12 lg:col-3 align-items-center gap-3 my-6">
         <PurchaseButton :link="event.link" name="Sign Up" />
         <Button class="p-button toggle-button" @click="toggleExpand">More Info</Button>
       </div>
