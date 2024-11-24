@@ -12,10 +12,19 @@ const expand = ref(false);
 const toggleExpand = () => {
   expand.value = !expand.value;
 };
+
+const isInDateRange = (start: string, end: string) => {
+  const today = new Date();
+  const bannerStart = new Date(start);
+  const bannerEnd = new Date(end);
+
+  return bannerStart <= today && bannerEnd >= today ? true : false;
+};
 </script>
 
 <template>
   <div
+    v-if="isInDateRange(event.event_date_start, event.event_date_end)"
     class="event flex align-content-center p-3 justify-content-between gap-2 my-5 w-full"
     :class="expand ? 'expand' : null"
   >
