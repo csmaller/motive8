@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const route = useRoute();
+
 useHead({
   script: [
     { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
@@ -16,6 +18,20 @@ const colorMode = useColorMode();
 colorMode.preference = 'light';
 
 const toast = usePVToastService();
+
+onMounted(() => {
+  if (route.hash) {
+    let hash = route.hash;
+    hash = hash.replace('#', '');
+    const anchor = document.getElementById(hash);
+
+    if (anchor) {
+      window.scrollTo({
+        top: anchor.getBoundingClientRect().top + 350,
+      });
+    }
+  }
+});
 </script>
 <template>
   <div id="default-layout">
