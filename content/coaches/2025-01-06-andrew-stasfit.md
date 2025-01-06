@@ -6,7 +6,7 @@ name: Andrew Stasinos
 phone: 801-839-6899
 email: andrew@stasfit.com
 image: /img/andrew_stasfit.jpeg
-class: border-1
+class: w-full px-4 py-2
 ---
 Head Coach and Founder
 
