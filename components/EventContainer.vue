@@ -24,17 +24,17 @@ const isInDateRange = (start: string, end: string) => {
 <template>
   <div
     v-if="isInDateRange(event.start, event.end)"
-    class="event flex align-content-center p-3 justify-content-between gap-2 my-5 w-full"
+    class="event flex align-content-center p-0 justify-content-between gap-2 my-5 w-full"
     :class="expand ? 'expand' : null"
   >
     <div class="flex grid w-full">
-      <div class="flex col-12 sm:col-12 lg:col-3">
-        <img :src="event.image" :alt="event.description" />
+      <div class="flex w-full">
+        <img :src="event.image" :alt="event.description" class="w-full" />
       </div>
       <div class="content flex flex-column align-content-center col-12 sm:col-12 lg:col-6 py-4">
         <h2 class="mb-2">{{ event.title }}</h2>
-        <small>Start Of Event:{{ prettyDate(event.event_date_start) }}</small>
-        <small>End Of Event:{{ prettyDate(event.event_date_end) }}</small>
+        <small>Start Of Event: {{ prettyDate(event.event_date_start) }}</small>
+        <small>End Of Event: {{ prettyDate(event.event_date_end) }}</small>
         <small>Time Start: {{ prettyTime(event.event_date_start) }}</small>
         <p>{{ event.description }}</p>
       </div>
@@ -60,8 +60,7 @@ const isInDateRange = (start: string, end: string) => {
 .event {
   border-bottom: 2px solid var(--yellow);
   border-top: 2px solid var(--yellow);
-  background-color: var(--blue);
-  max-height: 300px;
+
   transition: all 0.8s ease;
   overflow: hidden;
   color: black;
@@ -88,14 +87,10 @@ const isInDateRange = (start: string, end: string) => {
   }
 
   img {
-    max-width: 340px;
-    max-height: 340px;
-
-    @media (max-width: 720px) {
-      width: 100%;
-      height: auto;
-    }
+    width: 100%;
+    height: auto;
   }
+
   .main-content {
     :deep(p) {
       text-align: left;

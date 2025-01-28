@@ -91,6 +91,18 @@ collections:
           default: 'img',
           reqiured: false,
         }
+      - {
+          label: 'Background Color',
+          name: 'background_color',
+          widget: 'select',
+          options:
+            [
+              { label: 'None', value: '' },
+              { label: 'White', value: 'rgba(255,255,255, .8)' },
+              { label: 'Blue', value: 'rgba(57, 121, 192, 0.8)' },
+              { label: 'Yellow', value: 'rgba(236, 202, 81, 0.8)' },
+            ],
+        }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - {
           label: 'Event Start Date',
@@ -98,7 +110,7 @@ collections:
           widget: 'datetime',
         }
       - { label: 'Event End Date', name: 'event_date_end', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Sub Header', name: 'description', widget: 'string' }
       - {
           label: 'Payment Link',
           name: 'link',
