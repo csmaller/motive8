@@ -12,7 +12,6 @@ const { data: blogQuery } = await useAsyncData('blog', () => {
 
     <ul v-if="blogQuery?.length" class="text-center w-full">
       <li v-for="link in blogQuery" :key="link.id">
-        {{ link }}
         <EventContainer :event="link" :background-color="link.background_color" />
       </li>
     </ul>
