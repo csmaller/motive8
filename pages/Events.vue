@@ -12,7 +12,8 @@ const { data: blogQuery } = await useAsyncData('blog', () => {
 
     <ul v-if="blogQuery?.length" class="text-center w-full">
       <li v-for="link in blogQuery" :key="link.id">
-        <EventContainer :event="link" />
+        {{ link }}
+        <EventContainer :event="link" :background-color="link.background_color" />
       </li>
     </ul>
     <h3 v-else class="mt-4 flex w-full justify-content-center">Sorry, There are no upcoming events.</h3>

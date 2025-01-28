@@ -1,11 +1,14 @@
 <script setup lang="ts">
 interface Props {
   event: any;
+  backgroundColor?: string;
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  backgroundColor: 'white',
+});
 
-const { event } = toRefs(props);
+const { event, backgroundColor } = toRefs(props);
 
 const expand = ref(false);
 
@@ -26,21 +29,23 @@ const isInDateRange = (start: string, end: string) => {
     v-if="isInDateRange(event.start, event.end)"
     class="event flex align-content-center p-0 justify-content-between gap-2 my-5 w-full"
     :class="expand ? 'expand' : null"
+    v-bind:style="{ backgroundColor }"
   >
     <div class="flex grid w-full">
       <div class="flex w-full">
         <img :src="event.image" :alt="event.description" class="w-full" />
       </div>
-      <div class="content flex flex-column align-content-center col-12 sm:col-12 lg:col-6 py-4">
+      <div
+        class="content flex flex-column align-content-center w-full justify-content-center col-12 sm:col-12 lg:col-6 py-4 gap-2"
+      >
         <h2 class="mb-2">{{ event.title }}</h2>
+        <h5>{{ event.description }}</h5>
         <small>Start Of Event: {{ prettyDate(event.event_date_start) }}</small>
         <small>End Of Event: {{ prettyDate(event.event_date_end) }}</small>
         <small>Time Start: {{ prettyTime(event.event_date_start) }}</small>
-        <p>{{ event.description }}</p>
       </div>
       <div class="payment flex flex-column col-12 sm:col-12 lg:col-3 align-items-center gap-3 my-6">
         <PurchaseButton v-if="event && event.link" :link="event.link" name="Sign Up" />
-        <Button class="p-button toggle-button" @click="toggleExpand">More Info</Button>
       </div>
       <div class="content flex align-content-center justify-content-center col-12 p-4 border-1">
         <div class="main-content flex flex-column">
@@ -48,7 +53,6 @@ const isInDateRange = (start: string, end: string) => {
           <ContentRendererMarkdown :value="event" />
           <div class="payment flex flex-column align-items-center gap-3 my-6">
             <PurchaseButton v-if="event && event.link" :link="event.link" name="Sign Up" />
-            <Button class="p-button toggle-button" @click="toggleExpand">Close</Button>
           </div>
         </div>
       </div>
@@ -92,16 +96,28 @@ const isInDateRange = (start: string, end: string) => {
   }
 
   .main-content {
+    width: 100%;
+    justify-content: center;
+    display: flex;
     :deep(p) {
       text-align: left;
       color: black;
     }
-    :deep(img) {
-      float: right;
-      max-height: 400px;
-      max-width: 300px;
-      margin-left: 20px;
+    :deep(table) {
+      width: 100%;
+
+      tr {
+        td {
+          padding: 10px;
+
+          img {
+            width: 100%;
+            max-height: 400px;
+          }
+        }
+      }
     }
+
     :deep(a, h1, h2, h3, h4, h5) {
       color: black !important;
     }
