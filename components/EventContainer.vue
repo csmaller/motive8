@@ -109,7 +109,7 @@ const isInDateRange = (start: string, end: string) => {
       tr {
         td {
           padding: 10px;
-
+          width: 50%;
           img {
             width: 100%;
             max-height: 400px;
