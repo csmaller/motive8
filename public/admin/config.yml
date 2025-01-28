@@ -105,7 +105,7 @@ collections:
           widget: 'string',
           required: false,
         }
-      - { label: 'Body', name: 'body', widget: 'markdown-toast-ui' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'about'
     label: 'About'
