@@ -3,19 +3,18 @@ title: classes
 date: 2023-11-13T02:53:35.227Z
 class: w-full
 ---
-
 ## Anna
 
-Tuesdays and Thursdays 90min ride 5:30pm
+Tuesdays and Thursdays  5:30pm 75-90min
 
 ## Mark
 
-Mondays 90min ride 5:30am
+Mondays 5:30am 60-75min
 
 ## Andrew
 
-Wednesdays 90min ride 5:30am
+Wednesdays  5:30am 60-75min
 
 ## Coaches Rotate
 
-Saturdays 2hour ride 7am
+Saturdays 7am Long ride 2Hours+
