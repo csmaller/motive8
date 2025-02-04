@@ -29,6 +29,6 @@ Did you know you train harder and execute better when your coach and friends are
 
 *<br/>*
 
-
-
 ***This gives you unlimited access to all classes. 24/7 365 days a year.***
+
+***[Click here to start your trial on Velocity](https://app.vqvelocity.com/join?a=4o1rcm)***
