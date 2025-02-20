@@ -1,7 +1,7 @@
 ---
 date: 2024-10-22T01:59:05.559Z
 name: Have to have all 3!
-image: /img/img_9565.jpg
+image: /img/screenshot-2025-02-20-at-3.41.40 pm.png
 price: 59
 background_color: rgba(57, 121, 192, 0.8)
 class: img
