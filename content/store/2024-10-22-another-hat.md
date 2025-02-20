@@ -1,7 +1,7 @@
 ---
 date: 2024-10-22T01:13:32.985Z
 name: M8E Running Trucker Hat
-image: /img/img_9558.jpg
+image: /img/screenshot-2025-02-20-at-3.39.44 pm.png
 price: 25
 background_color: rgba(57, 121, 192, 0.8)
 class: img
