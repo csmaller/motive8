@@ -1,7 +1,7 @@
 <template>
   <div
     id="header"
-    class="w-full header flex flex-wrap gap-1 align-items-center justify-content-between sm:px-6 p-3 pl-4"
+    class="w-full header flex flex-wrap gap-1 align-items-center justify-content-between sm:px-6 p-0 pl-4"
   >
     <Nav />
     <Hamburger />

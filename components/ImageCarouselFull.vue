@@ -34,7 +34,7 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <div class="carousel">
-    <Mission class="mission" />
+    <Mission class="mission" id="mission" />
     <div
       class="carousel-images"
       :class="{ transitioning: isTransitioning }"
@@ -51,12 +51,19 @@ onBeforeUnmount(() => {
   </div>
 </template>
 
-<style scoped>
+<style scoped lagn="scss">
 .mission {
-  z-index: 10000;
+  z-index: 105;
   position: absolute;
   top: 80px;
   left: 10%;
+
+  @media (max-width: 500px) {
+    position: relative;
+    left: 0px;
+    top: -20px;
+    padding: 0 10px;
+  }
 }
 .carousel {
   position: relative;
@@ -64,6 +71,10 @@ onBeforeUnmount(() => {
   width: 100%;
   height: 100vh - 70px;
   overflow: hidden;
+
+  @media (max-width: 500px) {
+    margin-top: 150px;
+  }
 }
 
 .carousel-images {

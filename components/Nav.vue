@@ -64,7 +64,7 @@ const storeItems = computed(() => store.countCartItems);
 }
 
 .sm-logo {
-  width: 90px;
+  width: 80px;
   height: auto;
 }
 .cart-button {

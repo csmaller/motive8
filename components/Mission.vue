@@ -5,8 +5,13 @@ const { data: missionQuery } = await useAsyncData('mission', () => {
 
 const isVisible = ref(true);
 
+const isMediumScreen = () => {
+  return window.innerWidth >= 501; // Adjust the range for medium screen sizes
+};
+
 onMounted(() => {
   setTimeout(() => {
+    if (!isMediumScreen()) return; // Check if the screen size is medium
     isVisible.value = false; // Hide the mission element after 5 seconds
   }, 5800);
 
@@ -24,14 +29,14 @@ onMounted(() => {
 
 <template>
   <div>
-    <div v-if="missionQuery" id="mission" class="mission block w-full p-3 sm:mt-1" :class="{ hidden: !isVisible }">
+    <div v-if="missionQuery" id="mission" class="mission block w-full p-1 sm:mt-1" :class="{ hidden: !isVisible }">
       <ContentRendererMarkdown :value="missionQuery" />
     </div>
   </div>
 </template>
 <style scoped lang="scss">
 .mission {
-  font-size: 20px;
+  font-size: 15px;
   position: relative;
   transition:
     transform 0.5s ease-in-out,
@@ -43,6 +48,18 @@ onMounted(() => {
   }
   a {
     color: rgb(255, 217, 0) !important;
+  }
+
+  @media (max-width: 500px) {
+    position: relative;
+    left: 20px;
+    top: 20px;
+
+    div {
+      h3 {
+        font-size: 12px !important;
+      }
+    }
   }
 }
 </style>

@@ -20,7 +20,7 @@ const { item, backgroundColor, buttonName, className } = toRefs(props);
       <img v-if="item.image" :alt="`${item.image}`" :src="item.image" />
     </div>
 
-    <div class="blurb align-content-start px-3 py-1 col-6 sm:col-12 lg:col-6 mr-0">
+    <div class="blurb align-content-start px-3 py-1 col-12 sm:col-12 lg:col-6 mr-0">
       <LazyProseH1 class="py-3 font-underline">{{ item.name }}</LazyProseH1>
 
       <ContentRendererMarkdown :value="item" />
