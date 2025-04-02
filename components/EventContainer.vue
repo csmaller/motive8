@@ -58,6 +58,7 @@ const isInDateRange = (start: string, end: string) => {
       </div>
     </div>
   </div>
+  <div v-else>This Event has ended.</div>
 </template>
 
 <style scoped lang="scss">

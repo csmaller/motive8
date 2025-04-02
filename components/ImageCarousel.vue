@@ -51,7 +51,7 @@ const responsiveOptions = ref([
 .container {
   overflow: hidden;
   height: 700px;
-  margin-right: 50px;
+  margin-right: 0px;
 
   .carousel__item {
     min-height: 400px;

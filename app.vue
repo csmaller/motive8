@@ -17,6 +17,7 @@ useHead({
 const colorMode = useColorMode();
 colorMode.preference = 'light';
 
+const menuSlid = ref(false);
 const toast = usePVToastService();
 
 onMounted(() => {
@@ -31,6 +32,22 @@ onMounted(() => {
       });
     }
   }
+
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos && menuSlid.value === false) {
+      document.getElementById('header').style.top = '0';
+      document.getElementById('logo').style.top = '-20px';
+      document.getElementById('sm-logo').style.top = '-200px';
+      menuSlid.value = true;
+    } else {
+      document.getElementById('header').style.top = '-72px';
+      document.getElementById('logo').style.top = '-300px';
+      document.getElementById('sm-logo').style.top = '35px';
+    }
+    prevScrollpos = currentScrollPos;
+  };
 });
 </script>
 <template>
@@ -44,7 +61,6 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <!-- <Footer /> -->
       <Toast />
     </div>
   </div>
