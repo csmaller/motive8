@@ -20,6 +20,10 @@ colorMode.preference = 'light';
 const menuSlid = ref(false);
 const toast = usePVToastService();
 
+const isMediumScreen = () => {
+  return window.innerWidth >= 768; // Adjust the range for medium screen sizes
+};
+
 onMounted(() => {
   if (route.hash) {
     let hash = route.hash;
@@ -35,6 +39,8 @@ onMounted(() => {
 
   let prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
+    if (!isMediumScreen()) return; // Check if the screen size is medium
+
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos && menuSlid.value === false) {
       document.getElementById('header').style.top = '0';

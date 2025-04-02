@@ -16,14 +16,6 @@ const myClass = computed(() => (!isSlider.value ? className.value : null));
       <div class="flex blurb col-12 md:col-6 px-0" :class="myClass">
         <slot />
       </div>
-      <div v-if="isSlider" class="img-container col-12 md:col-6">
-        <div class="flex sm:flex lg:hidden">
-          <img :src="img" class="w-full" />
-        </div>
-        <ParallaxElement :factor="0.2" class="hidden sm:hidden md:block">
-          <ImageCarousel class="hidden sm:hidden md:block" />
-        </ParallaxElement>
-      </div>
     </div>
   </div>
 </template>

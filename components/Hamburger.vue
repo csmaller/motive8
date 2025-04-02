@@ -17,7 +17,7 @@ const storeItems = computed(() => store.countCartItems);
 </script>
 
 <template>
-  <div class="sm:flex md:hidden mr-5">
+  <div class="flex md:hidden gap-7 align-items-center justify-content-start sm:w-4 lg:w-full">
     <label id="hamburger-menu" @click="toggleMenu">
       <nav id="sidebar-menu" :class="show ? `show-menu` : null">
         <ul v-if="show">
@@ -39,12 +39,30 @@ const storeItems = computed(() => store.countCartItems);
         </ul>
       </nav>
     </label>
-
+    <div class="logo-container flex align-items-center">
+      <a href="/" id="sm-logo"><img src="/img/m8e.png" class="sm-logo m-0" /></a>
+    </div>
     <div class="overlay"></div>
   </div>
 </template>
 
 <style lang="scss">
+#sm-logo {
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+
+  top: -20px;
+}
+
+.sm-logo {
+  height: 70px;
+}
+.logo-container {
+  width: 140px;
+  height: 60px;
+  display: flex;
+}
+
 #hamburger-menu {
   width: 50px;
   cursor: pointer;

@@ -48,11 +48,7 @@ const storeItems = computed(() => store.countCartItems);
   height: 120px;
   position: relative;
 }
-.small-logo-container {
-  width: 100px;
-  height: 80px;
-  position: relative;
-}
+
 #logo {
   transition: all 0.5s ease-in-out;
   background-color: white;

@@ -17,24 +17,19 @@ onMounted(async () => {
 </script>
 
 <template>
-  <ParallaxContainer background-img="img/blue_bg.jpg" gradient="linear-gradient(white,transparent 90%)">
-    <ParallaxElement :factor="0.1">
-      <div
-        v-if="cartStore.products"
-        class="store p-4 lg:p-4 sm:px-1 mb-5 pb-6 justify-content-start lg:justify-content-evenly sm:justify-content-start w-full"
-      >
-        <div class="flex flex-wrap p-2 mb-5 justify-content-evenly">
-          <ProductListItem
-            v-for="item in products"
-            :key="item.url"
-            :product="item"
-            :background-color="item.background_color"
-            :class-Name="'merchandise'"
-          />
-        </div>
-      </div>
-    </ParallaxElement>
-  </ParallaxContainer>
+  <div
+    class="store p-4 lg:p-4 sm:px-1 mb-5 pb-6 justify-content-start lg:justify-content-evenly sm:justify-content-start w-full"
+  >
+    <div class="flex flex-wrap p-2 mb-5 justify-content-evenly">
+      <ProductListItem
+        v-for="item in products"
+        :key="item.url"
+        :product="item"
+        :background-color="item.background_color"
+        :class-Name="'merchandise'"
+      />
+    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">

@@ -16,7 +16,7 @@ const nextSlide = () => {
 
     setTimeout(() => {
       isTransitioning.value = false;
-    }, 800);
+    }, 80000);
   } else {
     currentIndex.value = (currentIndex.value + 1) % images.images.length;
   }
@@ -26,23 +26,6 @@ const interval = setInterval(() => {
   nextSlide();
 }, 6000);
 
-const startInterval = (interval) => {
-  interval = setInterval(() => {
-    nextSlide();
-  }, 6000);
-};
-const prevSlide = () => {
-  clearInterval(interval);
-  currentIndex.value = (currentIndex.value - 1 + images.images.length) % images.images.length;
-  startInterval(interval);
-};
-
-const onNextSlide = () => {
-  clearInterval(interval);
-  nextSlide();
-  startInterval(interval);
-};
-
 onMounted(() => {});
 // Clear the interval when the component is unmounted
 onBeforeUnmount(() => {
@@ -51,6 +34,7 @@ onBeforeUnmount(() => {
 </script>
 <template>
   <div class="carousel">
+    <Mission class="mission" />
     <div
       class="carousel-images"
       :class="{ transitioning: isTransitioning }"
@@ -64,12 +48,16 @@ onBeforeUnmount(() => {
         class="carousel-image"
       />
     </div>
-    <button class="carousel-button carousel-prev" @click="prevSlide">&#10094;</button>
-    <button class="carousel-button carousel-next" @click="onNextSlide">&#10095;</button>
   </div>
 </template>
 
 <style scoped>
+.mission {
+  z-index: 10000;
+  position: absolute;
+  top: 80px;
+  left: 10%;
+}
 .carousel {
   position: relative;
   margin-top: 70px;
@@ -88,7 +76,8 @@ onBeforeUnmount(() => {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-0 .carousel-image {
+
+.carousel-image {
   width: 104%;
   flex-shrink: 0;
 }

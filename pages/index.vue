@@ -5,7 +5,7 @@
     <Home class="col-12" />
     <Divider link="coaches" />
     <Coaches class="col-12" />
-    <Divider link="programs" bottom="5px" />
+    <Divider link="programs" bottom="25px" />
     <Programs class="col-12" />
     <Divider link="contact" bottom="5px" />
     <Contact class="col-12" />
