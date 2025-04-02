@@ -13,7 +13,7 @@ onMounted(() => {
   setTimeout(() => {
     if (!isMediumScreen()) return; // Check if the screen size is medium
     isVisible.value = false; // Hide the mission element after 5 seconds
-  }, 5800);
+  }, 5900);
 
   // Disable all anchor tags inside the mission element
   const missionElement = document.getElementById('mission');

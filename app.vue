@@ -35,6 +35,15 @@ onMounted(() => {
         top: anchor.getBoundingClientRect().top + 350,
       });
     }
+  } else {
+    setTimeout(() => {
+      if (isMediumScreen() && menuSlid.value !== true) {
+        window.scrollTo({
+          top: 2,
+        });
+        menuSlid.value = true;
+      }
+    }, 5000);
   }
 
   let prevScrollpos = window.pageYOffset;
@@ -42,14 +51,13 @@ onMounted(() => {
     if (!isMediumScreen()) return; // Check if the screen size is medium
 
     var currentScrollPos = window.pageYOffset;
-    if ((prevScrollpos > currentScrollPos && menuSlid.value === false) || currentScrollPos < 100) {
+    if ((prevScrollpos > currentScrollPos && menuSlid.value === false) || currentScrollPos === 0) {
       document.getElementById('header').style.top = '0';
       document.getElementById('logo').style.top = '-20px';
       document.getElementById('sm-logo').style.top = '-200px';
       document.getElementById('nav-container').style.height = '150px';
       document.getElementById('nav-container').style.alignContent = 'center';
       document.getElementById('nav-container').style.top = '0px';
-      menuSlid.value = true;
     } else {
       document.getElementById('header').style.top = '-85px';
       document.getElementById('logo').style.top = '-300px';
@@ -57,6 +65,7 @@ onMounted(() => {
       document.getElementById('nav-container').style.height = '120px';
       document.getElementById('nav-container').style.alignContent = 'end';
       document.getElementById('nav-container').style.top = '42px';
+      menuSlid.value = true;
     }
     prevScrollpos = currentScrollPos;
   };
