@@ -16,7 +16,7 @@ const nextSlide = () => {
 
     setTimeout(() => {
       isTransitioning.value = false;
-    }, 80000);
+    }, 800);
   } else {
     currentIndex.value = (currentIndex.value + 1) % images.images.length;
   }
