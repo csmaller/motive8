@@ -42,15 +42,21 @@ onMounted(() => {
     if (!isMediumScreen()) return; // Check if the screen size is medium
 
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos && menuSlid.value === false) {
+    if ((prevScrollpos > currentScrollPos && menuSlid.value === false) || currentScrollPos < 100) {
       document.getElementById('header').style.top = '0';
       document.getElementById('logo').style.top = '-20px';
       document.getElementById('sm-logo').style.top = '-200px';
+      document.getElementById('nav-container').style.height = '150px';
+      document.getElementById('nav-container').style.alignContent = 'center';
+      document.getElementById('nav-container').style.top = '0px';
       menuSlid.value = true;
     } else {
-      document.getElementById('header').style.top = '-72px';
+      document.getElementById('header').style.top = '-95px';
       document.getElementById('logo').style.top = '-300px';
-      document.getElementById('sm-logo').style.top = '35px';
+      document.getElementById('sm-logo').style.top = '38px';
+      document.getElementById('nav-container').style.height = '110px';
+      document.getElementById('nav-container').style.alignContent = 'end';
+      document.getElementById('nav-container').style.top = '50px';
     }
     prevScrollpos = currentScrollPos;
   };

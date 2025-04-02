@@ -11,7 +11,8 @@ const storeItems = computed(() => store.countCartItems);
 </script>
 <template>
   <div
-    class="nav-container hidden sm:hidden md:inline-flex lg:flex gap-7 align-items-center justify-content-center sm:w-4 lg:w-full"
+    id="nav-container"
+    class="nav-container hidden relative sm:hidden md:inline-flex lg:flex gap-7 align-items-center justify-content-center sm:w-4 lg:w-full"
   >
     <div class="flex align-items-center gap-7">
       <NuxtLink to="/">Home</NuxtLink>
@@ -19,7 +20,7 @@ const storeItems = computed(() => store.countCartItems);
       <NuxtLink to="/#programs">Velocity</NuxtLink>
       <NuxtLink to="/store">Store</NuxtLink>
     </div>
-    <div class="logo-container">
+    <div class="logo-container justify-content-center">
       <a href="/" id="logo"><img src="/img/m8logo.png" class="logo m-0" /></a>
       <a href="/" id="sm-logo"><img src="/img/m8e.png" class="sm-logo m-0" /></a>
     </div>
@@ -59,7 +60,12 @@ const storeItems = computed(() => store.countCartItems);
   transition: all 0.5s ease-in-out;
   background-color: white;
   position: absolute;
-  top: -20px;
+  top: -200px;
+}
+
+.sm-logo {
+  width: 90px;
+  height: auto;
 }
 .cart-button {
   color: green;

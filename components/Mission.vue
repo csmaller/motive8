@@ -8,7 +8,7 @@ const isVisible = ref(true);
 onMounted(() => {
   setTimeout(() => {
     isVisible.value = false; // Hide the mission element after 5 seconds
-  }, 5000);
+  }, 5800);
 
   // Disable all anchor tags inside the mission element
   const missionElement = document.getElementById('mission');
@@ -32,6 +32,11 @@ onMounted(() => {
 <style scoped lang="scss">
 .mission {
   font-size: 20px;
+  position: relative;
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.5s ease-in-out; /* Smooth transition for movement and fade-out */
+
   &.hidden {
     transform: translateX(100%); /* Slide right off the screen */
     opacity: 0; /* Fade out */

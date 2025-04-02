@@ -7,10 +7,10 @@
     <Coaches class="col-12" />
     <Divider link="programs" bottom="25px" />
     <Programs class="col-12" />
-    <Divider link="contact" bottom="5px" />
-    <Contact class="col-12" />
     <Divider link="classes" />
     <Classes class="col-12" />
+    <Divider link="contact" bottom="5px" />
+    <Contact class="col-12" />
   </div>
 </template>
 
