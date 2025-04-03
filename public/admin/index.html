@@ -39,10 +39,10 @@
           return { pdfUrl: match[1] };
         },
         toBlock: function (obj) {
-          return `<object data="${obj.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0"  type="application/pdf" style="min-height:1050px;min-width:850px"></object>`;
+          return `<object data="${obj.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0"  type="application/pdf" style="min-height:100vh;min-width:100vw"></object>`;
         },
         toPreview: function (obj) {
-          return `<object data="${obj.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0"  type="application/pdf" style="min-height:1050px;min-width:850px"></object>`;
+          return `<object data="${obj.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0"  type="application/pdf" style="min-height:100vh;min-width:100vw"></object>`;
         },
       });
       CMS.registerEditorComponent({
