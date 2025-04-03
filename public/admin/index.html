@@ -40,10 +40,10 @@
           return { pdfUrl: match[1] };
         },
         toBlock: function (obj) {
-          return `<embed src="${obj.pdfUrl}" width="100%" height="100%" type="application/pdf">`;
+          return `<embed src="${obj.pdfUrl}" width="100%" height="100%" type="application/pdf" title="${obj.pdfUrl}"></embed>`;
         },
         toPreview: function (obj) {
-          return `<iframe src="${obj.pdfUrl}" width="100%" height="100%"></iframe>`; // Example preview
+          return `<embed src="${obj.pdfUrl}" width="100%" height="100%"></embed>`; // Example preview
         },
       });
       CMS.registerEditorComponent({
