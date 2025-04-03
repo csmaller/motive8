@@ -97,7 +97,7 @@ collections:
           label: 'Main Header Image',
           name: 'image',
           widget: 'image',
-          required: true,
+          required: false,
         }
 
       - {

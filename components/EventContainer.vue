@@ -26,7 +26,6 @@ const isInDateRange = (start: string, end: string) => {
 
 <template>
   <div
-    v-if="isInDateRange(event.start, event.end)"
     class="event flex align-content-center p-0 justify-content-between gap-2 my-5 w-full"
     :class="expand ? 'expand' : null"
     v-bind:style="{ backgroundColor }"
@@ -58,7 +57,6 @@ const isInDateRange = (start: string, end: string) => {
       </div>
     </div>
   </div>
-  <div v-else>This Event has ended.</div>
 </template>
 
 <style scoped lang="scss">

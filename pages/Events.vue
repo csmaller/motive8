@@ -7,12 +7,16 @@ const isInDateRange = (start: string, end: string) => {
   const today = new Date();
   const bannerStart = new Date(start);
   const bannerEnd = new Date(end);
-  console.log(today, bannerStart, bannerEnd);
+  console.log(today, bannerStart >= today);
   return bannerStart >= today;
 };
 
 const anyInDateRange = (blogQuery: any) => {
-  const inRange = blogQuery.some((event: any) => isInDateRange(event.event_date_start, event.event_date_end));
+  const inRange = blogQuery.some((event: any) => {
+    console.log(event.event_date_start, event.event_date_end);
+    isInDateRange(event.event_date_start, event.event_date_end);
+  });
+  console.log('inRange', inRange);
 
   return inRange;
 };
@@ -22,8 +26,9 @@ const anyInDateRange = (blogQuery: any) => {
   <div class="mt-7 w-full h-full flex flex-column">
     <h3 class="flex text-center justify-content-center w-full my-5">Events</h3>
 
-    <ul v-if="blogQuery?.length && anyInDateRange(blogQuery)" class="text-center w-full">
+    <ul v-if="blogQuery?.length" class="text-center w-full">
       <li v-for="link in blogQuery" :key="link.id">
+        {{ link }}
         <EventContainer :event="link" :background-color="link.background_color" />
       </li>
     </ul>
