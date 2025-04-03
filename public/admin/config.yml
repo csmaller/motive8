@@ -83,7 +83,12 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'PDF', name: 'pdf', widget: 'file' }
+      - {
+          label: 'PDF',
+          name: 'pdf',
+          widget: 'file',
+          media_folder: '/public/pdf',
+        }
       - { label: 'Ad Start Date', name: 'start', widget: 'datetime' }
       - { label: 'Ad End Date', name: 'end', widget: 'datetime' }
       - { label: 'Title', name: 'title', widget: 'string' }
