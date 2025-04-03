@@ -23,6 +23,27 @@
 
     <script>
       CMS.registerEditorComponent({
+        id: 'pdf-embed',
+        label: 'Embed PDF',
+        fields: [
+          {
+            name: 'pdfUrl',
+            label: 'PDF URL',
+            widget: 'string',
+          },
+        ],
+        pattern: /^{{< pdf-embed ([a-zA-Z0-9]+) >}}/, // Example pattern
+        fromBlock: function (match) {
+          return { pdfUrl: match[1] };
+        },
+        toBlock: function (obj) {
+          return `{{< pdf-embed ${obj.pdfUrl} >}}`;
+        },
+        toPreview: function (obj) {
+          return `<iframe src="${obj.pdfUrl}" width="100%" height="100%"></iframe>`; // Example preview
+        },
+      });
+      CMS.registerEditorComponent({
         id: 'ImageResponsive',
         label: 'Image And Caption',
         fields: [
