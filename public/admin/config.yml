@@ -16,6 +16,14 @@ collections:
         label: 'Events'
         name: 'eventList'
         fields:
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+          - label: 'PDF'
+            name: 'pdf'
+            widget: 'file'
+            folder: '/public/pdf'
+            public_folder: '/pdf'
           - name: events
             label: Events
             widget: list
