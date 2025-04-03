@@ -88,6 +88,7 @@ collections:
           name: 'pdf',
           widget: 'file',
           media_folder: '/public/pdf',
+          required: false,
         }
       - { label: 'Ad Start Date', name: 'start', widget: 'datetime' }
       - { label: 'Ad End Date', name: 'end', widget: 'datetime' }
