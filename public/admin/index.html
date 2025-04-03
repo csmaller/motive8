@@ -32,12 +32,15 @@
             widget: 'string',
           },
         ],
-        pattern: /^{{< pdf-embed ([a-zA-Z0-9]+) >}}/, // Example pattern
+
+        pattern:
+          /^{{< embed src="([a-zA-Z0-9-_ ]+)" width="([0-9-_ ]+%)" height="([0-9-_ ]+%)" type="application\/pdf">}}/,
+
         fromBlock: function (match) {
           return { pdfUrl: match[1] };
         },
         toBlock: function (obj) {
-          return `{{< pdf-embed ${obj.pdfUrl} >}}`;
+          return `<embed src="${obj.pdfUrl}" width="100%" height="100%" type="application/pdf">`;
         },
         toPreview: function (obj) {
           return `<iframe src="${obj.pdfUrl}" width="100%" height="100%"></iframe>`; // Example preview
