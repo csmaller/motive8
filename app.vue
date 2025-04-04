@@ -58,25 +58,39 @@ onMounted(() => {
 
       var currentScrollPos = window.pageYOffset;
       if ((prevScrollpos > currentScrollPos && menuSlid.value === false) || currentScrollPos === 0) {
-        document.getElementById('header').style.top = '0';
-        document.getElementById('logo').style.top = '-20px';
-        document.getElementById('sm-logo').style.top = '-200px';
-        document.getElementById('nav-container').style.height = '150px';
-        document.getElementById('nav-container').style.alignContent = 'center';
-        document.getElementById('nav-container').style.top = '0px';
+        loadBigMenu();
       } else {
-        document.getElementById('header').style.top = '-85px';
-        document.getElementById('logo').style.top = '-300px';
-        document.getElementById('sm-logo').style.top = '40px';
-        document.getElementById('nav-container').style.height = '120px';
-        document.getElementById('nav-container').style.alignContent = 'end';
-        document.getElementById('nav-container').style.top = '42px';
+        loadSmallMenu();
+
         menuSlid.value = true;
       }
       prevScrollpos = currentScrollPos;
     };
   };
+
+  const loadBigMenu = () => {
+    document.getElementById('header').style.top = '0';
+    document.getElementById('logo').style.top = '-20px';
+    document.getElementById('sm-logo').style.top = '-200px';
+    document.getElementById('nav-container').style.height = '150px';
+    document.getElementById('nav-container').style.alignContent = 'center';
+    document.getElementById('nav-container').style.top = '0px';
+  };
+
+  const loadSmallMenu = () => {
+    document.getElementById('header').style.top = '-85px';
+    document.getElementById('logo').style.top = '-300px';
+    document.getElementById('sm-logo').style.top = '40px';
+    document.getElementById('nav-container').style.height = '120px';
+    document.getElementById('nav-container').style.alignContent = 'end';
+    document.getElementById('nav-container').style.top = '42px';
+  };
+
   handleScroll();
+});
+
+onUpdated(() => {
+  console.log(route.path);
 });
 </script>
 <template>

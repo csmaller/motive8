@@ -7,15 +7,20 @@ const isInDateRange = (start: string, end: string) => {
   const today = new Date();
   const bannerStart = new Date(start);
   const bannerEnd = new Date(end);
-  console.log(today, bannerStart >= today);
   return bannerStart >= today;
 };
 
+const loadSmallMenu = () => {
+  document.getElementById('header').style.top = '-85px';
+  document.getElementById('logo').style.top = '-300px';
+  document.getElementById('sm-logo').style.top = '40px';
+  document.getElementById('nav-container').style.height = '120px';
+  document.getElementById('nav-container').style.alignContent = 'end';
+  document.getElementById('nav-container').style.top = '42px';
+};
+
 onMounted(() => {
-  window.scrollTo({
-    top: 40,
-    behavior: 'smooth',
-  });
+  loadSmallMenu();
 });
 </script>
 

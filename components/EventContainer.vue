@@ -64,7 +64,7 @@ const isInDateRange = (start: string, end: string) => {
     <div v-else class="flex flex-column align-content-start p-0 justify-content-center w-full">
       <PDF :src="event.pdf" />
     </div>
-    <div class="payment align-items-center gap-3 my-6">
+    <div class="payment align-items-center gap-3">
       <PurchaseButton v-if="event.link" :link="event.link" name="Sign Up" />
     </div>
   </div>
