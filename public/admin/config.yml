@@ -87,7 +87,7 @@ collections:
           label: 'PDF',
           name: 'pdf',
           widget: 'file',
-          media_folder: '/public/pdf',
+          media_folder: '/pdf',
           required: false,
           multiple: true,
         }
