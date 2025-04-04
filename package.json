@@ -44,6 +44,7 @@
     "n": "^10.1.0",
     "netlify-cms-widget-markdown-toast-ui": "^0.1.0",
     "nuxt": "^3.13.2",
+    "pdf-vue3": "^1.0.12",
     "pinia": "^2.2.5",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
