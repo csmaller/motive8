@@ -16,12 +16,27 @@ const toggleExpand = () => {
   expand.value = !expand.value;
 };
 
+const replaceImgSrc = () => {
+  const images = document.querySelectorAll('img');
+
+  images.forEach((img) => {
+    let src = img.getAttribute('src');
+    if (src && !src.startsWith('/')) {
+      img.setAttribute('src', '/' + src);
+    }
+  });
+};
+
 const isInDateRange = (start: string, end: string) => {
   const today = new Date();
   const bannerStart = new Date(start);
   const bannerEnd = new Date(end);
   return bannerStart <= today && bannerEnd >= today ? true : false;
 };
+
+onMounted(() => {
+  replaceImgSrc();
+});
 </script>
 
 <template>
