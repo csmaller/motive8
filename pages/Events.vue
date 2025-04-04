@@ -11,21 +11,16 @@ const isInDateRange = (start: string, end: string) => {
   return bannerStart >= today;
 };
 
-const anyInDateRange = (blogQuery: any) => {
-  const inRange = blogQuery.some((event: any) => {
-    console.log(isInDateRange(event.event_date_start, event.event_date_end));
-    isInDateRange(event.event_date_start, event.event_date_end);
+onMounted(() => {
+  window.scrollTo({
+    top: 40,
+    behavior: 'smooth',
   });
-  console.log('inRange', inRange);
-
-  return inRange;
-};
+});
 </script>
 
 <template>
-  <div class="mt-7 w-full h-full flex flex-column">
-    <h3 class="flex text-center justify-content-center w-full my-5">Events</h3>
-
+  <div class="event-container w-full h-full flex flex-column">
     <ul v-if="blogQuery?.length" class="text-center w-full">
       <li v-for="link in blogQuery" :key="link.id">
         <EventContainer
@@ -40,6 +35,9 @@ const anyInDateRange = (blogQuery: any) => {
 </template>
 
 <style scoped lang="scss">
+.event-container {
+  margin-top: 60px;
+}
 a {
   font-size: 18px;
 }
