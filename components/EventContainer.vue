@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import PDF from 'pdf-vue3';
-
 interface Props {
   event: any;
   backgroundColor?: string;
@@ -29,41 +27,14 @@ const isInDateRange = (start: string, end: string) => {
 <template>
   <div>
     <div
-      class="event flex align-content-center p-0 justify-content-between gap-2 my-5 w-full"
+      class="event flex align-content-center p-0 justify-content-center gap-2 my-5 w-full"
       :class="expand ? 'expand' : null"
-      v-bind:style="{ backgroundColor }"
-      v-if="event.pdf === '' || event.pdf === undefined"
     >
-      <div class="flex grid w-full">
-        <div class="flex w-full">
-          <img :src="event.image" :alt="event.description" class="w-full" />
-        </div>
-        <div
-          class="content flex flex-column align-content-center w-full justify-content-center col-12 sm:col-12 lg:col-6 py-4 gap-2"
-        >
-          <h2 class="mb-2">{{ event.title }}</h2>
-          <h5>{{ event.description }}</h5>
-          <small>Start Of Event: {{ prettyDate(event.event_date_start) }}</small>
-          <small>End Of Event: {{ prettyDate(event.event_date_end) }}</small>
-          <small>Time Start: {{ prettyTime(event.event_date_start) }}</small>
-        </div>
-        <div class="payment flex flex-column col-12 sm:col-12 lg:col-3 align-items-center gap-3 my-6">
-          <PurchaseButton v-if="event && event.link" :link="event.link" name="Sign Up" />
-        </div>
-        <div class="content flex align-content-center justify-content-center col-12 p-4 border-1">
-          <div class="main-content flex flex-column">
-            <h2 class="itinerary w-full text-center hidden sm:block lg:hidden mb-3">ITINERARY</h2>
-            <ContentRendererMarkdown :value="event" />
-            <div class="payment flex flex-column align-items-center gap-3 my-6">
-              <PurchaseButton v-if="event && event.link" :link="event.link" name="Sign Up" />
-            </div>
-          </div>
-        </div>
+      <div class="main-content flex flex-column justify-content-center">
+        <ContentRendererMarkdown :value="event" />
       </div>
     </div>
-    <div v-else class="flex flex-column align-content-start p-0 justify-content-center w-full">
-      <PDF :src="event.pdf" />
-    </div>
+
     <div class="payment align-items-center gap-3">
       <PurchaseButton v-if="event.link" :link="event.link" name="Sign Up" />
     </div>
@@ -71,6 +42,10 @@ const isInDateRange = (start: string, end: string) => {
 </template>
 
 <style scoped lang="scss">
+:deep(img) {
+  max-width: inherit !important;
+}
+
 .event {
   border-bottom: 2px solid var(--yellow);
   border-top: 2px solid var(--yellow);
@@ -78,6 +53,16 @@ const isInDateRange = (start: string, end: string) => {
   transition: all 0.8s ease;
   overflow: hidden;
   color: black;
+
+  .main-content {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 50px;
+    @media (max-width: 500px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 
   .toggle-buton {
     visibility: inherit;
