@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { useUtilities } from '~/composables/useUtilities';
+
+const utilities = useUtilities();
+const { loadSmallMenu, isMediumScreen } = utilities;
+
 const { data: blogQuery } = await useAsyncData('blog', () => {
   return queryContent('/blog').sort({ date: -1 }).find();
 });
@@ -6,21 +11,13 @@ const { data: blogQuery } = await useAsyncData('blog', () => {
 const isInDateRange = (start: string, end: string) => {
   const today = new Date();
   const bannerStart = new Date(start);
-  const bannerEnd = new Date(end);
   return bannerStart >= today;
 };
 
-const loadSmallMenu = () => {
-  document.getElementById('header').style.top = '-85px';
-  document.getElementById('logo').style.top = '-300px';
-  document.getElementById('sm-logo').style.top = '40px';
-  document.getElementById('nav-container').style.height = '120px';
-  document.getElementById('nav-container').style.alignContent = 'end';
-  document.getElementById('nav-container').style.top = '42px';
-};
-
 onMounted(() => {
-  loadSmallMenu();
+  if (isMediumScreen()) {
+    loadSmallMenu();
+  }
 });
 </script>
 
