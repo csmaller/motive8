@@ -62,9 +62,6 @@ onMounted(() => {
 }
 
 .event {
-  border-bottom: 2px solid var(--yellow);
-  border-top: 2px solid var(--yellow);
-
   transition: all 0.8s ease;
   overflow: hidden;
   color: black;
